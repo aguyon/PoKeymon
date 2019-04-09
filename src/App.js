@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from "./Home";
-import Solo from "./Solo";
-import Duo from "./Duo";
-import Pokedex from "./Pokedex";
+import Home from './Home';
+import Solo from './Solo';
+import Duo from './Duo';
+import Pokedex from './Pokedex';
 
 class App extends Component {
   render() {
@@ -22,8 +21,6 @@ class App extends Component {
               <Route path="/pokedex" component={Pokedex} />
             </Switch>
           </BrowserRouter>
-
-          <img src={logo} className="App-logo" alt="logo" />
         </header>
       </div>
     );
