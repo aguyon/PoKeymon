@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <div>
-        <NavLink to="/" activeClassName="selected">Accueil</NavLink>
+        <NavLink to="/" activeClassName="selected">
+          Accueil
+        </NavLink>
         <NavLink to="/solo-mode">Solo Mode</NavLink>
         <NavLink to="/dual-mode">Dual Mode</NavLink>
         <NavLink to="/pokedex">Pokedex</NavLink>

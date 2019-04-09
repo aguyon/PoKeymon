@@ -9,6 +9,11 @@ import Duo from './Duo';
 import Pokedex from './Pokedex';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="App">

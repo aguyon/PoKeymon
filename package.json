@@ -26,7 +26,8 @@
     "parser": "babel-eslint",
     "env": {
       "es6": true,
-      "browser": true
+      "browser": true,
+      "jest":true
     },
     "parserOptions": {
       "sourceType": "module"
