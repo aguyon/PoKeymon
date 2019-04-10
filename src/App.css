@@ -1,43 +1,43 @@
+* {
+  font-family: "Dosis", sans-serif;
+}
+
+html {
+  background-color: #ede9ed;
+}
+
+h2 {
+  color: #e84334;
+  padding: 1.3rem;
+  font-weight: 900 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #363637;
+  height: 85px;
+  font-size: calc(20px + 2vmin);
+  color: #ede9ed;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item a {
+  display: block;
+  padding: 1rem 2rem;
+  font-weight: 900;
+  color: #ede9ed;
+  letter-spacing: 0.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-a { 
-  color: #60DAFB;
+.nav-item a:hover {
+  color: #E8D032;
   text-decoration: none;
-  display: inline;
 }
 
-a:hover { color: white; }
-
-.selected { color: white }
+.selected {
+  color: #000 !important;
+}

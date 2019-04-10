@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
 
 class Pokedex extends Component {
   constructor() {
@@ -10,13 +11,21 @@ class Pokedex extends Component {
   render() {
     return (
       <div>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/solo-mode">Solo Mode</NavLink>
-        <NavLink to="/dual-mode">Dual Mode</NavLink>
-        <NavLink to="/pokedex" activeClassName="selected">
-          Pokedex
-        </NavLink>
-        <h2>Pokedex</h2>
+        <Nav className="justify-content-center">
+          <Nav.Item>
+            <NavLink to="/">Accueil</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/solo-mode">Solo Mode</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/dual-mode">Dual Mode</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/pokedex" activeClassName="selected">PoKeydex</NavLink>
+          </Nav.Item>
+        </Nav>
+        <h2>PoKeydex</h2>
       </div>
     );
   }
