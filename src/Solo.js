@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 // import ArrowKeysReact from 'arrow-keys-react';
+import Nav from 'react-bootstrap/Nav';
 
 class Solo extends Component {
   constructor() {
@@ -11,12 +12,20 @@ class Solo extends Component {
   render() {
     return (
       <div>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/solo-mode" activeClassName="selected">
-          Solo Mode
-        </NavLink>
-        <NavLink to="/dual-mode">Dual Mode</NavLink>
-        <NavLink to="/pokedex">Pokedex</NavLink>
+        <Nav className="justify-content-center">
+          <Nav.Item>
+            <NavLink to="/">Accueil</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/solo-mode" activeClassName="selected">Solo Mode</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/dual-mode">Dual Mode</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/pokedex">PoKeydex</NavLink>
+          </Nav.Item>
+        </Nav>
         <h2>Solo Mode</h2>
       </div>
     );
