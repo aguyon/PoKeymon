@@ -3,10 +3,10 @@ import './App.css';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
-import Solo from './Solo';
-import Duo from './Duo';
-import Pokedex from './Pokedex';
+import Home from './pages/Home';
+import Solo from './pages/Solo';
+import Duo from './pages/Duo';
+import Pokedex from './pages/Pokedex';
 
 class App extends Component {
   constructor() {
