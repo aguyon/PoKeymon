@@ -1,0 +1,22 @@
+.arrKeys {
+    width : 120px;
+    margin: 8px;
+}
+
+.arrows {
+    text-align: center;
+    color     : tomato;
+}
+
+.content {
+    color     : rgb(131, 131, 131);
+    text-align: center;
+}
+
+#good {
+    transform: scale(1.1);
+}
+
+#wrong {
+    transform: scale(1);
+}
