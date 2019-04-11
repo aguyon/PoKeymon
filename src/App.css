@@ -14,15 +14,15 @@ h2 {
   letter-spacing: 0.1em;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-header {
   background-color: #363637;
   height: 85px;
   font-size: calc(20px + 2vmin);
   color: #ede9ed;
+}
+
+.title {
+  text-align: center;
 }
 
 .nav-item a {
