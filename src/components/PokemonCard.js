@@ -15,7 +15,7 @@ class PokemonCard extends Component {
     this.state = {
       name: '',
       imageUrl: '',
-      pokemonIndex: '',
+      /* pokemonIndex: '', */
       imageLoading: true,
       toManyRequests: false,
     };
@@ -26,13 +26,13 @@ class PokemonCard extends Component {
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
-    this.setState({ name, imageUrl, pokemonIndex });
+    this.setState({ name, imageUrl /* pokemonIndex */ });
   }
 
   render() {
     const {
       name,
-      pokemonIndex,
+      /* pokemonIndex, */
       imageUrl,
       imageLoading,
       toManyRequests,

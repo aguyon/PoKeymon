@@ -24,6 +24,7 @@ class PokemonList extends Component {
       <React.Fragment>
         {pokemon ? (
           <div className="row">
+            {/* eslint-disable-next-line no-shadow */}
             {pokemon.map(pokemon => (
               <PokemonCard
                 key={pokemon.name}

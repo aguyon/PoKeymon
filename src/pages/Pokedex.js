@@ -67,7 +67,6 @@ class Pokedex extends Component {
             </NavLink>
           </Nav.Item>
         </Nav>
-        <h2 className="title">PoKeydex</h2>
         <PokemonList />
       </React.Fragment>
     );

@@ -25,7 +25,6 @@ class Home extends Component {
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
-        <h2>Accueil</h2>
       </div>
     );
   }

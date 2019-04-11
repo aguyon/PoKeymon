@@ -26,7 +26,6 @@ class Solo extends Component {
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
-        <h2>Solo Mode</h2>
       </div>
     );
   }
