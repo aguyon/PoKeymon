@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 // import ArrowKeysReact from 'arrow-keys-react';
 import Nav from 'react-bootstrap/Nav';
+import AlerteResulat from '../components/AlerteResultat';
 
 class Solo extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class Solo extends Component {
           </Nav.Item>
         </Nav>
         <h2>Solo Mode</h2>
+        <AlerteResulat />
       </div>
     );
   }
