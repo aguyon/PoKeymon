@@ -4,9 +4,19 @@ import styled from 'styled-components';
 import pokeball from '../media/pokeball.png';
 
 const Sprite = styled.img`
-    width: 5em !important;
-    height: 5em;
-    display: none;
+  width: 5em !important;
+  height: 5em;
+  display: none;
+`;
+
+const Card = styled.div`
+  opacity: 0.95;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.62), 0 2px 3px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 2px 38px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    filter: none;
+  }
 `;
 
 class PokemonCard extends Component {
@@ -39,7 +49,7 @@ class PokemonCard extends Component {
     } = this.state;
     return (
       <div className="col-md-3 col-sm-6 mb-3">
-        <div className="card">
+        <Card className="card">
           {/* <h5 className="card-header">{pokemonIndex}</h5> */}
           {imageLoading ? (
             <img
@@ -77,7 +87,7 @@ class PokemonCard extends Component {
                 .join(' ')}
             </h6>
           </div>
-        </div>
+        </Card>
       </div>
     );
   }
