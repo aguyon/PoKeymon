@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { Component } from 'react';
 import ArrowKeysReact from 'arrow-keys-react';
 
@@ -15,7 +16,7 @@ class Command extends Component {
     super();
     this.state = {
       content: '',
-      toDoArr: [down, right, left, up, right, left, down, right, left, left, up, 'end'],
+      toDoArr: [down, right, left, up, right, left, down, right, left, left, up],
       i: 0,
     };
 
@@ -43,30 +44,78 @@ class Command extends Component {
     });
   }
 
+  isActiveR = () => {
+    const { content } = this.state;
+    if (content === right) {
+      this.idR = 'active';
+    } else {
+      this.idR = 'inactive';
+    }
+    return this.idR;
+  }
 
-  keyIsToDo() {
+  isActiveL = () => {
+    const { content } = this.state;
+    if (content === left) {
+      this.idL = 'active';
+    } else {
+      this.idL = 'inactive';
+    }
+    return this.idL;
+  }
+
+  isActiveU = () => {
+    const { content } = this.state;
+    if (content === up) {
+      this.idU = 'active';
+    } else {
+      this.idU = 'inactive';
+    }
+    return this.idU;
+  }
+
+  isActiveD = () => {
+    const { content } = this.state;
+    if (content === down) {
+      this.idD = 'active';
+    } else {
+      this.idD = 'inactive';
+    }
+    return this.idD;
+  }
+
+  keyIsToDo = () => {
     const { content, toDoArr, i } = this.state;
-    return (content === toDoArr[i]) ? this.state.i++ : i;
+    if (content === toDoArr[i]) {
+      this.setState({ i: i + 1 });
+    }
+    return i;
   }
 
   render() {
-    // eslint-disable-next-line no-lone-blocks
-    { this.keyIsToDo(); }
+    this.keyIsToDo();
+    this.isActiveR();
+    this.isActiveL();
+    this.isActiveU();
+    this.isActiveD();
+
     const { toDoArr, i } = this.state;
 
     return (
       <div>
-        <div className="content" {...ArrowKeysReact.events} tabIndex="1">
-          <p><img src={toDoArr[i]} alt="end" /></p>
+        <div className="content" {...ArrowKeysReact.events} tabIndex="0">
+          <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
 
-          <div>
-            <img className="arrKeys" src={upb} id={this.id} alt="up" />
-          </div>
+          <div className="controller">
+            <div>
+              <img className="arrKeys" src={upb} id={this.idU} alt="up" />
+            </div>
 
-          <div>
-            <img className="arrKeys" src={leftb} id={this.id} alt="left" />
-            <img className="arrKeys" src={downb} id={this.id} alt="down" />
-            <img className="arrKeys" src={rightb} id={this.id} alt="right" />
+            <div>
+              <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
+              <img className="arrKeys" src={downb} id={this.idD} alt="down" />
+              <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
+            </div>
           </div>
         </div>
       </div>
