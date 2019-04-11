@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-// import ArrowKeysReact from 'arrow-keys-react';
 import Nav from 'react-bootstrap/Nav';
-import AlerteResulat from '../components/AlerteResultat';
+import '../css/Solo.css';
+import Command from '../components/Command';
 
 class Solo extends Component {
   constructor() {
@@ -27,8 +27,9 @@ class Solo extends Component {
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
-        <h2>Solo Mode</h2>
-        <AlerteResulat />
+        <div>
+          <Command />
+        </div>
       </div>
     );
   }
