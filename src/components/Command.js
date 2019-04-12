@@ -104,23 +104,6 @@ class Command extends Component {
 
     return (
       <div>
-<<<<<<< HEAD
-        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        {/* eslint-disable-next-line jsx-a11y/tabindex-no-positive */}
-        <div className="content" {...ArrowKeysReact.events} tabIndex="1">
-          <p><img src={toDoArr[i]} alt="end" /></p>
-
-          <div>
-            <img className="arrKeys" src={upb} id={this.id} alt="up" />
-          </div>
-          <div>
-            {i === toDoArr.length - 1 ? <AlerteResultat /> : ''}
-          </div>
-          <div>
-            <img className="arrKeys" src={leftb} id={this.id} alt="left" />
-            <img className="arrKeys" src={downb} id={this.id} alt="down" />
-            <img className="arrKeys" src={rightb} id={this.id} alt="right" />
-=======
         <div className="content" {...ArrowKeysReact.events} tabIndex="0">
           <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
 
@@ -128,13 +111,12 @@ class Command extends Component {
             <div>
               <img className="arrKeys" src={upb} id={this.idU} alt="up" />
             </div>
-
+            {i === toDoArr.length ? <AlerteResultat /> : ''}
             <div>
               <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
               <img className="arrKeys" src={downb} id={this.idD} alt="down" />
               <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
             </div>
->>>>>>> arrowControls
           </div>
         </div>
       </div>
