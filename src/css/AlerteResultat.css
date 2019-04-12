@@ -3,6 +3,13 @@
     background-color:#D84459;
 }
 
+#victory {
+    display: flex;
+    justify-content: center !important;
+    font-weight: bold !important;
+    font-size: 1em !important;
+}
+
 #modalAlerte {
     -webkit-border-radius: 20px !important;
     -moz-border-radius: 20px !important;
@@ -11,6 +18,10 @@
 
 #modalBody {
     background-color:#E2E9ED;
+    font-size: 2em !important;
+    justify-content: center !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonModal {
@@ -23,3 +34,6 @@
     background-color: #2B3332;
 }
 
+#imgModal {
+    margin: 10px !important;
+}

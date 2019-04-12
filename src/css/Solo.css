@@ -16,14 +16,14 @@
 .pokeball {
     position: absolute;
     width: 180px;
-    left : 230px;
+    left : 430px;
     bottom: 310px;
 }
 
 .pokeball2 {
     position: absolute;
     width: 180px;
-    left : 230px;
+    left : 430px;
     bottom: 310px;
     animation: animPokeball .6s infinite; 
 }
@@ -32,13 +32,20 @@
     position: absolute;
     bottom: 30px;
     margin: auto;
-    left : 120px;
+    left : 320px;
 }
 
 .toDo {
+    top: 120px;
     margin: 20px;
     position: absolute;
-    left: 175px;
+    left: 375px;
+}
+
+.pokemon {
+    position: absolute;
+    right: 300px;
+    bottom: 100px;
 }
 
 @keyframes animTouch {

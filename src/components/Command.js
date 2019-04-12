@@ -116,25 +116,21 @@ class Command extends Component {
     const { toDoArr, i, pokeballClass } = this.state;
 
     return (
-      <container>
-        <div {...ArrowKeysReact.events} tabIndex="0">
-          <div className="content">
-            <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
-            <img src={pokeball} className={pokeballClass} alt="pokeball" />
-            <div className="controller">
-              <div>
-                <img className="arrKeys" src={upb} id={this.idU} alt="up" />
-              </div>
-              <div>
-                <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
-                <img className="arrKeys" src={downb} id={this.idD} alt="down" />
-                <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
-              </div>
-              {i === toDoArr.length ? <AlerteResultat /> : ''}
-            </div>
+      <div className="allGameplay" {...ArrowKeysReact.events} tabIndex="0">
+        <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
+        <img src={pokeball} className={pokeballClass} alt="pokeball" />
+        <div className="controller">
+          <div>
+            <img className="arrKeys" src={upb} id={this.idU} alt="up" />
           </div>
+          <div>
+            <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
+            <img className="arrKeys" src={downb} id={this.idD} alt="down" />
+            <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
+          </div>
+          {i === toDoArr.length ? <AlerteResultat /> : ''}
         </div>
-      </container>
+      </div>
     );
   }
 }
