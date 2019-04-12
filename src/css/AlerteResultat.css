@@ -1,0 +1,25 @@
+
+#sasa {
+    background-color:#D84459;
+}
+
+#modalAlerte {
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important; 
+}
+
+#modalBody {
+    background-color:#E2E9ED;
+}
+
+.buttonModal {
+    background-color: #E2E9ED !important;
+    color: #2B3332 !important;
+    font-weight: bold !important;
+}
+
+#modalFoot {
+    background-color: #2B3332;
+}
+
