@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 // import ArrowKeysReact from 'arrow-keys-react';
 import Nav from 'react-bootstrap/Nav';
+import PokemonACapturer from '../components/PokemonACapturer';
 
 class Solo extends Component {
   constructor() {
@@ -26,6 +27,7 @@ class Solo extends Component {
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
+        <PokemonACapturer />
       </div>
     );
   }
