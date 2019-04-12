@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
+import PokemonList from '../components/PokemonList';
+import '../css/Pokedex.css';
+
 
 class Pokedex extends Component {
   constructor() {
@@ -25,7 +28,7 @@ class Pokedex extends Component {
             <NavLink to="/pokedex" activeClassName="selected">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
-        <h2>PoKeydex</h2>
+        <PokemonList />
       </div>
     );
   }
