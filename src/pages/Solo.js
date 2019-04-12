@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import '../css/Solo.css';
 import Command from '../components/Command';
+import PokemonACapturer from '../components/PokemonACapturer';
 
 class Solo extends Component {
   constructor() {
@@ -31,6 +32,7 @@ class Solo extends Component {
         </div>
         <div>
           <Command />
+          <PokemonACapturer />
         </div>
       </div>
     );
