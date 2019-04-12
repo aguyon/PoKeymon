@@ -3,20 +3,23 @@
     margin: 8px;
 }
 
-.arrows {
-    text-align: center;
-    color     : tomato;
-}
-
-.content {
-    color     : rgb(131, 131, 131);
-    text-align: center;
-}
-
-#good {
+#active {
     transform: scale(1.1);
 }
 
-#wrong {
+#inactive {
     transform: scale(1);
+}
+
+.controller {
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    left : 120px;
+}
+
+.toDo {
+    margin: 20px;
+    position: absolute;
+    left: 175px;
 }
