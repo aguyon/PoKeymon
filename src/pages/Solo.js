@@ -31,6 +31,7 @@ class Solo extends Component {
           </Nav>
         </div>
         <div>
+          <PokemonACapturer />
           <Command />
           <PokemonACapturer />
         </div>

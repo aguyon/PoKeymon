@@ -11,6 +11,7 @@ import up from '../media/up.png';
 import down from '../media/down.png';
 import left from '../media/left.png';
 import right from '../media/right.png';
+import pokeball from '../media/pokeball.svg';
 
 class Command extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class Command extends Component {
       content: '',
       toDoArr: [down, right, left, up, right, left, down, right, left, left, up],
       i: 0,
+      pokeballClass: 'pokeball2',
     };
 
     ArrowKeysReact.config({
@@ -93,31 +95,40 @@ class Command extends Component {
     return i;
   }
 
+  keyIsFalse = () => {
+    const {
+      content, toDoArr, i, pokeballClass,
+    } = this.state;
+    if (content === toDoArr[i]) {
+      this.setState({ pokeballClass: 'pokeball' });
+    }
+    return pokeballClass;
+  }
+
   render() {
     this.keyIsToDo();
+    this.keyIsFalse();
     this.isActiveR();
     this.isActiveL();
     this.isActiveU();
     this.isActiveD();
 
-    const { toDoArr, i } = this.state;
+    const { toDoArr, i, pokeballClass } = this.state;
 
     return (
-      <div>
-        <div className="content" {...ArrowKeysReact.events} tabIndex="0">
-          <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
-
-          <div className="controller">
-            <div>
-              <img className="arrKeys" src={upb} id={this.idU} alt="up" />
-            </div>
-            {i === toDoArr.length ? <AlerteResultat /> : ''}
-            <div>
-              <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
-              <img className="arrKeys" src={downb} id={this.idD} alt="down" />
-              <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
-            </div>
+      <div className="allGameplay" {...ArrowKeysReact.events} tabIndex="0">
+        <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
+        <img src={pokeball} className={pokeballClass} alt="pokeball" />
+        <div className="controller">
+          <div>
+            <img className="arrKeys" src={upb} id={this.idU} alt="up" />
           </div>
+          <div>
+            <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
+            <img className="arrKeys" src={downb} id={this.idD} alt="down" />
+            <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
+          </div>
+          {i === toDoArr.length ? <AlerteResultat /> : ''}
         </div>
       </div>
     );
