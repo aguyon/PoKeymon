@@ -4,11 +4,13 @@
 }
 
 #active {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    transition-duration: .1s;
 }
 
 #inactive {
     transform: scale(1);
+    transition-duration: .1s;
 }
 
 .controller {
@@ -23,3 +25,8 @@
     position: absolute;
     left: 175px;
 }
+
+@keyframes animTouch {
+    0% {transform: scale(1);}
+    100% { transform: scale(1.1); }
+  }

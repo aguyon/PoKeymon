@@ -102,23 +102,25 @@ class Command extends Component {
     const { toDoArr, i } = this.state;
 
     return (
-      <div>
-        <div className="content" {...ArrowKeysReact.events} tabIndex="0">
-          <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
+      <container>
+        <div {...ArrowKeysReact.events} tabIndex="0">
+          <div className="content">
+            <div className="toDo"><img src={toDoArr[i]} alt="end" /></div>
 
-          <div className="controller">
-            <div>
-              <img className="arrKeys" src={upb} id={this.idU} alt="up" />
-            </div>
+            <div className="controller">
+              <div>
+                <img className="arrKeys" src={upb} id={this.idU} alt="up" />
+              </div>
 
-            <div>
-              <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
-              <img className="arrKeys" src={downb} id={this.idD} alt="down" />
-              <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
+              <div>
+                <img className="arrKeys" src={leftb} id={this.idL} alt="left" />
+                <img className="arrKeys" src={downb} id={this.idD} alt="down" />
+                <img className="arrKeys" src={rightb} id={this.idR} alt="right" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </container>
     );
   }
 }
