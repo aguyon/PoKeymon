@@ -33,6 +33,7 @@ class Solo extends Component {
         <div>
           <PokemonACapturer />
           <Command />
+          <PokemonACapturer />
         </div>
       </div>
     );

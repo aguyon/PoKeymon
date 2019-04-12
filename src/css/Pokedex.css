@@ -1,0 +1,22 @@
+.row {
+    margin: 25px !important;
+}
+
+.card {
+    color: white;
+    border-radius: 20px !important;
+    background-color: #363637 !important;
+    filter: grayscale(1);
+}
+
+.card-header {
+    font-size: 0.5em;
+}
+
+.card-title {
+    font-size: 0.8em;
+}
+
+.card-body {
+    padding: 0 !important;
+}
