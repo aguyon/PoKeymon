@@ -1,0 +1,43 @@
+* {
+  font-family: "Dosis", sans-serif;
+}
+
+html {
+  background-color: #ede9ed;
+}
+
+h2 {
+  color: #e84334;
+  padding: 1.3rem;
+  font-weight: 900 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #363637;
+  height: 85px;
+  font-size: calc(20px + 2vmin);
+  color: #ede9ed;
+}
+
+.nav-item a {
+  display: block;
+  padding: 1rem 2rem;
+  font-weight: 900;
+  color: #ede9ed;
+  letter-spacing: 0.2em;
+}
+
+.nav-item a:hover {
+  color: #E8D032;
+  text-decoration: none;
+}
+
+.selected {
+  color: #000 !important;
+}
