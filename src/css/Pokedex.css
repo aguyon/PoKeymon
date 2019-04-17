@@ -2,11 +2,23 @@
     margin: 25px !important;
 }
 
+h1 {
+    color: #363637;
+}
+
+.customCol {
+    max-width: 65% !important;
+    margin: 35px auto;
+}
+
 .card {
     color: white;
     border-radius: 20px !important;
     background-color: #363637 !important;
-    filter: grayscale(1);
+}
+
+.card-img-top {
+    width: auto !important;
 }
 
 .card-header {
@@ -19,4 +31,17 @@
 
 .card-body {
     padding: 0 !important;
+}
+
+.poke {
+    filter: grayscale(30%);
+}
+
+.imgPokemon {
+    width: 240px !important;
+}
+
+.btnRedirect {
+    position: absolute;
+    margin-left: -200px;
 }
