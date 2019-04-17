@@ -8,10 +8,16 @@ import PokemonACapturer from '../components/PokemonACapturer';
 class Solo extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      index: 0,
+    };
+    setInterval(() => this.setState({
+      index: Math.floor(Math.random() * 3),
+    }), 1000);
   }
 
   render() {
+    const { index } = this.state;
     return (
       <div>
         <div>
@@ -31,9 +37,8 @@ class Solo extends Component {
           </Nav>
         </div>
         <div>
-          <PokemonACapturer />
           <Command />
-          <PokemonACapturer />
+          <PokemonACapturer index={index} />
         </div>
       </div>
     );
