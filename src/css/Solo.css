@@ -1,6 +1,13 @@
 .arrKeys {
     width : 120px;
-    margin: 8px;
+    margin: 0px 8px;
+}
+
+.arrKeysU {
+    width : 120px;
+    margin: 0px 8px;
+    position: relative;
+    left: 136px;
 }
 
 #active {
@@ -58,4 +65,48 @@
     33% { transform: scale(1.2) rotateZ(5deg); }
     66% { transform: scale(1.2) rotateZ(-5deg); }
     100% { transform: scale(1); }
+}
+
+#DownupU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UpupU {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#DownleftL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UpleftL {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#DowndownD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UpdownD {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#DownrightR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UprightR {
+    transform: scale(1);
+    transition-duration: .1s;
 }
