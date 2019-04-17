@@ -2,8 +2,10 @@
     margin: 25px !important;
 }
 
-h1 {
-    color: #363637;
+.namePokemon {
+    color: #EDE9ED;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .customCol {
@@ -31,6 +33,14 @@ h1 {
 
 .card-body {
     padding: 0 !important;
+}
+
+.filter {
+    filter: grayscale(1);
+}
+
+.notFilter {
+    filter: none;
 }
 
 .poke {

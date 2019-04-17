@@ -25,22 +25,25 @@ const TYPE_COLORS = {
 };
 
 export default class Pokemon extends Component {
-  state = {
-    name: '',
-    imageUrl: '',
-    statTitleWidth: 3,
-    statBarWidth: 9,
-    stats: {
-      hp: '',
-      attack: '',
-      defense: '',
-      speed: '',
-      specialAttack: '',
-      specialDefense: '',
-    },
-    themeColor: '#EF5350',
-    redirect: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      imageUrl: '',
+      statTitleWidth: 3,
+      statBarWidth: 9,
+      stats: {
+        hp: '',
+        attack: '',
+        defense: '',
+        speed: '',
+        specialAttack: '',
+        specialDefense: '',
+      },
+      themeColor: '#EF5350',
+      redirect: false,
+    };
+  }
 
   async componentDidMount() {
     const { match } = this.props;
@@ -138,7 +141,16 @@ export default class Pokemon extends Component {
         <div className="card">
           <div className="card-body">
             <div className="row align-items-center">
-              <div className=" col-md-3 ">
+              <div className=" col-md-12">
+                <h1 className="namePokemon">
+                  {name
+                    .toLowerCase()
+                    .split(' ')
+                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                    .join(' ')}
+                </h1>
+              </div>
+              <div className=" col-md-3">
                 <img
                   src={imageUrl}
                   className="card-img-top rounded mx-auto mt-2 imgPokemon"
@@ -146,13 +158,6 @@ export default class Pokemon extends Component {
                 />
               </div>
               <div className="col-md-9">
-                <h3 className="mx-auto">
-                  {name
-                    .toLowerCase()
-                    .split(' ')
-                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                    .join(' ')}
-                </h3>
                 <div className="row align-items-center">
                   <div className={`col-12 col-md-${statTitleWidth}`}>
                     HP

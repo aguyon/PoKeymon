@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 import pokeball from '../media/pokeball.png';
@@ -38,13 +37,16 @@ const StyledLink = styled(Link)`
 `;
 
 export default class PokemonCard extends Component {
-  state = {
-    name: '',
-    imageUrl: '',
-    pokemonIndex: '',
-    imageLoading: true,
-    toManyRequests: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      imageUrl: '',
+      pokemonIndex: '',
+      imageLoading: true,
+      toManyRequests: false,
+    };
+  }
 
   componentDidMount() {
     const { name, url } = this.props;
@@ -63,6 +65,7 @@ export default class PokemonCard extends Component {
       imageUrl,
       toManyRequests,
     } = this.state;
+
     return (
       <div className="col-md-3 col-sm-6 mb-5">
         <StyledLink to={`pokemon/${pokemonIndex}`}>
