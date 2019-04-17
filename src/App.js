@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Solo from './pages/Solo';
 import Duo from './pages/Duo';
 import Pokedex from './pages/Pokedex';
+import Login from './components/Login';
 
 class App extends Component {
   constructor() {
@@ -24,6 +25,8 @@ class App extends Component {
               <Route path="/solo-mode" component={Solo} />
               <Route path="/dual-mode" component={Duo} />
               <Route path="/pokedex" component={Pokedex} />
+              <Route path="/Login" component={Login} />
+              <Route path="/Login/:user" component={Home} />
             </Switch>
           </BrowserRouter>
         </header>
