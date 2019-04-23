@@ -83,7 +83,7 @@ class Home extends Component {
 
         <Nav>
           <div id="testmadiv">
-            <NavLink to="/solo-mode"><button className="ModeHomePage2">Solo Mode</button></NavLink>
+            <NavLink to="/solo-mode"><button type="button" className="ModeHomePage2">Solo Mode</button></NavLink>
           </div>
         </Nav>
       </div>
