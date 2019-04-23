@@ -43,6 +43,7 @@
       ],
       "jsx-a11y/href-no-hash": "off",
       "jsx-a11y/mouse-events-have-key-events": "off",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
       "react/prop-types": "off"
     }
   },
