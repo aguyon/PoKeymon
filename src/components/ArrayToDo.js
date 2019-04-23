@@ -10,6 +10,13 @@ class ArrayToDo extends Component {
     };
   }
 
+  componentDidMount() { this.Array = this.toDoArray(); }
+
+  handleChange = (value) => {
+    const { touchToDo } = this.props;
+    touchToDo(value);
+  };
+
   toDoArray = () => {
     const arr = ['down', 'left', 'right', 'up'];
     const toDoArrRandom = [];
@@ -20,8 +27,6 @@ class ArrayToDo extends Component {
   }
 
   render() {
-    this.toDoArray();
-
     const { i } = this.state;
 
     return (

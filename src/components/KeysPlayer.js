@@ -13,24 +13,30 @@ class KeysPlayer extends Component {
   }
 
   onKeyUp(keyName, e, handle) {
-    console.log('test:onKeyUp', e, handle);
+    // console.log('test:onKeyUp', e, handle);
     this.setState({
       output: `Up${keyName}`,
     });
   }
 
   onKeyDown(keyName, e, handle) {
-    console.log('test:onKeyDown', keyName, e, handle);
+    // console.log('test:onKeyDown', keyName, e, handle);
     this.setState({
       output: `Down${keyName}`,
     });
   }
+
+  handleChange = (val) => {
+    const { touchKey } = this.props;
+    touchKey(val);
+  };
 
   render() {
     const {
       haut, gauche, bas, droite,
     } = this.props;
     const { output } = this.state;
+    console.log(output, 'out');
     return (
       <div>
         <div>
@@ -55,8 +61,9 @@ class KeysPlayer extends Component {
             onKeyUp={this.onKeyUp.bind(this)}
           />
         </div>
-        <div>
+        <div onChange={() => this.handleChange(output)}>
           <KeysShow output2={output} />
+         {/* this.handleChange(output) */}
         </div>
       </div>
     );

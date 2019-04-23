@@ -10,16 +10,38 @@ class Player extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      keyResult: '',
+      todoResult: '',
     };
   }
 
+  touchKey = (val) => {
+    this.setState({
+      keyResult: val,
+    });
+  };
+
+  touchTodo = (value) => {
+    this.setState({
+      todoResult: value,
+    });
+  };
+
   render() {
+    const { keyResult, todoResult } = this.state;
+    console.log(this.state, 'TR');
+    console.log(todoResult, 'TDR');
+
     return (
       <div>
         <Container>
+          <h1>
+Hello
+            {' '}
+            {keyResult}
+          </h1>
           <div>
-            <ArrayToDo />
+            <ArrayToDo touchToDo={this.touchToDo} />
           </div>
           <div className="controller">
             <KeysPlayer
@@ -27,6 +49,7 @@ class Player extends Component {
               gauche="left"
               bas="down"
               droite="right"
+              touchKey={this.touchKey}
             />
           </div>
         </Container>
