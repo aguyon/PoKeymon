@@ -73,19 +73,20 @@ class Home extends Component {
           </Nav.Item>
         </Nav>
 
+        <div id="HomeGeneral">
+          <h2>Accueil</h2>
+          <h3>Choose your first Pokemon</h3>
+          <img onClick={() => this.selectionPokemon1()} className="ImageAcceuil1" src={bulbasaur} alt="Bulbizarre" style={{ transform: `scale(${scale})` }} />
+          <img onClick={() => this.selectionPokemon2()} className="ImageAcceuil2" src={charmander} alt="Salameche" style={{ transform: `scale(${scale1})` }} />
+          <img onClick={() => this.selectionPokemon3()} className="ImageAcceuil3" src={squirtle} alt="Carapuce" style={{ transform: `scale(${scale2})` }} />
+          <br />
 
-        <h2>Accueil</h2>
-        <h3>Choose your first Pokemon</h3>
-        <img onClick={() => this.selectionPokemon1()} className="ImageAcceuil1" src={bulbasaur} alt="Bulbizarre" style={{ transform: `scale(${scale})` }} />
-        <img onClick={() => this.selectionPokemon2()} className="ImageAcceuil2" src={charmander} alt="Salameche" style={{ transform: `scale(${scale1})` }} />
-        <img onClick={() => this.selectionPokemon3()} className="ImageAcceuil3" src={squirtle} alt="Carapuce" style={{ transform: `scale(${scale2})` }} />
-        <br />
-
-        <Nav>
-          <div id="testmadiv">
-            <NavLink to="/solo-mode"><button type="button" className="ModeHomePage2">Solo Mode</button></NavLink>
-          </div>
-        </Nav>
+          <Nav>
+            <div id="testmadiv">
+              <NavLink to="/solo-mode"><button type="button" className="ModeHomePage2">Solo Mode</button></NavLink>
+            </div>
+          </Nav>
+        </div>
       </div>
     );
   }
