@@ -3,12 +3,10 @@ import {
   HashRouter as Router, Route, Switch, NavLink,
 } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-
-import Pokemon from '../components/Pokemon';
 import PokemonList from '../components/PokemonList';
+import Pokemon from '../components/Pokemon';
 
 import '../css/Pokedex.css';
-
 
 const Pokedex = () => (
   <div>

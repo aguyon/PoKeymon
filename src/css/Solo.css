@@ -1,0 +1,61 @@
+.arrKeys {
+    width : 120px;
+    margin: 8px;
+}
+
+#active {
+    transform: scale(1.15);
+    transition-duration: .1s;
+}
+
+#inactive {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+.pokeball {
+    position: absolute;
+    width: 180px;
+    left : 430px;
+    bottom: 310px;
+}
+
+.pokeball2 {
+    position: absolute;
+    width: 180px;
+    left : 430px;
+    bottom: 310px;
+    animation: animPokeball .6s infinite; 
+}
+
+.controller {
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    left : 320px;
+}
+
+.toDo {
+    top: 120px;
+    margin: 20px;
+    position: absolute;
+    left: 375px;
+}
+
+.pokemon {
+    position: absolute;
+    right: 300px;
+    bottom: 100px;
+}
+
+@keyframes animTouch {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes animPokeball {
+    0% { transform: scale(1); }
+    33% { transform: scale(1.2) rotateZ(5deg); }
+    66% { transform: scale(1.2) rotateZ(-5deg); }
+    100% { transform: scale(1); }
+}

@@ -8,7 +8,12 @@ class PokemonACapturer extends Component {
   }
 
   render() {
-    return <img height="300px" width="600px" src={bulbasaur} alt="Bulbasar" />;
+    return (
+      <div className="pokemon">
+        <img height="250px" src={bulbasaur} alt="Bulbasar" />
+        <h2>Bulbasaur</h2>
+      </div>
+    );
   }
 }
 
