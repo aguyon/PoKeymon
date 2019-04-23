@@ -74,7 +74,6 @@ class Home extends Component {
         </Nav>
 
         <div id="HomeGeneral">
-          <h2>Accueil</h2>
           <h3>Choose your first Pokemon</h3>
           <img onClick={() => this.selectionPokemon1()} className="ImageAcceuil1" src={bulbasaur} alt="Bulbizarre" style={{ transform: `scale(${scale})` }} />
           <img onClick={() => this.selectionPokemon2()} className="ImageAcceuil2" src={charmander} alt="Salameche" style={{ transform: `scale(${scale1})` }} />
