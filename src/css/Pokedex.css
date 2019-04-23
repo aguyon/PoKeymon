@@ -2,11 +2,25 @@
     margin: 25px !important;
 }
 
+.namePokemon {
+    color: #EDE9ED;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.customCol {
+    max-width: 65% !important;
+    margin: 35px auto;
+}
+
 .card {
     color: white;
     border-radius: 20px !important;
     background-color: #363637 !important;
-    filter: grayscale(1);
+}
+
+.card-img-top {
+    width: auto !important;
 }
 
 .card-header {
@@ -19,4 +33,26 @@
 
 .card-body {
     padding: 0 !important;
+}
+
+.progress {
+    height: 2rem !important;
+}
+
+small {
+    font-size: 170% !important;
+    font-weight: 800 !important;
+}
+
+.poke {
+    filter: grayscale(30%);
+}
+
+.imgPokemon {
+    width: 240px !important;
+}
+
+.btnRedirect {
+    position: absolute;
+    margin-left: -200px;
 }
