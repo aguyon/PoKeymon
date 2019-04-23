@@ -4,8 +4,8 @@ import axios from 'axios';
 import PokemonCard from './PokemonCard';
 
 class PokemonList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       url: 'https://pokeapi.co/api/v2/pokemon',
       pokemon: null,
