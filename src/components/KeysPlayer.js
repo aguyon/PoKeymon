@@ -77,7 +77,7 @@ class KeysPlayer extends Component {
         </div>
         <div className="gameplay">
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
-          <KeysShow output2={output} />
+          <KeysShow output2={output} toDoArrow={toDoArrRandom[i]} />
         </div>
       </div>
     );
