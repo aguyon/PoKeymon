@@ -2,13 +2,21 @@
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow from './KeysShow';
+import ToDoArrows from './ToDoArrows';
 import '../css/Solo.css';
+
+const arr = ['down', 'left', 'right', 'up'];
+const toDoArrRandom = [];
+for (let i = 0; i < 30; i += 1) {
+  toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
+}
 
 class KeysPlayer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       output: ' ',
+      i: 0,
     };
   }
 
@@ -22,7 +30,7 @@ class KeysPlayer extends Component {
   onKeyDown(keyName, e, handle) {
     // console.log('test:onKeyDown', keyName, e, handle);
     this.setState({
-      output: `Down${keyName}`,
+      output: keyName,
     });
   }
 
@@ -31,14 +39,24 @@ class KeysPlayer extends Component {
     touchKey(val);
   };
 
+  keyIsToDo = () => {
+    const { output, i } = this.state;
+    if (output === toDoArrRandom[i]) {
+      this.setState({ i: i + 1 });
+    }
+    return i;
+  }
+
   render() {
     const {
       haut, gauche, bas, droite,
     } = this.props;
-    const { output } = this.state;
-    console.log(output, 'out');
+    this.keyIsToDo();
+    const { output, i } = this.state;
+    console.log(output, 'out', toDoArrRandom);
+    console.log(i);
     return (
-      <div>
+      <div className="gameplay">
         <div>
           <Hotkeys
             keyName={haut}
@@ -61,10 +79,8 @@ class KeysPlayer extends Component {
             onKeyUp={this.onKeyUp.bind(this)}
           />
         </div>
-        <div onChange={() => this.handleChange(output)}>
-          <KeysShow output2={output} />
-         {/* this.handleChange(output) */}
-        </div>
+        <ToDoArrows toDoArrow={toDoArrRandom[i]} />
+        <KeysShow output2={output} />
       </div>
     );
   }

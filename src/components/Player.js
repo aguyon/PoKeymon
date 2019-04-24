@@ -35,11 +35,6 @@ class Player extends Component {
     return (
       <div>
         <Container>
-          <h1>
-Hello
-            {' '}
-            {keyResult}
-          </h1>
           <div>
             <ArrayToDo touchToDo={this.touchToDo} />
           </div>

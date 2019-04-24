@@ -46,13 +46,15 @@ h1 {
     left : 320px;
 }
 
-.toDo {
-    top: 120px;
-    margin: 20px;
-    position: absolute;
-    left: 375px;
+.flecheToDo {
+    width: 150px;
+    margin-bottom: 60%;
 }
-
+.gameplay {
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+}
 .pokemon {
     position: absolute;
     right: 300px;
@@ -71,7 +73,7 @@ h1 {
     100% { transform: scale(1); }
 }
 
-#DownupU {
+#upU {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
@@ -82,7 +84,7 @@ h1 {
     transition-duration: .1s;
 }
 
-#DownleftL {
+#leftL {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
@@ -93,7 +95,7 @@ h1 {
     transition-duration: .1s;
 }
 
-#DowndownD {
+#downD {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
@@ -104,7 +106,7 @@ h1 {
     transition-duration: .1s;
 }
 
-#DownrightR {
+#rightR {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
