@@ -44,7 +44,7 @@ class Solo extends Component {
             <Player />
           </div>
           <div id="tt">
-           <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
+            <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
           </div>
         </div>
       </div>
