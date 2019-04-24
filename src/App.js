@@ -26,7 +26,6 @@ class App extends Component {
               <Route path="/dual-mode" component={Duo} />
               <Route path="/pokedex" component={Pokedex} />
               <Route path="/Login" component={Login} />
-              <Route path="/Login/:user" component={Home} />
             </Switch>
           </BrowserRouter>
         </header>
