@@ -8,10 +8,19 @@ import PokemonACapturer from '../components/PokemonACapturer';
 class Solo extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      index: 0,
+    };
+  }
+
+  pokemonRandom = (indexPlayedPokemon) => {
+    this.setState({
+      index: indexPlayedPokemon,
+    });
   }
 
   render() {
+    const { index } = this.state;
     return (
       <div>
         <div>
@@ -35,7 +44,7 @@ class Solo extends Component {
             <Player />
           </div>
           <div id="tt">
-            <PokemonACapturer />
+           <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
           </div>
         </div>
       </div>
