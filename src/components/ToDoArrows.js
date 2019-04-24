@@ -21,9 +21,6 @@ class ToDoArrows extends Component {
 
   render() {
     const { toDoArrow } = this.props;
-    console.log(toDoArrow, 'arrow');
-    console.log(toDoArrow);
-
     return (
       <div>
         <div className="toDo"><img className="flecheToDo" src={imgs[toDoArrow]} alt="end" /></div>

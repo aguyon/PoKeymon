@@ -20,15 +20,13 @@ class KeysPlayer extends Component {
     };
   }
 
-  onKeyUp(keyName, e, handle) {
-    // console.log('test:onKeyUp', e, handle);
+  onKeyUp(keyName) {
     this.setState({
       output: `Up${keyName}`,
     });
   }
 
-  onKeyDown(keyName, e, handle) {
-    // console.log('test:onKeyDown', keyName, e, handle);
+  onKeyDown(keyName) {
     this.setState({
       output: keyName,
     });
@@ -53,8 +51,6 @@ class KeysPlayer extends Component {
     } = this.props;
     this.keyIsToDo();
     const { output, i } = this.state;
-    console.log(output, 'out', toDoArrRandom);
-    console.log(i);
     return (
       <div className="gameplay">
         <div>
