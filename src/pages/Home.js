@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import bulbasaur from '../media/001-bulbasaur.svg';
-import charmander from '../media/004-charmander.svg';
-import squirtle from '../media/007-squirtle.svg';
+import bulbasaur from '../media/PokemonACapturer/001-bulbasaur.svg';
+import charmander from '../media/PokemonACapturer/004-charmander.svg';
+import squirtle from '../media/PokemonACapturer/007-squirtle.svg';
 import '../css/Home.css';
 
 class Home extends Component {
