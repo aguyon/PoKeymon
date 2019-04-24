@@ -11,13 +11,17 @@ class Solo extends Component {
     this.state = {
       index: 0,
     };
-    setInterval(() => this.setState({
-      index: Math.floor(Math.random() * 3),
-    }), 1000);
+  }
+
+  pokemonRandom = (indexPlayedPokemon) => {
+    this.setState({
+      index: indexPlayedPokemon,
+    });
   }
 
   render() {
     const { index } = this.state;
+    console.log(this.indexPlayedPokemon, 'SOLO')
     return (
       <div>
         <div>
@@ -38,7 +42,7 @@ class Solo extends Component {
         </div>
         <div>
           <Command />
-          <PokemonACapturer index={index} />
+          <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
         </div>
       </div>
     );

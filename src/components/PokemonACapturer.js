@@ -17,6 +17,7 @@ const pokemons = [
     pokemonImage: squirtle,
   },
 ];
+const pokemonRandom = Math.floor(Math.random() * 3);
 
 class PokemonACapturer extends Component {
   constructor() {
@@ -25,15 +26,14 @@ class PokemonACapturer extends Component {
   }
 
   render() {
-    const { index } = this.props;
+    console.log(pokemonRandom);
     return (
       <figure className="pokemon">
-        <img height="250px" src={pokemons[index].pokemonImage} alt={pokemons[index].pokemonName} />
+        <img height="250px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
-          <blockquote>{pokemons[index].pokemonName}</blockquote>
+          <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>
         </figcaption>
       </figure>
-
     );
   }
 }
