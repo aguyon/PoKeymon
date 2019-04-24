@@ -12,12 +12,16 @@ export default class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <h1 style={{ marginTop: '10%', marginBottom: '5%', color: 'black' }}> Joint the game </h1>
-        <h5 style={{ color: 'black' }}> choose an username</h5>
+        <div id="joint-the-game">
+          <h1> Joint the game </h1>
+        </div>
+        <div id="text-user">
+          choose an username
+        </div>
         <form onSubmit={this.handleSubmit}>
-
-          <input type="text" name="user" style={{ marginBottom: '20px', width: '50%', borderRadius: '5px' }} />
-
+          <div id="text-login">
+            <input type="text" name="user" style={{ marginBottom: '20px', width: '50%', borderRadius: '5px' }} />
+          </div>
           <Button
             onClick={this.onNavigateHome}
             className="btn btn-primary"

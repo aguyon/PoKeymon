@@ -9,3 +9,9 @@
     }
   }
 
+#text-user, #joint-the-game, #text-login {
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 5%
+}
