@@ -31,7 +31,7 @@ class AlerteResultat extends React.Component {
             <Modal.Title><p id="victory">Congratulations, Grogory!</p></Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
-Woohoo, Bulbasaur joined your team!
+            Woohoo, Bulbasaur joined your team!
             <img id="imgModal" height="200px" src={bulbasaur} alt="Bulbasar" />
           </Modal.Body>
           <Modal.Footer id="modalFoot">

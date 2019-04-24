@@ -52,7 +52,7 @@ class KeysPlayer extends Component {
     this.keyIsToDo();
     const { output, i } = this.state;
     return (
-      <div className="gameplay">
+      <div>
         <div>
           <Hotkeys
             keyName={haut}
@@ -75,8 +75,10 @@ class KeysPlayer extends Component {
             onKeyUp={this.onKeyUp.bind(this)}
           />
         </div>
-        <ToDoArrows toDoArrow={toDoArrRandom[i]} />
-        <KeysShow output2={output} />
+        <div className="gameplay">
+          <ToDoArrows toDoArrow={toDoArrRandom[i]} />
+          <KeysShow output2={output} />
+        </div>
       </div>
     );
   }
