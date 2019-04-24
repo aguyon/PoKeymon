@@ -30,9 +30,13 @@ class Solo extends Component {
             </Nav.Item>
           </Nav>
         </div>
-        <div>
-          <PokemonACapturer />
-          <Player />
+        <div className="oo">
+          <div id="pp">
+            <Player />
+          </div>
+          <div id="tt">
+            <PokemonACapturer />
+          </div>
         </div>
       </div>
     );

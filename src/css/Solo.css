@@ -39,27 +39,16 @@ h1 {
     animation: animPokeball .6s infinite; 
 }
 
-.controller {
-    position: absolute;
-    bottom: 30px;
-    margin: auto;
-    left : 320px;
-}
-
 .flecheToDo {
     width: 150px;
-    margin-bottom: 60%;
+    position: relative; 
 }
 .gameplay {
     align-content: center;
     display: inline-block;
     text-align: center;
 }
-.pokemon {
-    position: absolute;
-    right: 300px;
-    bottom: 100px;
-}
+
 
 @keyframes animTouch {
     0% { transform: scale(1); }
@@ -115,4 +104,11 @@ h1 {
 #UprightR {
     transform: scale(1);
     transition-duration: .1s;
+}
+
+.oo {
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+    align-items: center;
 }
