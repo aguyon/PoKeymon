@@ -17,16 +17,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <BrowserRouter>
+        <BrowserRouter>
+          <header className="App-header">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/solo-mode" component={Solo} />
               <Route path="/dual-mode" component={Duo} />
               <Route path="/pokedex" component={Pokedex} />
             </Switch>
-          </BrowserRouter>
-        </header>
+          </header>
+        </BrowserRouter>
       </div>
     );
   }

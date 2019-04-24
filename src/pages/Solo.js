@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import '../css/Solo.css';
-import Command from '../components/Command';
+import Player from '../components/Player';
 import PokemonACapturer from '../components/PokemonACapturer';
 
 class Solo extends Component {
@@ -40,8 +40,8 @@ class Solo extends Component {
           </Nav>
         </div>
         <div>
-          <Command />
           <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
+          <Player />
         </div>
       </div>
     );

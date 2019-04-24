@@ -1,0 +1,28 @@
+{
+    "count": 964,
+    "previous": null,
+    "results": [
+        {
+            "name": "bulbasaur",
+            "url": "https://i.postimg.cc/dtfJ9pcj/025-pikachu-3x.png"
+        },
+        {
+            "name": "ivysaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/2/"
+        },
+        {
+            "name": "venusaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/3/"
+        },
+        {
+            "name": "charmander",
+            "url": "https://pokeapi.co/api/v2/pokemon/4/"
+        },
+        {
+            "name": "charmeleon",
+            "url": "https://pokeapi.co/api/v2/pokemon/5/"
+        },
+        {
+            "name": "charizard",
+            "url": "https://pokeapi.co/api/v2/pokemon/6/"
+        },
