@@ -18,8 +18,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <BrowserRouter>
+        <BrowserRouter>
+          <header className="App-header">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/solo-mode" component={Solo} />
@@ -27,8 +27,8 @@ class App extends Component {
               <Route path="/pokedex" component={Pokedex} />
               <Route path="/Login" component={Login} />
             </Switch>
-          </BrowserRouter>
-        </header>
+          </header>
+        </BrowserRouter>
       </div>
     );
   }
