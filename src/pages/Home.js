@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import bulbasaur from '../media/001-bulbasaur.svg';
-import charmander from '../media/004-charmander.svg';
-import squirtle from '../media/007-squirtle.svg';
+import bulbasaur from '../media/PokemonACapturer/001-bulbasaur.svg';
+import charmander from '../media/PokemonACapturer/004-charmander.svg';
+import squirtle from '../media/PokemonACapturer/007-squirtle.svg';
 import '../css/Home.css';
 
 class Home extends Component {
@@ -19,7 +19,7 @@ class Home extends Component {
   }
 
   selectionPokemon1 = () => {
-    let{ scale } = this.state;
+    let { scale } = this.state;
     if (scale === 1.4) {
       scale = 1;
     } else {
@@ -31,7 +31,7 @@ class Home extends Component {
   }
 
   selectionPokemon2 = () => {
-    let{ scale1 } = this.state;
+    let { scale1 } = this.state;
     if (scale1 === 1.4) {
       scale1 = 1;
     } else {
@@ -43,7 +43,7 @@ class Home extends Component {
   }
 
   selectionPokemon3 = () => {
-    let{ scale2 } = this.state;
+    let { scale2 } = this.state;
     if (scale2 === 1.4) {
       scale2 = 1;
     } else {
