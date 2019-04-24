@@ -109,7 +109,7 @@
 .fullPage {
     display: flex;
     justify-content: space-around;
-    height: 90vh;
+    height: 88vh;
     width: 100vw;
     align-items: center;
 }
