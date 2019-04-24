@@ -1,17 +1,15 @@
-h1 {
-    color: black;
-}
-
 .arrKeys {
     width : 120px;
     margin: 0px 8px;
+    height: 120px;
 }
 
 .arrKeysU {
     width : 120px;
-    margin: 0px 8px;
+    margin: -8px 8px;
     position: relative;
     left: 136px;
+    height: 120px;
 }
 
 #active {
@@ -40,12 +38,14 @@ h1 {
 }
 
 .flecheToDo {
-    width: 150px;
-    position: relative; 
+    width: 150px; 
 }
+
+.toDo {
+    margin-bottom: 25vh;
+}
+
 .gameplay {
-    align-content: center;
-    display: inline-block;
     text-align: center;
 }
 
@@ -106,9 +106,10 @@ h1 {
     transition-duration: .1s;
 }
 
-.oo {
+.fullPage {
     display: flex;
     justify-content: space-around;
     height: 90vh;
+    width: 100vw;
     align-items: center;
 }
