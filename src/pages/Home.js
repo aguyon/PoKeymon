@@ -71,6 +71,9 @@ class Home extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/login">log in</NavLink>
+          </Nav.Item>
         </Nav>
 
         <div id="HomeGeneral">
