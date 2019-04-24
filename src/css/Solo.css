@@ -4,6 +4,10 @@
     height: 120px;
 }
 
+.upKey {
+    text-align: center;
+}
+
 .arrKeysU {
     width : 120px;
     margin: -8px 8px;
@@ -66,6 +70,7 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
+    border: solid 20px rgb(89, 201, 67);
 }
 
 #UpleftL {
@@ -77,7 +82,7 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 10px red;
+    border: solid 20px rgb(218, 87, 87);
 }
 
 #UpdownD {
@@ -102,4 +107,10 @@
     height: 88vh;
     width: 100vw;
     align-items: center;
+}
+
+.controller {
+    display: inline;
+    justify-content: center;
+    text-align: center;
 }
