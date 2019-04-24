@@ -21,7 +21,6 @@ class Solo extends Component {
 
   render() {
     const { index } = this.state;
-    console.log(this.indexPlayedPokemon, 'SOLO')
     return (
       <div>
         <div>

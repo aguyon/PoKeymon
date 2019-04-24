@@ -26,7 +26,6 @@ class PokemonACapturer extends Component {
   }
 
   render() {
-    console.log(pokemonRandom);
     return (
       <figure className="pokemon">
         <img height="250px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
