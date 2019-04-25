@@ -18,14 +18,14 @@ class PokemonList extends Component {
     this.setState({ pokemon: res.data.results });
   }
 
-  getMypokemonIndexes = () => {
+  getMypokemonNames = () => {
     const listPokemonsACapturer = localStorage.getItem('listPokemons');
     return listPokemonsACapturer;
   };
 
-  isInMyPokedex = (indexref) => {
-    const myPokemonName = this.getMypokemonIndexes();
-    return indexref === myPokemonName;
+  isInMyPokedex = (indexRef) => {
+    const myPokemonName = this.getMypokemonNames();
+    return indexRef === myPokemonName;
   };
 
   render() {
