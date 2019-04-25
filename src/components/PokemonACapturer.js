@@ -110,12 +110,20 @@ class PokemonACapturer extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    const { getPokemon } = this.props;
+    if (getPokemon) {
+      getPokemon(pokemonRandom, pokemons[pokemonRandom].pokemonName);
+    }
+  }
+
   render() {
+    const { imageOnly } = this.props;
     return (
       <figure className="pokemon">
         <img height="250px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
-          <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>
+          {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>}
         </figcaption>
       </figure>
     );

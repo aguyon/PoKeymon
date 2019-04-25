@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 import '../css/Solo.css';
 import Player from '../components/Player';
 import PokemonACapturer from '../components/PokemonACapturer';
+import AlerteResultat from '../components/AlerteResultat';
+
 
 class Solo extends Component {
   constructor() {
     super();
     this.state = {
-      index: 0,
+      index: '',
+      modal: false,
     };
+    this.toggle = this.toggle.bind(this);
   }
 
-  pokemonRandom = (indexPlayedPokemon) => {
+  pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
     this.setState({
       index: indexPlayedPokemon,
+      name: playedPokemonName,
     });
   }
 
+  toggle() {
+    this.setState(prevState => ({
+      modal: !prevState.modal,
+    }));
+  }
+
   render() {
-    const { index } = this.state;
+    const { index, name, modal } = this.state;
+    const { buttonLabel } = this.props;
     return (
       <div>
         <div>
@@ -41,7 +54,9 @@ class Solo extends Component {
         </div>
         <div className="fullPage">
           <Player />
-          <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
+          <PokemonACapturer getPokemon={this.pokemonRandom} />
+          <Button color="danger" onClick={this.toggle}>{buttonLabel}</Button>
+          <AlerteResultat show={modal} pokemon={index} pokemonName={name} />
         </div>
       </div>
     );
