@@ -2,10 +2,27 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
+import styled from 'styled-components';
 import bulbasaur from '../media/001-bulbasaur.svg';
-import charmander from '../media/004-charmander.svg';
-import squirtle from '../media/007-squirtle.svg';
+import charmander from '../media/PokemonACapturer/004-charmander.svg';
+import squirtle from '../media/PokemonACapturer/007-squirtle.svg';
+import player from '../media/player.png';
+import solomode from '../media/solo-mode.png';
+
 import '../css/Home.css';
+
+const BattleButton = styled.img`
+hoverable: true,
+display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+`;
 
 class Home extends Component {
   constructor() {
@@ -14,12 +31,12 @@ class Home extends Component {
       scale: 1,
       scale1: 1,
       scale2: 1,
-
     };
   }
 
   selectionPokemon1 = () => {
-    let{ scale, scale1, scale2 } = this.state;
+    let { scale, scale1, scale2 } = this.state;
+    localStorage.setItem('listPokemons', 'bulbasaur');
     if (scale === 1.4) {
       scale = 1;
     } else {
@@ -35,7 +52,8 @@ class Home extends Component {
   }
 
   selectionPokemon2 = () => {
-    let{ scale1, scale, scale2 } = this.state;
+    let { scale1, scale, scale2 } = this.state;
+    localStorage.setItem('listPokemons', 'charmander');
     if (scale1 === 1.4) {
       scale1 = 1;
     } else {
@@ -51,7 +69,8 @@ class Home extends Component {
   }
 
   selectionPokemon3 = () => {
-    let{ scale2, scale1, scale } = this.state;
+    let { scale2, scale1, scale } = this.state;
+    localStorage.setItem('listPokemons', 'squirtle');
     if (scale2 === 1.4) {
       scale2 = 1;
     } else {
@@ -65,6 +84,15 @@ class Home extends Component {
       scale,
     });
   }
+
+  // addPokemonInPokedex = () => {
+  //   let pokemonIndex;
+  //   if (!localStorage.getItem('listPokemons')) {
+  //     localStorage.setItem('listPokemons', '');
+  //   }
+  //   const newPokedex = `${localStorage.getItem('listPokemons')} ${pokemonIndex}`;
+  //   localStorage.setItem('listPokemons', newPokedex);
+  // }
 
   render() {
     const { scale, scale1, scale2 } = this.state;
@@ -83,6 +111,11 @@ class Home extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
+          <Nav.Item>
+            <NavLink to="/login">
+              <img className="user-icon" src={player} alt="log-in" />
+            </NavLink>
+          </Nav.Item>
         </Nav>
 
         <div id="HomeGeneral">
@@ -94,11 +127,13 @@ class Home extends Component {
 
           <Nav>
             <div id="testmadiv">
-              <NavLink to="/solo-mode"><button type="button" className="ModeHomePage2">Solo Mode</button></NavLink>
+              <NavLink to="/solo-mode"><BattleButton className="battle" src={solomode} alt="log-in" /></NavLink>
             </div>
           </Nav>
         </div>
       </div>
+
+
     );
   }
 }

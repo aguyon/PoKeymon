@@ -148,8 +148,11 @@
     align-items: center;
 }
 
-.controller {
-    display: inline;
+#timer {
+    display: flex;
     justify-content: center;
+}
+
+#timerArea {
     text-align: center;
 }

@@ -58,6 +58,7 @@ export default class PokemonCard extends Component {
   }
 
   render() {
+    const { style } = this.props;
     const {
       name,
       pokemonIndex,
@@ -67,7 +68,7 @@ export default class PokemonCard extends Component {
     } = this.state;
 
     return (
-      <div className="col-md-3 col-sm-6 mb-5">
+      <div className="col-md-3 col-sm-6 mb-5" style={style}>
         <StyledLink to={`pokemon/${pokemonIndex}`}>
           <Card className="card">
             {/* <h5 className="card-header">{pokemonIndex}</h5> */}
@@ -86,11 +87,11 @@ export default class PokemonCard extends Component {
               onError={() => this.setState({ toManyRequests: true })}
               style={
                 // eslint-disable-next-line no-nested-ternary
-                toManyRequests
-                  ? { display: 'none' }
-                  : imageLoading
-                    ? null
-                    : { display: 'block' }
+                 toManyRequests
+                   ? { display: 'none' }
+                   : imageLoading
+                     ? null
+                     : { display: 'block' }
               }
             />
             {toManyRequests ? (
