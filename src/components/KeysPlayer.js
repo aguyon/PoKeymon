@@ -83,13 +83,13 @@ class KeysPlayer extends Component {
           </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
           <KeysShow output2={output} />
-        </div>
-        <div>
-          <Timer>
-            <Context.Consumer>
-              {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
-            </Context.Consumer>
-          </Timer>
+          <div id="timerArea">
+            <Timer>
+              <Context.Consumer>
+                {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+              </Context.Consumer>
+            </Timer>
+          </div>
         </div>
       </div>
     );
