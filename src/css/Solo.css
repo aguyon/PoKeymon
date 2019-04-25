@@ -2,7 +2,7 @@
     width : 120px;
     margin: 0px 8px;
     height: 120px;
-}
+}   
 
 .upKey {
     text-align: center;
@@ -14,6 +14,15 @@
     position: relative;
     left: 136px;
     height: 120px;
+}
+
+.arrKeysGoodU {
+    width : 120px;
+    margin: -8px 8px;
+    position: relative;
+    left: 136px;
+    height: 120px;
+    border: solid 20px rgb(89, 201, 67);
 }
 
 .pokeball {
@@ -32,7 +41,7 @@
 }
 
 .flecheToDo {
-    width: 150px; 
+    width: 25vh; 
 }
 
 .toDo {
@@ -59,6 +68,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodupU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
 }
 
 #UpupU {
@@ -70,7 +87,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 20px rgb(89, 201, 67);
+    border: solid 60px #FF1A1A;
+}
+
+#goodleftL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
 }
 
 #UpleftL {
@@ -82,7 +106,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 20px rgb(218, 87, 87);
+    border: solid 60px #FF1A1A;
+}
+
+#gooddownD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
 }
 
 #UpdownD {
@@ -94,6 +125,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodrightR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
 }
 
 #UprightR {
