@@ -19,38 +19,50 @@ class Home extends Component {
   }
 
   selectionPokemon1 = () => {
-    let { scale } = this.state;
+    let{ scale, scale1, scale2 } = this.state;
     if (scale === 1.4) {
       scale = 1;
     } else {
       scale = 1.4;
+      scale1 = 1;
+      scale2 = 1;
     }
     this.setState({
       scale,
+      scale1,
+      scale2,
     });
   }
 
   selectionPokemon2 = () => {
-    let { scale1 } = this.state;
+    let{ scale1, scale, scale2 } = this.state;
     if (scale1 === 1.4) {
       scale1 = 1;
     } else {
       scale1 = 1.4;
+      scale = 1;
+      scale2 = 1;
     }
     this.setState({
       scale1,
+      scale,
+      scale2,
     });
   }
 
   selectionPokemon3 = () => {
-    let { scale2 } = this.state;
+    let{ scale2, scale1, scale } = this.state;
     if (scale2 === 1.4) {
       scale2 = 1;
     } else {
       scale2 = 1.4;
+      scale1 = 1;
+      scale = 1;
     }
     this.setState({
       scale2,
+      scale1,
+      scale,
     });
   }
 
