@@ -53,7 +53,6 @@ class Timer extends Component {
   }
 
   render() {
-    console.log(this.props.starter);
     const { width } = this.state;
     const { background } = this.state;
     return (
