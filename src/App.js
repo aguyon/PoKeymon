@@ -3,17 +3,18 @@ import './App.css';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Login from './components/Login';
 import Home from './pages/Home';
 import Solo from './pages/Solo';
 import Duo from './pages/Duo';
 import Pokedex from './pages/Pokedex';
-import Login from './components/Login';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {};
   }
+
 
   render() {
     return (

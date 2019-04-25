@@ -1,9 +1,14 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow from './KeysShow';
 import ToDoArrows from './ToDoArrows';
 import '../css/Solo.css';
+import AlerteResultat from './AlerteResultat';
+import AlerteDefaite from './AlerteDefaite';
+import Context from './Context';
+import Timer from './Timer';
 
 const arr = ['down', 'left', 'right', 'up'];
 const toDoArrRandom = [];
@@ -47,37 +52,44 @@ class KeysPlayer extends Component {
 
   render() {
     const {
-      haut, gauche, bas, droite,
+      haut, gauche, bas, droite, pokemon, pokemonName,
     } = this.props;
     this.keyIsToDo();
     const { output, i } = this.state;
     return (
       <div>
-        <div>
-          <Hotkeys
-            keyName={haut}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={bas}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={droite}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={gauche}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-        </div>
         <div className="gameplay">
+          <div>
+            <Hotkeys
+              keyName={haut}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
+            <Hotkeys
+              keyName={bas}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
+            <Hotkeys
+              keyName={droite}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
+            <Hotkeys
+              keyName={gauche}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
+          </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
           <KeysShow output2={output} />
+          <div id="timerArea">
+            <Timer>
+              <Context.Consumer>
+                {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+              </Context.Consumer>
+            </Timer>
+          </div>
         </div>
       </div>
     );

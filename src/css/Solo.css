@@ -113,3 +113,12 @@
     width: 100vw;
     align-items: center;
 }
+
+#timer {
+    display: flex;
+    justify-content: center;
+}
+
+#timerArea {
+    text-align: center;
+}
