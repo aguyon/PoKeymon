@@ -52,7 +52,7 @@ class KeysPlayer extends Component {
 
   render() {
     const {
-      haut, gauche, bas, droite,
+      haut, gauche, bas, droite, pokemon, pokemonName,
     } = this.props;
     this.keyIsToDo();
     const { output, i } = this.state;
@@ -87,7 +87,7 @@ class KeysPlayer extends Component {
         <div>
           <Timer>
             <Context.Consumer>
-              {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat /> : '')}
+              {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
             </Context.Consumer>
           </Timer>
         </div>

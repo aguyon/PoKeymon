@@ -5,22 +5,24 @@ import '../css/Solo.css';
 import Player from '../components/Player';
 import PokemonACapturer from '../components/PokemonACapturer';
 
+
 class Solo extends Component {
   constructor() {
     super();
     this.state = {
-      index: 0,
+      index: '',
     };
   }
 
-  pokemonRandom = (indexPlayedPokemon) => {
+  pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
     this.setState({
       index: indexPlayedPokemon,
+      name: playedPokemonName,
     });
   }
 
   render() {
-    const { index } = this.state;
+    const { index, name } = this.state;
     return (
       <div>
         <div>
@@ -39,13 +41,9 @@ class Solo extends Component {
             </Nav.Item>
           </Nav>
         </div>
-        <div className="oo">
-          <div id="pp">
-            <Player />
-          </div>
-          <div id="tt">
-            <PokemonACapturer index={index} setPlayedPokemon={this.pokemonRandom} />
-          </div>
+        <div className="fullPage">
+          <Player pokemon={index} pokemonName={name} />
+          <PokemonACapturer getPokemon={this.pokemonRandom} />
         </div>
       </div>
     );

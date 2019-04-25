@@ -3,18 +3,18 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
-import bulbasaur from '../media/001-bulbasaur.svg';
+// import bulbasaur from '../media/001-bulbasaur.svg';
+import PokemonACapturer from './PokemonACapturer';
 
 
 class AlerteResultat extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.handleClose = this.handleClose.bind(this);
-
     this.state = {
       show: true,
     };
+
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleClose() {
@@ -23,6 +23,7 @@ class AlerteResultat extends React.Component {
 
 
   render() {
+    const { pokemonName, pokemon } = this.props;
     const { show } = this.state;
     return (
       <div>
@@ -31,8 +32,12 @@ class AlerteResultat extends React.Component {
             <Modal.Title><p id="victory">Congratulations, Grogory!</p></Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
-            Woohoo, Bulbasaur joined your team!
-            <img id="imgModal" height="200px" src={bulbasaur} alt="Bulbasar" />
+            Woohoo,
+            {' '}
+            {pokemonName}
+            {' '}
+            joined your team!
+            <PokemonACapturer index={pokemon} imageOnly />
           </Modal.Body>
           <Modal.Footer id="modalFoot">
             <Button className="buttonModal" onClick={this.handleClose}>
