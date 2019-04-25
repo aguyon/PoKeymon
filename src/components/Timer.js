@@ -8,7 +8,7 @@ class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: 100,
+      width: 102,
       background: 'green',
     };
     this.style = {
@@ -18,9 +18,15 @@ class Timer extends Component {
 
     setInterval(() => {
       const { width } = this.state;
-      if (width > 100) {
+      const { starter } = this.props;
+      if (starter !== ' ') {
         this.setState({
-          width: 101,
+          width: width - 1,
+          background: 'green',
+        });
+      } else if (width >= 100) {
+        this.setState({
+          width: 100,
           background: 'green',
         });
       } else if (width > 70) {
@@ -47,6 +53,7 @@ class Timer extends Component {
   }
 
   render() {
+    console.log(this.props.starter);
     const { width } = this.state;
     const { background } = this.state;
     return (
