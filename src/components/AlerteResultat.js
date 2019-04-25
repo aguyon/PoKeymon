@@ -11,20 +11,20 @@ class AlerteResultat extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      show: true,
+      closeModal: true,
     };
 
     this.handleClose = this.handleClose.bind(this);
   }
 
   handleClose() {
-    this.setState(prevState => ({ show: !prevState.show }));
+    this.setState({ closeModal: false });
   }
 
 
   render() {
-    console.log(this.handleClose);
     const { show, pokemonName, pokemon } = this.props;
+    const { closeModal } = this.state;
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
@@ -33,12 +33,14 @@ class AlerteResultat extends React.Component {
           </Modal.Header>
           <Modal.Body id="modalBody">
             Woohoo,
+            {' '}
             {pokemonName}
+            {' '}
             joined your team!
             <PokemonACapturer index={pokemon} imageOnly />
           </Modal.Body>
           <Modal.Footer id="modalFoot">
-            <Button className="buttonModal" onClick={this.handleClose}>
+            <Button className="buttonModal" onClick={closeModal}>
               Close
             </Button>
             <Button className="buttonModal" onClick={this.handleClose}>

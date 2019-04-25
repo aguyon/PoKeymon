@@ -33,7 +33,6 @@ class Solo extends Component {
 
   render() {
     const { index, name, modal } = this.state;
-    const { buttonLabel } = this.props;
     return (
       <div>
         <div>
@@ -55,7 +54,7 @@ class Solo extends Component {
         <div className="fullPage">
           <Player />
           <PokemonACapturer getPokemon={this.pokemonRandom} />
-          <Button color="danger" onClick={this.toggle}>{buttonLabel}</Button>
+          <Button color="danger" onClick={this.toggle}>Open Modal</Button>
           <AlerteResultat show={modal} pokemon={index} pokemonName={name} />
         </div>
       </div>
