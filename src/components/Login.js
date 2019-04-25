@@ -13,10 +13,10 @@ export default class Login extends Component {
     return (
       <div className="Login">
         <div id="joint-the-game">
-          <h1> Joint the game </h1>
+          <h1> Join the Game ! </h1>
         </div>
         <div id="text-user">
-          choose an username
+          Choose an Username
         </div>
         <form onSubmit={this.handleSubmit}>
           <div id="text-login">

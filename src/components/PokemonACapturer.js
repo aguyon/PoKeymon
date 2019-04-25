@@ -102,6 +102,9 @@ const pokemons = [
     pokemonImage: raticate,
   },
 ];
+
+// localStorage.setItem('listPokemons', [pokemons]);
+
 const pokemonRandom = Math.floor(Math.random() * pokemons.length);
 
 class PokemonACapturer extends Component {
