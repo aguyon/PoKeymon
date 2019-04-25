@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import Button from 'react-bootstrap/Button';
 import '../css/Solo.css';
 import Player from '../components/Player';
 import PokemonACapturer from '../components/PokemonACapturer';
-import AlerteResultat from '../components/AlerteResultat';
 
 
 class Solo extends Component {
@@ -13,9 +11,7 @@ class Solo extends Component {
     super();
     this.state = {
       index: '',
-      modal: false,
     };
-    this.toggle = this.toggle.bind(this);
   }
 
   pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
@@ -25,14 +21,8 @@ class Solo extends Component {
     });
   }
 
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal,
-    }));
-  }
-
   render() {
-    const { index, name, modal } = this.state;
+    const { index, name } = this.state;
     return (
       <div>
         <div>
@@ -52,10 +42,8 @@ class Solo extends Component {
           </Nav>
         </div>
         <div className="fullPage">
-          <Player />
+          <Player pokemon={index} pokemonName={name} />
           <PokemonACapturer getPokemon={this.pokemonRandom} />
-          <Button color="danger" onClick={this.toggle}>Open Modal</Button>
-          <AlerteResultat show={modal} pokemon={index} pokemonName={name} />
         </div>
       </div>
     );
