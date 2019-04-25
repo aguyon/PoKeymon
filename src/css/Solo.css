@@ -112,3 +112,9 @@ h1 {
     height: 90vh;
     align-items: center;
 }
+
+#timer {
+    display: flex;
+    justify-content: center;
+}
+
