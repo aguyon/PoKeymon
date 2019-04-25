@@ -6,17 +6,17 @@ import '../css/Login.css';
 export default class Login extends Component {
   // eslint-disable-next-line class-methods-use-this
   onNavigateHome() {
-    browserHistory.push('/solo-mode');
+    browserHistory.push('/');
   }
 
   render() {
     return (
       <div className="Login">
         <div id="joint-the-game">
-          <h1> Join the Game ! </h1>
+          <h1> Join the game </h1>
         </div>
         <div id="text-user">
-          Choose an Username
+          Enter your name
         </div>
         <form onSubmit={this.handleSubmit}>
           <div id="text-login">

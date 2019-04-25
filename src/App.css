@@ -2,8 +2,19 @@
   font-family: "Dosis", sans-serif;
 }
 
-html {
-  background-color: #ede9ed;
+html{
+  /* The image used */
+  background-image: url(./media/fond01.png);
+
+  /* Full height */
+  height: 100%;
+  width: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  overflow: hidden; 
 }
 
 h2 {
@@ -15,7 +26,7 @@ h2 {
 }
 
 .App-header {
-  background-color: #363637;
+  background-color: #565e49;
   height: 85px;
   font-size: calc(20px + 2vmin);
 }
@@ -25,11 +36,14 @@ h2 {
 }
 
 .nav-item a {
-  display: block;
-  padding: 1rem 2rem;
+  
+  padding: 1rem 1rem;
   font-weight: 900;
   color: #ede9ed;
-  letter-spacing: 0.2em;
+}
+
+.user-icon {
+  width: 25%; 
 }
 
 .nav-item a:hover {
