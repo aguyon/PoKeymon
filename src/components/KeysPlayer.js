@@ -21,41 +21,56 @@ class KeysPlayer extends Component {
     super(props);
     this.state = {
       output: ' ',
+      outputD: ' ',
       i: 0,
+      touchKeyClass: '',
     };
+  }
+
+  componentWillUpdate() {
+    this.keyIsToDo();
   }
 
   onKeyUp(keyName) {
     this.setState({
       output: `Up${keyName}`,
+      touchKeyClass: '',
     });
   }
 
   onKeyDown(keyName) {
     this.setState({
       output: keyName,
+      outputD: keyName,
     });
   }
 
-  handleChange = (val) => {
-    const { touchKey } = this.props;
-    touchKey(val);
-  };
-
   keyIsToDo = () => {
+    const { outputD, i } = this.state;
+    if (outputD === toDoArrRandom[i]) {
+      this.setState({
+        i: i + 1,
+      });
+    }
+  }
+
+  keyIsGood = () => {
     const { output, i } = this.state;
     if (output === toDoArrRandom[i]) {
-      this.setState({ i: i + 1 });
+      this.setState({
+        touchKeyClass: 'good',
+      });
     }
-    return i;
   }
 
   render() {
+    this.keyIsToDo();
+    this.keyIsGood();
     const {
       haut, gauche, bas, droite, pokemon, pokemonName,
     } = this.props;
-    this.keyIsToDo();
-    const { output, i } = this.state;
+    const { output, i, touchKeyClass } = this.state;
+
     return (
       <div>
         <div className="gameplay">
@@ -82,7 +97,7 @@ class KeysPlayer extends Component {
             />
           </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
-          <KeysShow output2={output} />
+          <KeysShow output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
           <div id="timerArea">
             <Timer>
               <Context.Consumer>
