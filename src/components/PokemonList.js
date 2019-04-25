@@ -18,6 +18,16 @@ class PokemonList extends Component {
     this.setState({ pokemon: res.data.results });
   }
 
+  getMypokemonNames = () => {
+    const listPokemonsACapturer = localStorage.getItem('listPokemons');
+    return listPokemonsACapturer;
+  };
+
+  isInMyPokedex = (indexRef) => {
+    const myPokemonName = this.getMypokemonNames();
+    return indexRef === myPokemonName;
+  };
+
   render() {
     const { pokemon } = this.state;
     return (
@@ -30,6 +40,9 @@ class PokemonList extends Component {
                 key={pokemon.name}
                 name={pokemon.name}
                 url={pokemon.url}
+                style={{
+                  filter: `grayscale(${this.isInMyPokedex(pokemon.name) ? '0' : '1'})`,
+                }}
               />
             ))}
           </div>
