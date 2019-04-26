@@ -16,11 +16,13 @@ html {
 
 .row {
     margin: 25px !important;
+    margin-top: 0px !important;
 }
 .namePokemon {
     color: #EDE9ED;
     text-align: center;
     font-size: 1.5em;
+    margin: 30px;
 }
 .customCol {
     max-width: 65% !important;
@@ -30,6 +32,11 @@ html {
     color: white;
     border-radius: 20px !important;
     background-color: #363637 !important;
+    margin-top: 60px !important;
+    margin-bottom: -85px;
+}
+.customStats {
+    margin: 25px !important;
 }
 .card-img-top {
     width: auto !important;
@@ -42,6 +49,7 @@ html {
 }
 .card-body {
     padding: 0 !important;
+    padding-bottom: 40px !important;
 }
 .progress {
     height: 2rem !important;
@@ -54,7 +62,7 @@ small {
     filter: grayscale(30%);
 }
 .imgPokemon {
-    width: 240px !important;
+    width: 280px !important;
 }
 .btnRedirect {
     position: absolute;
