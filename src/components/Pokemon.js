@@ -140,7 +140,7 @@ export default class Pokemon extends Component {
                     .join(' ')}
                 </h1>
               </div>
-              <div className=" col-md-3">
+              <div className="col-md-3">
                 <img
                   src={imageUrl}
                   className="card-img-top rounded mx-auto mt-2 imgPokemon"
@@ -148,7 +148,7 @@ export default class Pokemon extends Component {
                 />
               </div>
               <div className="col-md-9">
-                <div className="row align-items-center">
+                <div className="row align-items-center customStats">
                   <div className={`col-12 col-md-${statTitleWidth}`}>
                     HP
                   </div>
@@ -170,7 +170,7 @@ export default class Pokemon extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="row align-items-center">
+                <div className="row align-items-center customStats">
                   <div className={`col-12 col-md-${statTitleWidth}`}>
                     Attack
                   </div>
@@ -192,7 +192,7 @@ export default class Pokemon extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="row align-items-center">
+                <div className="row align-items-center customStats">
                   <div className={`col-12 col-md-${statTitleWidth}`}>
                     Defense
                   </div>
@@ -214,7 +214,7 @@ export default class Pokemon extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="row align-items-center">
+                <div className="row align-items-center customStats">
                   <div className={`col-12 col-md-${statTitleWidth}`}>
                     Speed
                   </div>
