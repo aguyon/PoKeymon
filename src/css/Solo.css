@@ -25,7 +25,7 @@
     border: solid 20px rgb(89, 201, 67);
 }
 
-.pokeball {
+/*.pokeball {
     position: absolute;
     width: 180px;
     left : 430px;
@@ -38,14 +38,15 @@
     left : 430px;
     bottom: 310px;
     animation: animPokeball .6s infinite; 
-}
+}*/
 
 .flecheToDo {
-    width: 25vh; 
+    width: 28vh; 
 }
 
 .toDo {
-    margin-bottom: 25vh;
+    margin-bottom: 24vh;
+    padding-top: 20px;
 }
 
 .gameplay {
@@ -148,11 +149,22 @@
     align-items: center;
 }
 
-#timer {
-    display: flex;
+.controller {
     justify-content: center;
+    position: relative;
+    left: 120px;
 }
 
-#timerArea {
+#timer {
+    display: flex;
+    
+}
+
+blockquote {
     text-align: center;
+}
+
+.pokemon2 {
+    position: relative;
+    left: 8vh;
 }

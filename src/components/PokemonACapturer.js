@@ -123,8 +123,8 @@ class PokemonACapturer extends Component {
   render() {
     const { imageOnly } = this.props;
     return (
-      <figure className="pokemon">
-        <img height="250px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
+      <figure className="pokemon2">
+        <img height="300px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
           {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>}
         </figcaption>

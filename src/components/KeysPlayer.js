@@ -27,10 +27,6 @@ class KeysPlayer extends Component {
     };
   }
 
-  componentWillUpdate() {
-    this.keyIsToDo();
-  }
-
   onKeyUp(keyName) {
     this.setState({
       output: `Up${keyName}`,
@@ -99,9 +95,9 @@ class KeysPlayer extends Component {
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
           <KeysShow output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
           <div id="timerArea">
-            <Timer>
+            <Timer starter={output}>
               <Context.Consumer>
-                {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+                {context => ((context.width) === 0 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
               </Context.Consumer>
             </Timer>
           </div>

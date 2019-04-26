@@ -18,7 +18,6 @@ h3{
   padding: 1.3rem;
   width: 20%;
   transition: 1s;
-  
 }
 
 .ImageAcceuil2{
@@ -34,16 +33,14 @@ h3{
 }
 
   .battle {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 15%;
-    margin-bottom: 60%;
-    margin-left: 200%;
+    margin-top: 10%;
+    position: relative;
+    left: 43vw;
   }
 
 #HomeGeneral{
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
