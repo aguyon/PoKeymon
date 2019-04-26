@@ -19,7 +19,7 @@ class Timer extends Component {
     setInterval(() => {
       const { width } = this.state;
       const { starter } = this.props;
-      if (starter !== ' ') {
+      if (starter !== ' ' && width === 100) {
         this.setState({
           width: width - 1,
           background: 'green',
