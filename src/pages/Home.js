@@ -85,15 +85,6 @@ class Home extends Component {
     });
   }
 
-  // addPokemonInPokedex = () => {
-  //   let pokemonIndex;
-  //   if (!localStorage.getItem('listPokemons')) {
-  //     localStorage.setItem('listPokemons', '');
-  //   }
-  //   const newPokedex = `${localStorage.getItem('listPokemons')} ${pokemonIndex}`;
-  //   localStorage.setItem('listPokemons', newPokedex);
-  // }
-
   render() {
     const { scale, scale1, scale2 } = this.state;
     return (
@@ -111,12 +102,10 @@ class Home extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/login">
-              <img className="user-icon" src={player} alt="log-in" />
-            </NavLink>
-          </Nav.Item>
         </Nav>
+        <NavLink to="/login">
+          <img className="user-icon" src={player} alt="log-in" />
+        </NavLink>
 
         <div id="HomeGeneral">
           <h3>Choose your first Pokemon</h3>
