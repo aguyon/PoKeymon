@@ -1,17 +1,17 @@
 html {
     background-color: #EFF4D4;
-    /*background-image: url(../media/fond01Poke.png);
+    background-image: url(../media/fond01Poke.png);
     
-     Full height 
+    /* Full height */
     height: 100%;
-    width: 100%; */
+    width: 100%; 
   
     /* Center and scale the image nicely 
     background-position: absolute;
     bottom: 0;
-    background-attachment: scroll;
+    background-attachment: scroll;*/
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
 }
 
 .row {
