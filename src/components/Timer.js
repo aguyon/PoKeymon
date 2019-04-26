@@ -46,7 +46,7 @@ class Timer extends Component {
         });
       } else if (width === 0) {
         this.setState({
-          width: 101,
+          width: 0,
         });
       }
     }, 200);
@@ -65,7 +65,7 @@ class Timer extends Component {
         <div
           className="jauge"
           style={{
-            ...this.style, background, width: `${width}%`, transitionProperty: 'width', transitionDuration: '100ms',
+            ...this.style, background, width: `${width}%`, transitionProperty: 'width', transitionDuration: '200ms',
           }}
         />
       </div>

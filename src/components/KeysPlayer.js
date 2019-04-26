@@ -97,7 +97,7 @@ class KeysPlayer extends Component {
           <div id="timerArea">
             <Timer starter={output}>
               <Context.Consumer>
-                {context => ((context.width) === 101 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+                {context => ((context.width) === 0 && i < toDoArrRandom.length ? <AlerteDefaite /> : i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
               </Context.Consumer>
             </Timer>
           </div>
