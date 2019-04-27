@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
 // import bulbasaur from '../media/001-bulbasaur.svg';
+// import PokemonCapture from './PokemonCapture';
 import PokemonACapturer from './PokemonACapturer';
 
 
@@ -21,7 +22,6 @@ class AlerteResultat extends React.Component {
     this.setState({ show: false });
   }
 
-
   render() {
     const { pokemonName, pokemon } = this.props;
     const { show } = this.state;
@@ -37,7 +37,9 @@ class AlerteResultat extends React.Component {
             {pokemonName}
             {' '}
             joined your team!
-            <PokemonACapturer index={pokemon} imageOnly />
+            <div className="pokemonCap">
+              <PokemonACapturer index={pokemon} imageOnly />
+            </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
             <Button className="buttonModal" onClick={this.handleClose}>

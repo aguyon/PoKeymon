@@ -25,21 +25,6 @@
     border: solid 20px rgb(89, 201, 67);
 }
 
-/*.pokeball {
-    position: absolute;
-    width: 180px;
-    left : 430px;
-    bottom: 310px;
-}
-
-.pokeball2 {
-    position: absolute;
-    width: 180px;
-    left : 430px;
-    bottom: 310px;
-    animation: animPokeball .6s infinite; 
-}*/
-
 .flecheToDo {
     width: 28vh; 
 }
@@ -53,90 +38,78 @@
     text-align: center;
 }
 
-@keyframes animTouch {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
-
-@keyframes animPokeball {
-    0% { transform: scale(1); }
-    33% { transform: scale(1.2) rotateZ(5deg); }
-    66% { transform: scale(1.2) rotateZ(-5deg); }
-    100% { transform: scale(1); }
-}
-
-#upU {
+#zU {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px #FF1A1A;
 }
 
-#goodupU {
+#goodzU {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px rgb(77, 196, 77);
 }
 
-#UpupU {
+#UpzU {
     transform: scale(1);
     transition-duration: .1s;
 }
 
-#leftL {
+#qL {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px #FF1A1A;
 }
 
-#goodleftL {
+#goodqL {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px rgb(77, 196, 77);
 }
 
-#UpleftL {
+#UpqL {
     transform: scale(1);
     transition-duration: .1s;
 }
 
-#downD {
+#sD {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px #FF1A1A;
 }
 
-#gooddownD {
+#goodsD {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px rgb(77, 196, 77);
 }
 
-#UpdownD {
+#UpsD {
     transform: scale(1);
     transition-duration: .1s;
 }
 
-#rightR {
+#dR {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px #FF1A1A;
 }
 
-#goodrightR {
+#gooddR {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
     border: solid 60px rgb(77, 196, 77);
 }
 
-#UprightR {
+#UpdR {
     transform: scale(1);
     transition-duration: .1s;
 }
@@ -149,13 +122,7 @@
     align-items: center;
 }
 
-.controller {
-    justify-content: center;
-    position: relative;
-    left: 120px;
-}
-
-.controller1 {
+.controller2 {
     justify-content: center;
     position: relative;
 }
@@ -167,19 +134,9 @@
 
 blockquote {
     text-align: center;
-    font-size: 2em;
 }
 
-.pokemonCap {
+.pokemon2 {
     position: relative;
-    left: 13vw;
-}
-
-.pokemonImage {
-    animation: animPokeball 1.4s infinite; 
-}
-
-.pokemonAcap {
-    position: relative;
-    right: 10vw;
+    left: 8vh;
 }
