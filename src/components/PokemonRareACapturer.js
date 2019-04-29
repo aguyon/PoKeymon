@@ -42,7 +42,14 @@ class PokemonRareACapturer extends Component {
       <figure>
         <img className="pokemonImage" height="340px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
-          {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>}
+          {imageOnly ? null : (
+            <blockquote>
+              {pokemons[pokemonRandom].pokemonName.toLowerCase()
+                .split(' ')
+                .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                .join(' ')}
+            </blockquote>
+          )}
         </figcaption>
       </figure>
     );

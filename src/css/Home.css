@@ -1,3 +1,11 @@
+html {
+  background-color: #EFF4D4;
+  background-image: url(../media/fond01Poke.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%; 
+}
 h2 {
   color: #e84334;
   padding: 1.3rem;
@@ -34,17 +42,15 @@ h3{
 .battle:hover {
   transform:translatey(8px);
 }
-
 #HomeGeneral{
   margin: 0 auto;
   width: 100%;
   text-align: center;
   justify-content: center;
 }
-
 #herb {
   position: absolute;
-  bottom:-19vh;
+  bottom: -15vh;
   background-image: url(../media/fond01Poke.png);
   background-repeat: no-repeat;
   z-index: 10;

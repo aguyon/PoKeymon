@@ -31,7 +31,8 @@
 
 .toDo2 {
    margin-bottom: 10vh;
-   margin-block-start: 1vh
+   margin-block-start: 1vh;
+   text-align: center;
 }
 
 .gameplay2 {
