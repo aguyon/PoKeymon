@@ -124,8 +124,13 @@ class PokemonACapturer extends Component {
       <figure className="pokemonAcap">
         <img className="pokemonImage" height="340px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
-          {/* eslint-disable-next-line max-len */}
-          {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName.toUpperCase()}</blockquote>}
+          {imageOnly ? null
+            : (
+              <blockquote>
+                {pokemons[pokemonRandom].pokemonName.toUpperCase()}
+              </blockquote>
+            )
+          }
         </figcaption>
       </figure>
     );

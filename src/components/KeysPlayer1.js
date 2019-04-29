@@ -1,12 +1,8 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow1 from './KeysShow1';
 import ToDoArrows from './ToDoArrows';
 import '../css/Solo.css';
-// import AlerteResultat from './AlerteResultat';
-// import Context from './Context';
 
 const arr = ['down', 'left', 'right', 'up'];
 const toDoArrRandom = [];
@@ -23,6 +19,8 @@ class KeysPlayer1 extends Component {
       i: 0,
       touchKeyClass: '',
     };
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onKeyUp(keyName) {
@@ -71,28 +69,28 @@ class KeysPlayer1 extends Component {
           <div>
             <Hotkeys
               keyName={haut}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={bas}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={droite}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={gauche}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={attack}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
           </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />

@@ -84,15 +84,7 @@ export default class PokemonCard extends Component {
               className="card-img-top rounded mx-auto mt-2"
               src={imageUrl}
               onLoad={() => this.setState({ imageLoading: false })}
-              onError={() => this.setState({ toManyRequests: true })}
-              style={
-                // eslint-disable-next-line no-nested-ternary
-                 toManyRequests
-                   ? { display: 'none' }
-                   : imageLoading
-                     ? null
-                     : { display: 'block' }
-              }
+              style={imageLoading ? null : { display: 'block' }}
             />
             {toManyRequests ? (
               <h6 className="mx-auto">

@@ -20,9 +20,6 @@ class KeysShow1 extends Component {
 
     return (
       <div className="controller1">
-        {/* <Row>
-          <img className="arrKeysU" src={upb} alt="up" id={`${touchKeyClass}${output2}B`} />
-        </Row> */}
         <Row>
           <img className="arrKeysU" src={upb} alt="up" id={`${touchKeyClass}${output2}U`} />
         </Row>

@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow from './KeysShow';
@@ -25,6 +23,8 @@ class KeysPlayer extends Component {
       i: 0,
       touchKeyClass: '',
     };
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onKeyUp(keyName) {
@@ -67,29 +67,30 @@ class KeysPlayer extends Component {
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
+
     return (
       <div>
         <div className="gameplay">
           <div>
             <Hotkeys
               keyName={haut}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={bas}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={droite}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
             <Hotkeys
               keyName={gauche}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
             />
           </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
@@ -97,12 +98,11 @@ class KeysPlayer extends Component {
           <div id="timerArea">
             <Timer starter={output}>
               <Context.Consumer>
-                {context => ((context.width) === 0 && i < toDoArrRandom.length
-                  ? <AlerteDefaite /> : i === toDoArrRandom.length
-                    ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+                {context => ((context.width) === 0 && i < toDoArrRandom.length ? <AlerteDefaite /> : '')}
               </Context.Consumer>
             </Timer>
           </div>
+          {i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : ''}
         </div>
       </div>
     );
