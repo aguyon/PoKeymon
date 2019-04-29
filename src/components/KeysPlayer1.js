@@ -58,8 +58,6 @@ class KeysPlayer1 extends Component {
   }
 
   render() {
-    console.log(toDoArrRandom);
-
     this.keyIsToDo();
     this.keyIsGood();
     const {
