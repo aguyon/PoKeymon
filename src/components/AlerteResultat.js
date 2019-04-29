@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
 // import bulbasaur from '../media/001-bulbasaur.svg';
 // import PokemonCapture from './PokemonCapture';
+import { NavLink } from 'react-router-dom';
 import PokemonACapturer from './PokemonACapturer';
 
 
@@ -16,6 +17,21 @@ class AlerteResultat extends React.Component {
     };
 
     this.handleClose = this.handleClose.bind(this);
+  }
+
+
+  componentDidMount() {
+    const { pokemonName } = this.props;
+    if (!localStorage.getItem('listPokemons')) {
+      localStorage.setItem('listPokemons', '[]');
+    }
+    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+    newListPokemons.push(pokemonName);
+    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+  }
+
+  refreshPage = () => {
+    window.location.reload();
   }
 
   handleClose() {
@@ -42,12 +58,14 @@ class AlerteResultat extends React.Component {
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
-            <Button className="buttonModal" onClick={this.handleClose}>
-              Close
+            <Button className="buttonModal" onClick={this.refreshPage}>
+              Next Game
             </Button>
-            <Button className="buttonModal" onClick={this.handleClose}>
-              Next game
-            </Button>
+            <NavLink to="/pokedex">
+              <Button className="buttonModal" onClick={this.handleClose}>
+                Pokedex
+              </Button>
+            </NavLink>
           </Modal.Footer>
         </Modal>
       </div>
