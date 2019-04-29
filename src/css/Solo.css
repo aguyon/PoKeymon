@@ -80,14 +80,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px #FF1A1A;
+    border: solid 30px #FF1A1A;
 }
 
 #goodupU {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px rgb(77, 196, 77);
+    border: solid 30px rgb(77, 196, 77);
 }
 
 #UpupU {
@@ -99,14 +99,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px #FF1A1A;
+    border: solid 30px #FF1A1A;
 }
 
 #goodleftL {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px rgb(77, 196, 77);
+    border: solid 30px rgb(77, 196, 77);
 }
 
 #UpleftL {
@@ -118,14 +118,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px #FF1A1A;
+    border: solid 30px #FF1A1A;
 }
 
 #gooddownD {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px rgb(77, 196, 77);
+    border: solid 30px rgb(77, 196, 77);
 }
 
 #UpdownD {
@@ -137,14 +137,14 @@
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px #FF1A1A;
+    border: solid 30px #FF1A1A;
 }
 
 #goodrightR {
     transform: scale(1.2);
     transition-duration: .1s;
     border-radius: 60px;
-    border: solid 60px rgb(77, 196, 77);
+    border: solid 30px rgb(77, 196, 77);
 }
 
 #UprightR {

@@ -12,7 +12,7 @@ import Timer from './Timer';
 
 const arr = ['down', 'left', 'right', 'up'];
 const toDoArrRandom = [];
-for (let i = 0; i < 27; i += 1) {
+for (let i = 0; i < 20; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
 }
 

@@ -1,0 +1,222 @@
+.pokeballU {
+    width : 8vw;
+}
+
+.DarrKeys {
+    width : 5vw;
+    margin: 0px 8px;
+    height: 5vw;
+}   
+
+.DupKey {
+    text-align: center;
+}
+
+.DarrKeysU {
+    width : 5vw;
+    margin: -8px 8px;
+    height: 5vw;
+}
+
+.DarrKeysGoodU {
+    width : 5vw;
+    margin: -8px 8px;
+    height: 5vw;
+    border: solid 20px rgb(89, 201, 67);
+}
+
+.flecheToDo {
+    width: 28vh; 
+}
+
+.toDo2 {
+   margin-bottom: 10vh;
+   margin-block-start: 1vh
+}
+
+.gameplay2 {
+    text-align: center;
+    align-content: space-around;
+}
+
+#zU {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodzU {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpzU {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#qL {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodqL {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpqL {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#sD {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodsD {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpsD {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#dR {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#gooddR {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpdR {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+
+blockquote {
+    text-align: center;
+}
+
+.pokemonCap2 {
+    position: relative;
+    left: 3vw;
+}
+
+#oU {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodoU {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpoU {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#kL {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodkL {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpkL {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#lD {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodlD {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UplD {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#mR {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodmR {
+    transform: scale(.6);
+    transition-duration: .08s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpmR {
+    transform: scale(1);
+    transition-duration: .08s;
+}
+
+#pB {
+    transform: scale(1.4);
+    transition-duration: .08s;
+}
+
+#UppB {
+    transform: scale(1);
+    transition-duration: .2s;
+}
+
+#eB {
+    transform: scale(1.4);
+    transition-duration: .08s;
+}
+
+#UpeB {
+    transform: scale(1);
+    transition-duration: .2s;
+}
