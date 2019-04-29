@@ -119,9 +119,9 @@ class PokemonACapturer extends Component {
   }
 
   render() {
-    const { imageOnly } = this.props;
+    const { imageOnly, showPokemon } = this.props;
     return (
-      <figure className="pokemonAcap">
+      <figure className="pokemonAcap" style={{ visibility: showPokemon ? 'visible' : 'hidden' }}>
         <img className="pokemonImage" height="340px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
           {/* eslint-disable-next-line max-len */}
