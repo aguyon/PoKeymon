@@ -11,6 +11,7 @@ class Solo extends Component {
     super();
     this.state = {
       index: '',
+      showPok: true,
     };
   }
 
@@ -21,8 +22,12 @@ class Solo extends Component {
     });
   }
 
+  handlePokHide = () => {
+    this.setState({ showPok: false });
+  }
+
   render() {
-    const { index, name } = this.state;
+    const { index, name, showPok } = this.state;
     return (
       <div>
         <div>
@@ -42,8 +47,8 @@ class Solo extends Component {
           </Nav>
         </div>
         <div className="fullPage">
-          <Player pokemon={index} pokemonName={name} />
-          <PokemonACapturer getPokemon={this.pokemonRandom} />
+          <Player pokemon={index} pokemonName={name} handlePokHide={this.handlePokHide} />
+          <PokemonACapturer getPokemon={this.pokemonRandom} showPokemon={showPok} />
         </div>
       </div>
     );
