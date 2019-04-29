@@ -5,7 +5,7 @@ import Hotkeys from 'react-hot-keys';
 import KeysShow2 from './KeysShow2';
 import ToDoArrows2 from './ToDoArrows2';
 import '../css/Solo2.css';
-// import AlerteResultat from './AlerteResultat';
+import AlerteResultatDual from './AlerteResultatDual';
 // import Context from './Context';
 
 const arr = ['s', 'q', 'd', 'z'];
@@ -61,7 +61,7 @@ class KeysPlayer2 extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, attack,
+      haut, gauche, bas, droite, attack, pokemon, pokemonName,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -97,6 +97,7 @@ class KeysPlayer2 extends Component {
           </div>
           <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
           <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
+          {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} /> : ''}
         </div>
       </div>
     );
