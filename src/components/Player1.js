@@ -2,13 +2,13 @@ import React from 'react';
 import KeysPlayer1 from './KeysPlayer1';
 
 const Player1 = ({
-  pokemonRare, pokemonName, showPok, handlePokHide,
+  pokemonRare, pokemonName, handlePokHideDuo, showPokDuo,
 }) => (
   <KeysPlayer1
     pokemon={pokemonRare}
     pokemonName={pokemonName}
-    handlePokHide={handlePokHide}
-    showPokemon={showPok}
+    handlePokHideDuo={handlePokHideDuo}
+    showPokemonDuo={showPokDuo}
     haut="o"
     gauche="k"
     bas="l"

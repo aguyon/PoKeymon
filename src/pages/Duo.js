@@ -11,8 +11,7 @@ class Duo extends Component {
     super();
     this.state = {
       index: '',
-      name: '',
-      showPok: true,
+      showPokDuo: true,
     };
   }
 
@@ -24,11 +23,11 @@ class Duo extends Component {
   }
 
   handlePokHide = () => {
-    this.setState({ showPok: false });
+    this.setState({ showPokDuo: false });
   }
 
   render() {
-    const { index, name, showPok } = this.state;
+    const { index, name, showPokDuo } = this.state;
     return (
       <div>
         <Nav className="justify-content-center">
@@ -46,9 +45,17 @@ class Duo extends Component {
           </Nav.Item>
         </Nav>
         <div className="fullPage">
-          <Player2 pokemonRare={index} pokemonName={name} handlePokHide={this.handlePokHide} />
-          <PokemonRareACapturer getPokemon={this.pokemonRareRandom} showPokemon={showPok} />
-          <Player1 pokemonRare={index} pokemonName={name} handlePokHide={this.handlePokHide} />
+          <Player2
+            pokemonRare={index}
+            pokemonName={name}
+            handlePokHideDuo={this.handlePokHideDuo}
+          />
+          <PokemonRareACapturer getPokemon={this.pokemonRandom} showPokemonDuo={showPokDuo} />
+          <Player1
+            pokemonRare={index}
+            pokemonName={name}
+            handlePokHideDuo={this.handlePokHideDuo}
+          />
         </div>
       </div>
     );

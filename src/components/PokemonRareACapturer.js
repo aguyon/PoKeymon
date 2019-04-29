@@ -19,9 +19,9 @@ class PokemonRareACapturer extends Component {
   }
 
   render() {
-    const { imageOnly, showPokemon } = this.props;
+    const { imageOnly, showPokemonDuo } = this.props;
     return (
-      <figure style={{ visibility: showPokemon ? 'visible' : 'hidden' }}>
+      <figure style={{ visibility: showPokemonDuo ? 'visible' : 'hidden' }}>
         <img className="pokemonImage" height="340px" src={pokemonsImg(pokemonsMulti[pokemonRandom])} alt={pokemonName} />
         <figcaption>
           {imageOnly ? null : <blockquote>{pokemonName.toUpperCase()}</blockquote>}
