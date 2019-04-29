@@ -5,7 +5,7 @@ import downb from '../media/downb.png';
 import leftb from '../media/leftb.png';
 import rightb from '../media/rightb.png';
 
-class KeysShow extends Component {
+class KeysShow2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class KeysShow extends Component {
       output2, touchKeyClass,
     } = this.props;
     return (
-      <div className="controller">
+      <div className="controller2">
         <Row>
           <img className="arrKeysU" src={upb} alt="up" id={`${touchKeyClass}${output2}U`} />
         </Row>
@@ -32,4 +32,4 @@ class KeysShow extends Component {
   }
 }
 
-export default KeysShow;
+export default KeysShow2;

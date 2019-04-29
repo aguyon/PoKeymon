@@ -2,10 +2,27 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import bulbasaur from '../media/PokemonACapturer/001-bulbasaur.svg';
+import styled from 'styled-components';
+import bulbasaur from '../media/001-bulbasaur.svg';
 import charmander from '../media/PokemonACapturer/004-charmander.svg';
 import squirtle from '../media/PokemonACapturer/007-squirtle.svg';
+import player from '../media/player.png';
+import solomode from '../media/solo-mode.png';
+
 import '../css/Home.css';
+
+const BattleButton = styled.img`
+hoverable: true,
+display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+`;
 
 class Home extends Component {
   constructor() {
@@ -68,15 +85,6 @@ class Home extends Component {
     });
   }
 
-  // addPokemonInPokedex = () => {
-  //   let pokemonIndex;
-  //   if (!localStorage.getItem('listPokemons')) {
-  //     localStorage.setItem('listPokemons', '');
-  //   }
-  //   const newPokedex = `${localStorage.getItem('listPokemons')} ${pokemonIndex}`;
-  //   localStorage.setItem('listPokemons', newPokedex);
-  // }
-
   render() {
     const { scale, scale1, scale2 } = this.state;
     return (
@@ -95,7 +103,10 @@ class Home extends Component {
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
         </Nav>
-
+        <NavLink to="/login">
+          <img className="user-icon" src={player} alt="log-in" />
+        </NavLink>
+        <div id="herb" />
         <div id="HomeGeneral">
           <h3>Choose your first Pokemon</h3>
           <img onClick={() => this.selectionPokemon1()} className="ImageAcceuil1" src={bulbasaur} alt="Bulbizarre" style={{ transform: `scale(${scale})` }} />
@@ -105,11 +116,13 @@ class Home extends Component {
 
           <Nav>
             <div id="testmadiv">
-              <NavLink to="/solo-mode"><button type="button" className="ModeHomePage2">Solo Mode</button></NavLink>
+              <NavLink to="/solo-mode"><BattleButton className="battle" src={solomode} alt="log-in" /></NavLink>
             </div>
           </Nav>
         </div>
       </div>
+
+
     );
   }
 }

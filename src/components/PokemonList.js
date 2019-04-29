@@ -32,23 +32,25 @@ class PokemonList extends Component {
     const { pokemon } = this.state;
     return (
       <React.Fragment>
-        {pokemon ? (
-          <div className="row">
-            {/* eslint-disable-next-line no-shadow */}
-            {pokemon.map(pokemon => (
-              <PokemonCard
-                key={pokemon.name}
-                name={pokemon.name}
-                url={pokemon.url}
-                style={{
-                  filter: `grayscale(${this.isInMyPokedex(pokemon.name) ? '0' : '1'})`,
-                }}
-              />
-            ))}
-          </div>
-        ) : (
-          <h1>Loading Pokemon</h1>
-        )}
+        <div className="bg">
+          {pokemon ? (
+            <div className="row rowCustom">
+              {/* eslint-disable-next-line no-shadow */}
+              {pokemon.map(pokemon => (
+                <PokemonCard
+                  key={pokemon.name}
+                  name={pokemon.name}
+                  url={pokemon.url}
+                  style={{
+                    filter: `grayscale(${this.isInMyPokedex(pokemon.name) ? '0' : '1'})`,
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <h1>Loading Pokemon</h1>
+          )}
+        </div>
       </React.Fragment>
     );
   }

@@ -107,7 +107,7 @@ const pokemons = [
 
 const pokemonRandom = Math.floor(Math.random() * pokemons.length);
 
-class PokemonACapturer extends Component {
+class PokemonCapture extends Component {
   constructor() {
     super();
     this.state = {};
@@ -123,8 +123,8 @@ class PokemonACapturer extends Component {
   render() {
     const { imageOnly } = this.props;
     return (
-      <figure className="pokemonAcap">
-        <img className="pokemonImage" height="340px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
+      <figure className="pokemonCap">
+        <img height="300px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
           {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>}
         </figcaption>
@@ -133,4 +133,4 @@ class PokemonACapturer extends Component {
   }
 }
 
-export default PokemonACapturer;
+export default PokemonCapture;
