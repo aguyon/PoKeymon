@@ -20,6 +20,16 @@ class AlerteResultat extends React.Component {
   }
 
 
+  componentDidMount() {
+    const { pokemonName } = this.props;
+    if (!localStorage.getItem('listPokemons')) {
+      localStorage.setItem('listPokemons', '[]');
+    }
+    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+    newListPokemons.push(pokemonName);
+    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+  }
+
   refreshPage = () => {
     window.location.reload();
   }
