@@ -11,7 +11,7 @@ import blastoise from '../media/PokemonACapturer/009-blastoise.svg';
 import caterpie from '../media/PokemonACapturer/010-caterpie.svg';
 import metapod from '../media/PokemonACapturer/011-metapod.svg';
 import butterfree from '../media/PokemonACapturer/012-butterfree.svg';
-import weedleShiny from '../media/PokemonACapturer/013-weedle-shiny.svg';
+import weedle from '../media/PokemonACapturer/013-weedle.svg';
 import kakuna from '../media/PokemonACapturer/014-kakuna.svg';
 import beedrill from '../media/PokemonACapturer/015-beedrill.svg';
 import pidgey from '../media/PokemonACapturer/016-pidgey.svg';
@@ -70,8 +70,8 @@ const pokemons = [
     pokemonImage: butterfree,
   },
   {
-    pokemonName: 'weedleShiny',
-    pokemonImage: weedleShiny,
+    pokemonName: 'weedle',
+    pokemonImage: weedle,
   },
   {
     pokemonName: 'kakuna',
