@@ -10,7 +10,7 @@ import AlerteResultatDual from './AlerteResultatDual';
 
 const arr = ['s', 'q', 'd', 'z'];
 const toDoArrRandom = [];
-for (let i = 0; i < 30; i += 1) {
+for (let i = 0; i < 20; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
 }
 

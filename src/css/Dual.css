@@ -207,6 +207,16 @@ blockquote {
 }
 
 #UppB {
-    transform: scale(1.2);
+    transform: scale(1);
+    transition-duration: .2s;
+}
+
+#eB {
+    transform: scale(1.4);
     transition-duration: .08s;
+}
+
+#UpeB {
+    transform: scale(1);
+    transition-duration: .2s;
 }
