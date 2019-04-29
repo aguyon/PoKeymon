@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
 import { NavLink } from 'react-router-dom';
-// import bulbasaur from '../media/001-bulbasaur.svg';
-// import PokemonCapture from './PokemonCapture';
 import PokemonRareACapturer from './PokemonRareACapturer';
 
 
@@ -18,6 +16,16 @@ class AlerteResultat extends React.Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
+  componentDidMount() {
+    const { pokemonName } = this.props;
+    if (!localStorage.getItem('listPokemons')) {
+      localStorage.setItem('listPokemons', '[]');
+    }
+    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+    newListPokemons.push(pokemonName);
+    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+  }
+
   refreshPage = () => {
     window.location.reload();
   }
@@ -29,6 +37,8 @@ class AlerteResultat extends React.Component {
   render() {
     const { pokemonName, pokemon } = this.props;
     const { show } = this.state;
+    console.log(pokemonName);
+
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>

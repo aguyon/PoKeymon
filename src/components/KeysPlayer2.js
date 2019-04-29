@@ -64,37 +64,36 @@ class KeysPlayer2 extends Component {
       haut, gauche, bas, droite, attack, pokemon, pokemonName,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
+    console.log(pokemonName);
 
     return (
-      <div>
-        <div className="gameplay">
-          <div>
-            <Hotkeys
-              keyName={haut}
-              onKeyDown={this.onKeyDown}
-              onKeyUp={this.onKeyUp}
-            />
-            <Hotkeys
-              keyName={bas}
-              onKeyDown={this.onKeyDown}
-              onKeyUp={this.onKeyUp}
-            />
-            <Hotkeys
-              keyName={droite}
-              onKeyDown={this.onKeyDown}
-              onKeyUp={this.onKeyUp}
-            />
-            <Hotkeys
-              keyName={gauche}
-              onKeyDown={this.onKeyDown}
-              onKeyUp={this.onKeyUp}
-            />
-            <Hotkeys
-              keyName={attack}
-              onKeyDown={this.onKeyDown}
-              onKeyUp={this.onKeyUp}
-            />
-          </div>
+      <div className="gameplay">
+        <div>
+          <Hotkeys
+            keyName={haut}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={bas}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={droite}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={gauche}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={attack}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
         </div>
         <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
         <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
