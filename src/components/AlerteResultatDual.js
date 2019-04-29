@@ -1,12 +1,11 @@
-
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
+import { NavLink } from 'react-router-dom';
 // import bulbasaur from '../media/001-bulbasaur.svg';
 // import PokemonCapture from './PokemonCapture';
-import { NavLink } from 'react-router-dom';
-import PokemonACapturer from './PokemonACapturer';
+import PokemonRareACapturer from './PokemonRareACapturer';
 
 
 class AlerteResultat extends React.Component {
@@ -17,17 +16,6 @@ class AlerteResultat extends React.Component {
     };
 
     this.handleClose = this.handleClose.bind(this);
-  }
-
-
-  componentDidMount() {
-    const { pokemonName } = this.props;
-    if (!localStorage.getItem('listPokemons')) {
-      localStorage.setItem('listPokemons', '[]');
-    }
-    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
-    newListPokemons.push(pokemonName);
-    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
   }
 
   refreshPage = () => {
@@ -53,8 +41,8 @@ class AlerteResultat extends React.Component {
             {pokemonName}
             {' '}
             joined your team!
-            <div className="pokemonCap">
-              <PokemonACapturer index={pokemon} showPokemon imageOnly />
+            <div className="pokemonCap2">
+              <PokemonRareACapturer index={pokemon} imageOnly />
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">

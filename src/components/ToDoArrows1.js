@@ -6,13 +6,13 @@ import left from '../media/left.png';
 import right from '../media/right.png';
 
 const imgs = {
-  z: up,
-  s: down,
-  q: left,
-  d: right,
+  o: up,
+  l: down,
+  k: left,
+  m: right,
 };
 
-class ToDoArrows2 extends Component {
+class ToDoArrows1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,4 +29,4 @@ class ToDoArrows2 extends Component {
   }
 }
 
-export default ToDoArrows2;
+export default ToDoArrows1;
