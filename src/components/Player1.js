@@ -1,14 +1,15 @@
 import React from 'react';
 import KeysPlayer1 from './KeysPlayer1';
 
-const Player1 = ({ pokemon, pokemonName }) => (
+const Player1 = ({ pokemonRare, pokemonName }) => (
   <KeysPlayer1
-    pokemon={pokemon}
+    pokemon={pokemonRare}
     pokemonName={pokemonName}
     haut="up"
     gauche="left"
     bas="down"
     droite="right"
+    attack="backspace"
   />
 );
 

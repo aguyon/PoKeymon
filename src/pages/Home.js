@@ -106,7 +106,7 @@ class Home extends Component {
         <NavLink to="/login">
           <img className="user-icon" src={player} alt="log-in" />
         </NavLink>
-
+        <div id="herb" />
         <div id="HomeGeneral">
           <h3>Choose your first Pokemon</h3>
           <img onClick={() => this.selectionPokemon1()} className="ImageAcceuil1" src={bulbasaur} alt="Bulbizarre" style={{ transform: `scale(${scale})` }} />

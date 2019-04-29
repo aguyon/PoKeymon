@@ -65,6 +65,17 @@
     100% { transform: scale(1); }
 }
 
+#backspaceB {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UpbackspaceB {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
 #upU {
     transform: scale(1.2);
     transition-duration: .1s;

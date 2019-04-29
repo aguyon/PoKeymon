@@ -44,3 +44,16 @@ h3{
   text-align: center;
   justify-content: center;
 }
+
+#herb {
+  position: absolute;
+  bottom:-19vh;
+  background-image: url(../media/fond01Poke.png);
+  background-repeat: no-repeat;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  transform: scaleX(-1) scaleY(.7);
+  opacity: .6;
+  pointer-events:none;
+}

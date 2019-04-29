@@ -61,7 +61,7 @@ class KeysPlayer2 extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite,
+      haut, gauche, bas, droite, attack,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -86,6 +86,11 @@ class KeysPlayer2 extends Component {
             />
             <Hotkeys
               keyName={gauche}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
+            <Hotkeys
+              keyName={attack}
               onKeyDown={this.onKeyDown.bind(this)}
               onKeyUp={this.onKeyUp.bind(this)}
             />

@@ -9,6 +9,7 @@ const Player2 = ({ pokemon, pokemonName }) => (
     gauche="q"
     bas="s"
     droite="d"
+    attack="e"
   />
 );
 
