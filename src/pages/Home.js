@@ -36,7 +36,7 @@ class Home extends Component {
 
   selectionPokemon1 = () => {
     let { scale, scale1, scale2 } = this.state;
-    localStorage.setItem('listPokemons', 'bulbasaur');
+    localStorage.setItem('listPokemons', '["bulbasaur"]');
     if (scale === 1.4) {
       scale = 1;
     } else {
@@ -53,7 +53,7 @@ class Home extends Component {
 
   selectionPokemon2 = () => {
     let { scale1, scale, scale2 } = this.state;
-    localStorage.setItem('listPokemons', 'charmander');
+    localStorage.setItem('listPokemons', '["charmander"]');
     if (scale1 === 1.4) {
       scale1 = 1;
     } else {
@@ -70,7 +70,7 @@ class Home extends Component {
 
   selectionPokemon3 = () => {
     let { scale2, scale1, scale } = this.state;
-    localStorage.setItem('listPokemons', 'squirtle');
+    localStorage.setItem('listPokemons', '["squirtle"]');
     if (scale2 === 1.4) {
       scale2 = 1;
     } else {
