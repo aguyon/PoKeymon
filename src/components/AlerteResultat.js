@@ -1,10 +1,7 @@
-
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
-// import bulbasaur from '../media/001-bulbasaur.svg';
-// import PokemonCapture from './PokemonCapture';
 import { NavLink } from 'react-router-dom';
 import PokemonACapturer from './PokemonACapturer';
 
