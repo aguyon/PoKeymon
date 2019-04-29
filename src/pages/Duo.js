@@ -46,9 +46,17 @@ class Duo extends Component {
           </Nav.Item>
         </Nav>
         <div className="fullPage">
-          <Player2 pokemonRare={index} pokemonName={name} handlePokHideDuo={this.handlePokHideDuo} />
+          <Player2
+            pokemonRare={index}
+            pokemonName={name}
+            handlePokHideDuo={this.handlePokHideDuo}
+          />
           <PokemonRareACapturer getPokemon={this.pokemonRandom} showPokemonDuo={showPokDuo} />
-          <Player1 pokemonRare={index} pokemonName={name} handlePokHideDuo={this.handlePokHideDuo} />
+          <Player1
+            pokemonRare={index}
+            pokemonName={name}
+            handlePokHideDuo={this.handlePokHideDuo}
+          />
         </div>
       </div>
     );
