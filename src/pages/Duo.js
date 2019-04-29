@@ -11,10 +11,19 @@ class Duo extends Component {
   constructor() {
     super();
     this.state = {
+      index: '',
     };
   }
 
+  pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
+    this.setState({
+      index: indexPlayedPokemon,
+      name: playedPokemonName,
+    });
+  }
+
   render() {
+    const { index, name } = this.state;
     return (
       <div>
         <Nav className="justify-content-center">
@@ -32,9 +41,9 @@ class Duo extends Component {
           </Nav.Item>
         </Nav>
         <div className="fullPage">
-          <Player2 />
-          <PokemonRareACapturer getPokemon={this.pokemonRandom} />
-          <Player1 />
+          <Player2 pokemonRare={index} pokemonName={name} />
+          <PokemonRareACapturer getPokemon={this.pokemonRareRandom} />
+          <Player1 pokemonRare={index} pokemonName={name} />
         </div>
       </div>
     );
