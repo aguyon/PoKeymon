@@ -23,9 +23,9 @@ class PokemonList extends Component {
     return listPokemonsACapturer;
   };
 
-  isInMyPokedex = (indexRef) => {
-    const myPokemonName = this.getMypokemonNames();
-    return indexRef === myPokemonName;
+  isInMyPokedex = (nameRef) => {
+    const myPokemonsName = this.getMypokemonNames();
+    return myPokemonsName.includes(nameRef);
   };
 
   render() {
