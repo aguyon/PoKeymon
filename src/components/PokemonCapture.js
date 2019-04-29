@@ -22,90 +22,92 @@ import raticate from '../media/PokemonACapturer/020-raticate.svg';
 
 const pokemons = [
   {
-    pokemonName: 'bulbasaur',
+    pokemonName: 'Bulbasaur',
     pokemonImage: bulbasaur,
   },
   {
-    pokemonName: 'ivysaur',
+    pokemonName: 'Ivysaur',
     pokemonImage: ivysaur,
   },
   {
-    pokemonName: 'venusaur',
+    pokemonName: 'Venusaur',
     pokemonImage: venusaur,
   },
   {
-    pokemonName: 'charmander',
+    pokemonName: 'Charmander',
     pokemonImage: charmander,
   },
   {
-    pokemonName: 'charmeleon',
+    pokemonName: 'Charmeleon',
     pokemonImage: charmeleon,
   },
   {
-    pokemonName: 'charizard',
+    pokemonName: 'Charizard',
     pokemonImage: charizard,
   },
   {
-    pokemonName: 'squirtle',
+    pokemonName: 'Squirtle',
     pokemonImage: squirtle,
   },
   {
-    pokemonName: 'wartortle',
+    pokemonName: 'Wartortle',
     pokemonImage: wartortle,
   },
   {
-    pokemonName: 'blastoise',
+    pokemonName: 'Blastoise',
     pokemonImage: blastoise,
   },
   {
-    pokemonName: 'caterpie',
+    pokemonName: 'Caterpie',
     pokemonImage: caterpie,
   },
   {
-    pokemonName: 'metapod',
+    pokemonName: 'Metapod',
     pokemonImage: metapod,
   },
   {
-    pokemonName: 'butterfree',
+    pokemonName: 'Butterfree',
     pokemonImage: butterfree,
   },
   {
-    pokemonName: 'weedleShiny',
+    pokemonName: 'WeedleShiny',
     pokemonImage: weedleShiny,
   },
   {
-    pokemonName: 'kakuna',
+    pokemonName: 'Kakuna',
     pokemonImage: kakuna,
   },
   {
-    pokemonName: 'beedrill',
+    pokemonName: 'Beedrill',
     pokemonImage: beedrill,
   },
   {
-    pokemonName: 'pidgey',
+    pokemonName: 'Pidgey',
     pokemonImage: pidgey,
   },
   {
-    pokemonName: 'pidgeotto',
+    pokemonName: 'Pidgeotto',
     pokemonImage: pidgeotto,
   },
   {
-    pokemonName: 'pidgeot',
+    pokemonName: 'Pidgeot',
     pokemonImage: pidgeot,
   },
   {
-    pokemonName: 'rattata',
+    pokemonName: 'Rattata',
     pokemonImage: rattata,
   },
   {
-    pokemonName: 'raticate',
+    pokemonName: 'Raticate',
     pokemonImage: raticate,
   },
 ];
 
+// localStorage.setItem('listPokemons', [pokemons]);
+
 const pokemonRandom = Math.floor(Math.random() * pokemons.length);
 
-class PokemonACapturer extends Component {
+class PokemonCapture extends Component {
   constructor() {
     super();
     this.state = {};
@@ -121,15 +123,14 @@ class PokemonACapturer extends Component {
   render() {
     const { imageOnly } = this.props;
     return (
-      <figure className="pokemonAcap">
-        <img className="pokemonImage" height="340px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
+      <figure className="pokemonCap">
+        <img height="300px" src={pokemons[pokemonRandom].pokemonImage} alt={pokemons[pokemonRandom].pokemonName} />
         <figcaption>
-          {/* eslint-disable-next-line max-len */}
-          {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName.toUpperCase()}</blockquote>}
+          {imageOnly ? null : <blockquote>{pokemons[pokemonRandom].pokemonName}</blockquote>}
         </figcaption>
       </figure>
     );
   }
 }
 
-export default PokemonACapturer;
+export default PokemonCapture;

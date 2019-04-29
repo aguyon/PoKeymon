@@ -2,13 +2,11 @@
 /* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
-import KeysShow from './KeysShow';
+import KeysShow1 from './KeysShow1';
 import ToDoArrows from './ToDoArrows';
 import '../css/Solo.css';
-import AlerteResultat from './AlerteResultat';
-import AlerteDefaite from './AlerteDefaite';
-import Context from './Context';
-import Timer from './Timer';
+// import AlerteResultat from './AlerteResultat';
+// import Context from './Context';
 
 const arr = ['down', 'left', 'right', 'up'];
 const toDoArrRandom = [];
@@ -16,7 +14,7 @@ for (let i = 0; i < 28; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
 }
 
-class KeysPlayer extends Component {
+class KeysPlayer1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,7 +61,7 @@ class KeysPlayer extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, pokemon, pokemonName,
+      haut, gauche, bas, droite, attack,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -91,22 +89,18 @@ class KeysPlayer extends Component {
               onKeyDown={this.onKeyDown.bind(this)}
               onKeyUp={this.onKeyUp.bind(this)}
             />
+            <Hotkeys
+              keyName={attack}
+              onKeyDown={this.onKeyDown.bind(this)}
+              onKeyUp={this.onKeyUp.bind(this)}
+            />
           </div>
           <ToDoArrows toDoArrow={toDoArrRandom[i]} />
-          <KeysShow output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
-          <div id="timerArea">
-            <Timer starter={output}>
-              <Context.Consumer>
-                {context => ((context.width) === 0 && i < toDoArrRandom.length
-                  ? <AlerteDefaite /> : i === toDoArrRandom.length
-                    ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
-              </Context.Consumer>
-            </Timer>
-          </div>
+          <KeysShow1 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
         </div>
       </div>
     );
   }
 }
 
-export default KeysPlayer;
+export default KeysPlayer1;
