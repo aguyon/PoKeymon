@@ -46,6 +46,9 @@ class KeysPlayer extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHide } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHide();
       });
     }
   }
@@ -63,7 +66,7 @@ class KeysPlayer extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, pokemon, pokemonName,
+      haut, gauche, bas, droite, pokemon, pokemonName, showPokemon,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -99,7 +102,7 @@ class KeysPlayer extends Component {
               <Context.Consumer>
                 {context => ((context.width) === 0 && i < toDoArrRandom.length
                   ? <AlerteDefaite /> : i === toDoArrRandom.length
-                    ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : '')}
+                    ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} showPokemon={showPokemon} /> : '')}
               </Context.Consumer>
             </Timer>
           </div>
