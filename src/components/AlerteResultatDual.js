@@ -37,7 +37,6 @@ class AlerteResultat extends React.Component {
   render() {
     const { pokemonName, pokemon } = this.props;
     const { show } = this.state;
-    console.log(pokemonName);
 
     return (
       <div>
@@ -52,7 +51,7 @@ class AlerteResultat extends React.Component {
             {' '}
             joined your team!
             <div className="pokemonCap2">
-              <PokemonRareACapturer index={pokemon} imageOnly />
+              <PokemonRareACapturer index={pokemon} imageOnly showPokemon />
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">

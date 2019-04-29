@@ -44,6 +44,9 @@ class KeysPlayer1 extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHide } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHide();
       });
     }
   }

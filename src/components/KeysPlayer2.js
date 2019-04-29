@@ -44,6 +44,9 @@ class KeysPlayer2 extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHide } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHide();
       });
     }
   }
@@ -64,7 +67,6 @@ class KeysPlayer2 extends Component {
       haut, gauche, bas, droite, attack, pokemon, pokemonName,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
-    console.log(pokemonName);
 
     return (
       <div className="gameplay">
