@@ -10,7 +10,7 @@ import Timer from './Timer';
 
 const arr = ['down', 'left', 'right', 'up'];
 const toDoArrRandom = [];
-for (let i = 0; i < 28; i += 1) {
+for (let i = 0; i < 20; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
 }
 
@@ -46,6 +46,9 @@ class KeysPlayer extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHide } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHide();
       });
     }
   }

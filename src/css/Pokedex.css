@@ -48,11 +48,14 @@ html {
     font-size: 0.8em;
 }
 .card-body {
-    padding: 0 !important;
-    padding-bottom: 40px !important;
+    padding: 25px !important;
+    padding-bottom: 25px !important;
 }
 .progress {
     height: 2rem !important;
+}
+.imgPokedex {
+    margin-top: 1.5rem !important;
 }
 small {
     font-size: 170% !important;
@@ -63,6 +66,7 @@ small {
 }
 .imgPokemon {
     width: 280px !important;
+    margin-left: -42px !important;
 }
 .btnRedirect {
     position: absolute;

@@ -4,6 +4,7 @@ import upb from '../media/upb.png';
 import downb from '../media/downb.png';
 import leftb from '../media/leftb.png';
 import rightb from '../media/rightb.png';
+import pokeball from '../media/pokeball.svg';
 
 class KeysShow2 extends Component {
   constructor(props) {
@@ -19,13 +20,16 @@ class KeysShow2 extends Component {
     } = this.props;
     return (
       <div className="controller2">
+        <div className="row justify-content-center">
+          <img className="pokeballU" src={pokeball} alt="up" id={`${touchKeyClass}${output2}B`} />
+        </div>
+        <div className="row justify-content-center">
+          <img className="DarrKeysU" src={upb} alt="up" id={`${touchKeyClass}${output2}U`} />
+        </div>
         <Row>
-          <img className="arrKeysU" src={upb} alt="up" id={`${touchKeyClass}${output2}U`} />
-        </Row>
-        <Row>
-          <img className="arrKeys" src={leftb} alt="left" id={`${touchKeyClass}${output2}L`} />
-          <img className="arrKeys" src={downb} alt="down" id={`${touchKeyClass}${output2}D`} />
-          <img className="arrKeys" src={rightb} alt="right" id={`${touchKeyClass}${output2}R`} />
+          <img className="DarrKeys" src={leftb} alt="left" id={`${touchKeyClass}${output2}L`} />
+          <img className="DarrKeys" src={downb} alt="down" id={`${touchKeyClass}${output2}D`} />
+          <img className="DarrKeys" src={rightb} alt="right" id={`${touchKeyClass}${output2}R`} />
         </Row>
       </div>
     );

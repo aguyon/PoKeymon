@@ -51,7 +51,7 @@ class AlerteResultat extends React.Component {
             {' '}
             joined your team!
             <div className="pokemonCap">
-              <PokemonACapturer index={pokemon} imageOnly />
+              <PokemonACapturer index={pokemon} showPokemon imageOnly />
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
