@@ -14,29 +14,26 @@ h3{
   letter-spacing: 0.1em;
 }
 
-.ImageAcceuil1{
+.accueilPokemon {
+  text-align: center;
+  margin-top: -25px;
+}
+
+.ImageAccueil{
   padding: 1.3rem;
   width: 20%;
   transition: 1s;
 }
 
-.ImageAcceuil2{
-  padding: 1.3rem;
-  width: 20%;
-  transition: 1s;
+.battle {
+  margin-top: 19%;
+  position: relative;
+  z-index: 11;
+  transition: all 0.2s ease-in-out;
 }
-
-.ImageAcceuil3{
-  padding: 1.3rem;
-  width: 20%;
-  transition: 1s;
+.battle:hover {
+  transform:translatey(8px);
 }
-
-  .battle {
-    margin-top: 10%;
-    position: relative;
-    left: 43vw;
-  }
 
 #HomeGeneral{
   margin: 0 auto;
