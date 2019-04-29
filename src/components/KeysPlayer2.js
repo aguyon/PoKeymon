@@ -44,6 +44,9 @@ class KeysPlayer2 extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHideDuo } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHideDuo();
       });
     }
   }
@@ -61,7 +64,7 @@ class KeysPlayer2 extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, attack, pokemon, pokemonName,
+      haut, gauche, bas, droite, attack, pokemon, pokemonName, showPokemonDuo,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -98,7 +101,7 @@ class KeysPlayer2 extends Component {
         </div>
         <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
         <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
-        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} /> : ''}
+        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} showPokemonDuo={showPokemonDuo} /> : ''}
       </div>
     );
   }
