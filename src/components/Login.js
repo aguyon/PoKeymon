@@ -4,8 +4,17 @@ import { browserHistory } from 'react-router';
 import '../css/Login.css';
 
 export default class Login extends Component {
-  // eslint-disable-next-line class-methods-use-this
-  onNavigateHome() {
+  constructor(props) {
+    super(props);
+    this.state = { };
+  }
+
+  // // WARNING! To be deprecated in React v17. Use componentDidUpdate instead.
+  // componentWillUpdate(nextProps, nextState) {
+  //   localStorage.setItem('username', JSON.stringify(nextState.users));
+  // }
+
+  onNavigateHome = () => {
     browserHistory.push('/');
   }
 
