@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-// import ArrowKeysReact from 'arrow-keys-react';
 import Nav from 'react-bootstrap/Nav';
 import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
