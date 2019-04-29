@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
+import { NavLink } from 'react-router-dom';
 // import bulbasaur from '../media/001-bulbasaur.svg';
 // import PokemonCapture from './PokemonCapture';
 import PokemonRareACapturer from './PokemonRareACapturer';
@@ -15,6 +16,10 @@ class AlerteResultat extends React.Component {
     };
 
     this.handleClose = this.handleClose.bind(this);
+  }
+
+  refreshPage = () => {
+    window.location.reload();
   }
 
   handleClose() {
@@ -41,12 +46,14 @@ class AlerteResultat extends React.Component {
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
-            <Button className="buttonModal" onClick={this.handleClose}>
-              Close
+            <Button className="buttonModal" onClick={this.refreshPage}>
+              Next Game
             </Button>
-            <Button className="buttonModal" onClick={this.handleClose}>
-              Next game
-            </Button>
+            <NavLink to="/pokedex">
+              <Button className="buttonModal" onClick={this.handleClose}>
+                Pokedex
+              </Button>
+            </NavLink>
           </Modal.Footer>
         </Modal>
       </div>

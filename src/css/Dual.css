@@ -1,6 +1,5 @@
 .pokeballU {
     width : 8vw;
-    height: 6vw;
 }
 
 .DarrKeys {
@@ -199,5 +198,15 @@ blockquote {
 
 #UpmR {
     transform: scale(1);
+    transition-duration: .08s;
+}
+
+#pB {
+    transform: scale(1.4);
+    transition-duration: .08s;
+}
+
+#UppB {
+    transform: scale(1.2);
     transition-duration: .08s;
 }
