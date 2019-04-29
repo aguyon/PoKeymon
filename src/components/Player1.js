@@ -5,11 +5,11 @@ const Player1 = ({ pokemonRare, pokemonName }) => (
   <KeysPlayer1
     pokemon={pokemonRare}
     pokemonName={pokemonName}
-    haut="up"
-    gauche="left"
-    bas="down"
-    droite="right"
-    attack="backspace"
+    haut="o"
+    gauche="k"
+    bas="l"
+    droite="m"
+    attack="p"
   />
 );
 

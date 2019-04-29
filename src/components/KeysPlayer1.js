@@ -3,12 +3,12 @@
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow1 from './KeysShow1';
-import ToDoArrows from './ToDoArrows';
+import ToDoArrows1 from './ToDoArrows1';
 import '../css/Solo.css';
 import AlerteResultatDual from './AlerteResultatDual';
 // import Context from './Context';
 
-const arr = ['down', 'left', 'right', 'up'];
+const arr = ['l', 'k', 'm', 'o'];
 const toDoArrRandom = [];
 for (let i = 0; i < 28; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
@@ -58,6 +58,8 @@ class KeysPlayer1 extends Component {
   }
 
   render() {
+    console.log(toDoArrRandom);
+
     this.keyIsToDo();
     this.keyIsGood();
     const {
@@ -95,7 +97,7 @@ class KeysPlayer1 extends Component {
               onKeyUp={this.onKeyUp.bind(this)}
             />
           </div>
-          <ToDoArrows toDoArrow={toDoArrRandom[i]} />
+          <ToDoArrows1 toDoArrow={toDoArrRandom[i]} />
           <KeysShow1 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
           {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} /> : ''}
         </div>

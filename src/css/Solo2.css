@@ -140,3 +140,79 @@ blockquote {
     position: relative;
     left: 3vw;
 }
+
+#oU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodoU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
+}
+
+#UpoU {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#kL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodkL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
+}
+
+#UpkL {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#lD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodlD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
+}
+
+#UplD {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#mR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px #FF1A1A;
+}
+
+#goodmR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 60px rgb(77, 196, 77);
+}
+
+#UpmR {
+    transform: scale(1);
+    transition-duration: .1s;
+}
