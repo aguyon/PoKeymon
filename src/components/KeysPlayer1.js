@@ -66,39 +66,37 @@ class KeysPlayer1 extends Component {
     const { output, i, touchKeyClass } = this.state;
 
     return (
-      <div>
-        <div className="gameplay">
-          <div>
-            <Hotkeys
-              keyName={haut}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={bas}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={droite}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={gauche}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={attack}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-          </div>
-          <ToDoArrows1 toDoArrow={toDoArrRandom[i]} />
-          <KeysShow1 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
-          {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} /> : ''}
+      <div className="gameplay2">
+        <div>
+          <Hotkeys
+            keyName={haut}
+            onKeyDown={this.onKeyDown.bind(this)}
+            onKeyUp={this.onKeyUp.bind(this)}
+          />
+          <Hotkeys
+            keyName={bas}
+            onKeyDown={this.onKeyDown.bind(this)}
+            onKeyUp={this.onKeyUp.bind(this)}
+          />
+          <Hotkeys
+            keyName={droite}
+            onKeyDown={this.onKeyDown.bind(this)}
+            onKeyUp={this.onKeyUp.bind(this)}
+          />
+          <Hotkeys
+            keyName={gauche}
+            onKeyDown={this.onKeyDown.bind(this)}
+            onKeyUp={this.onKeyUp.bind(this)}
+          />
+          <Hotkeys
+            keyName={attack}
+            onKeyDown={this.onKeyDown.bind(this)}
+            onKeyUp={this.onKeyUp.bind(this)}
+          />
         </div>
+        <ToDoArrows1 toDoArrow={toDoArrRandom[i]} />
+        <KeysShow1 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
+        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} /> : ''}
       </div>
     );
   }

@@ -23,7 +23,7 @@ class ToDoArrows1 extends Component {
     const { toDoArrow } = this.props;
     return (
       <div>
-        <div className="toDo"><img className="flecheToDo" src={imgs[toDoArrow]} alt=" " /></div>
+        <div className="toDo2"><img className="flecheToDo" src={imgs[toDoArrow]} alt=" " /></div>
       </div>
     );
   }
