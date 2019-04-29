@@ -1,57 +1,73 @@
-.row {
-    margin: 25px !important;
+html {
+    background-color: #EFF4D4;
+    background-image: url(../media/fond01Poke.png);
+    
+    /* Full height */
+    height: 100%;
+    width: 100%; 
+  
+    /* Center and scale the image nicely 
+    background-position: absolute;
+    bottom: 0;
+    background-attachment: scroll;*/
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.row {
+    margin: 25px !important;
+    margin-top: 0px !important;
+}
 .namePokemon {
     color: #EDE9ED;
     text-align: center;
     font-size: 1.5em;
+    margin: 30px;
 }
-
 .customCol {
     max-width: 65% !important;
     margin: 35px auto;
 }
-
 .card {
     color: white;
     border-radius: 20px !important;
     background-color: #363637 !important;
+    margin-top: 60px !important;
+    margin-bottom: -85px;
 }
-
+.customStats {
+    margin: 25px !important;
+}
 .card-img-top {
     width: auto !important;
 }
-
 .card-header {
     font-size: 0.5em;
 }
-
 .card-title {
     font-size: 0.8em;
 }
-
 .card-body {
-    padding: 0 !important;
+    padding: 25px !important;
+    padding-bottom: 25px !important;
 }
-
 .progress {
     height: 2rem !important;
 }
-
+.imgPokedex {
+    margin-top: 1.5rem !important;
+}
 small {
     font-size: 170% !important;
     font-weight: 800 !important;
 }
-
 .poke {
     filter: grayscale(30%);
 }
-
 .imgPokemon {
-    width: 240px !important;
+    width: 280px !important;
+    margin-left: -42px !important;
 }
-
 .btnRedirect {
     position: absolute;
     margin-left: -200px;

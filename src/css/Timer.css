@@ -1,0 +1,15 @@
+.barre {
+    position: relative;
+    border:3px;
+    border-style: solid;
+    border-color:black;
+    width:700px;
+    height:30px;
+    margin-top: 2.9vh;
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+.jauge {
+    border-radius: 7px;
+}

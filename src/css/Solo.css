@@ -1,19 +1,31 @@
 .arrKeys {
     width : 120px;
-    margin: 8px;
+    margin: 0px 8px;
+    height: 120px;
+}   
+
+.upKey {
+    text-align: center;
 }
 
-#active {
-    transform: scale(1.15);
-    transition-duration: .1s;
+.arrKeysU {
+    width : 120px;
+    margin: -8px 8px;
+    position: relative;
+    left: 136px;
+    height: 120px;
 }
 
-#inactive {
-    transform: scale(1);
-    transition-duration: .1s;
+.arrKeysGoodU {
+    width : 120px;
+    margin: -8px 8px;
+    position: relative;
+    left: 136px;
+    height: 120px;
+    border: solid 20px rgb(89, 201, 67);
 }
 
-.pokeball {
+/*.pokeball {
     position: absolute;
     width: 180px;
     left : 430px;
@@ -26,26 +38,19 @@
     left : 430px;
     bottom: 310px;
     animation: animPokeball .6s infinite; 
-}
+}*/
 
-.controller {
-    position: absolute;
-    bottom: 30px;
-    margin: auto;
-    left : 320px;
+.flecheToDo {
+    width: 28vh; 
 }
 
 .toDo {
-    top: 120px;
-    margin: 20px;
-    position: absolute;
-    left: 375px;
+    margin-bottom: 24vh;
+    padding-top: 20px;
 }
 
-.pokemon {
-    position: absolute;
-    right: 300px;
-    bottom: 100px;
+.gameplay {
+    text-align: center;
 }
 
 @keyframes animTouch {
@@ -58,4 +63,135 @@
     33% { transform: scale(1.2) rotateZ(5deg); }
     66% { transform: scale(1.2) rotateZ(-5deg); }
     100% { transform: scale(1); }
+}
+
+#backspaceB {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+}
+
+#UpbackspaceB {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#upU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodupU {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpupU {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#leftL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodleftL {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpleftL {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#downD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#gooddownD {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UpdownD {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+#rightR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px #FF1A1A;
+}
+
+#goodrightR {
+    transform: scale(1.2);
+    transition-duration: .1s;
+    border-radius: 60px;
+    border: solid 30px rgb(77, 196, 77);
+}
+
+#UprightR {
+    transform: scale(1);
+    transition-duration: .1s;
+}
+
+.fullPage {
+    display: flex;
+    justify-content: space-around;
+    height: 88vh;
+    width: 100vw;
+    align-items: center;
+}
+
+.controller {
+    justify-content: center;
+    position: relative;
+    left: 120px;
+}
+
+.controller1 {
+    justify-content: center;
+    position: relative;
+}
+
+#timer {
+    display: flex;
+    
+}
+
+blockquote {
+    text-align: center;
+    font-size: 2em;
+}
+
+.pokemonCap {
+    position: relative;
+    left: 13vw;
+}
+
+.pokemonImage {
+    animation: animPokeball 1.4s infinite;
+    margin: 20px;
+}
+
+.pokemonAcap {
+    position: relative;
+    right: 11vw;
 }

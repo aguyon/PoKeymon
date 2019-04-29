@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import bulbasaur from '../media/001-bulbasaur.svg';
+
+
+const pokemonsImg = require.context('../media/PokemonACapturer');
+const pokemonsMulti = pokemonsImg.keys();
+const pokemonRandom = Math.floor(Math.random() * 100);
+const pokemonName = (pokemonsMulti[pokemonRandom]).slice(6, -4);
 
 class PokemonACapturer extends Component {
   constructor() {
@@ -7,12 +12,28 @@ class PokemonACapturer extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    const { getPokemon } = this.props;
+    if (getPokemon) {
+      getPokemon(pokemonRandom, pokemonName);
+    }
+  }
+
   render() {
+    const { imageOnly, showPokemon } = this.props;
     return (
-      <div className="pokemon">
-        <img height="250px" src={bulbasaur} alt="Bulbasar" />
-        <h2>Bulbasaur</h2>
-      </div>
+      <figure className="pokemonAcap" style={{ visibility: showPokemon ? 'visible' : 'hidden' }}>
+        <img className="pokemonImage" height="340px" src={pokemonsImg(pokemonsMulti[pokemonRandom])} alt={pokemonName} />
+        <figcaption>
+          {imageOnly ? null
+            : (
+              <blockquote>
+                {pokemonName.toUpperCase()}
+              </blockquote>
+            )
+          }
+        </figcaption>
+      </figure>
     );
   }
 }

@@ -1,57 +1,63 @@
 h2 {
-    color: #e84334;
-    padding: 1.3rem;
-    font-weight: 900 !important;
-    font-size: 50px !important;
-    letter-spacing: 0.1em;
-  }
-  
-  h3{
-    color: #363637;
-    padding: 1.3rem;
-    font-weight: 900 !important;
-    font-size: 50px !important;
-    letter-spacing: 0.1em;
-  }
+  color: #e84334;
+  padding: 1.3rem;
+  font-weight: 900 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em;
+}
 
-  .ImageAcceuil1{
-    padding: 1.3rem;
-    width: 20%;
-    transition: 1s;
-    
-  }
+h3{
+  color: #363637;
+  padding: 4rem;
+  font-weight: 900 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em;
+}
 
-  .ImageAcceuil2{
-    padding: 1.3rem;
-    width: 20%;
-    transition: 1s;
-  }
+.accueilPokemon {
+  text-align: center;
+  margin-top: -25px;
+}
 
-  .ImageAcceuil3{
-    padding: 1.3rem;
-    width: 20%;
-    transition: 1s;
-  }
+.ImageAccueil{
+  padding: 1.3rem;
+  width: 20%;
+  transition: 1s;
+}
 
-  .ModeHomePage2{
-    color: #363637 !important;
-    background-color: #e84334;
-    padding: 1.3rem;
-    font-weight: 900 !important;
-    font-size: 50px !important;
-    letter-spacing: 0.1em;
-    border-radius: 10%;
-  }
+.battle {
+  margin-top: 19%;
+  position: relative;
+  z-index: 11;
+  transition: all 0.2s ease-in-out;
+}
+.battle:hover {
+  transform:translatey(8px);
+}
 
-  #testmadiv{
-    justify-content: center;
-    align-items: center;
-    padding-left: 42%;
-    padding-top: 3%;
-  }
+#HomeGeneral{
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
 
-  #HomeGeneral{
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-  }
+#herb {
+  position: fixed;
+  bottom:-19vh;
+  background-image: url(../media/fond01Poke.png);
+  background-repeat: no-repeat;
+  z-index: 8;
+  width: 100vw;
+  height: 100vh;
+  opacity: .6;
+  pointer-events:none;
+  animation: animHerb 6s linear infinite;
+
+}
+
+@keyframes animHerb {
+  0% { transform: scaleX(-1.1); }
+  50% { transform: scaleX(-1.2) translateX(-40px); }
+  100% { transform: scaleX(-1.1); }
+}

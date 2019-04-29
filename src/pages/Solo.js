@@ -2,16 +2,32 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import '../css/Solo.css';
-import Command from '../components/Command';
+import Player from '../components/Player';
 import PokemonACapturer from '../components/PokemonACapturer';
+
 
 class Solo extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      index: '',
+      showPok: true,
+    };
+  }
+
+  pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
+    this.setState({
+      index: indexPlayedPokemon,
+      name: playedPokemonName,
+    });
+  }
+
+  handlePokHide = () => {
+    this.setState({ showPok: false });
   }
 
   render() {
+    const { index, name, showPok } = this.state;
     return (
       <div>
         <div>
@@ -30,10 +46,9 @@ class Solo extends Component {
             </Nav.Item>
           </Nav>
         </div>
-        <div>
-          <PokemonACapturer />
-          <Command />
-          <PokemonACapturer />
+        <div className="fullPage">
+          <Player pokemon={index} pokemonName={name} handlePokHide={this.handlePokHide} />
+          <PokemonACapturer getPokemon={this.pokemonRandom} showPokemon={showPok} />
         </div>
       </div>
     );

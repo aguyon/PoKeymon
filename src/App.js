@@ -3,6 +3,7 @@ import './App.css';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Login from './components/Login';
 import Home from './pages/Home';
 import Solo from './pages/Solo';
 import Duo from './pages/Duo';
@@ -14,6 +15,7 @@ class App extends Component {
     this.state = {};
   }
 
+
   render() {
     return (
       <div className="App">
@@ -24,6 +26,7 @@ class App extends Component {
               <Route path="/solo-mode" component={Solo} />
               <Route path="/dual-mode" component={Duo} />
               <Route path="/pokedex" component={Pokedex} />
+              <Route path="/Login" component={Login} />
             </Switch>
           </header>
         </BrowserRouter>
