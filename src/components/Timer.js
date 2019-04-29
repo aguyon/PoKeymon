@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import '../css/Timer.css';
 import Context from './Context';
@@ -55,10 +54,11 @@ class Timer extends Component {
   render() {
     const { width } = this.state;
     const { background } = this.state;
+    const { children } = this.props;
     return (
       <div className="barre">
-        <Context.Provider value={{ width: this.state.width }}>
-          {this.props.children}
+        <Context.Provider value={{ width }}>
+          {children}
         </Context.Provider>
 
 

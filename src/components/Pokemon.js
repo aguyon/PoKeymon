@@ -54,14 +54,12 @@ export default class Pokemon extends Component {
     // Get Pokemon Information
     const pokemonRes = await Axios.get(pokemonUrl);
 
-    // eslint-disable-next-line prefer-destructuring
-    const name = pokemonRes.data.name;
+    const { name } = pokemonRes.data;
 
     let {
       hp, attack, defense, speed,
     } = '';
 
-    // eslint-disable-next-line array-callback-return
     pokemonRes.data.stats.map((stat) => {
       switch (stat.stat.name) {
         case 'hp':
@@ -79,9 +77,9 @@ export default class Pokemon extends Component {
         default:
           break;
       }
+      return stat;
     });
 
-    // eslint-disable-next-line max-len
     const types = pokemonRes.data.types.map(type => type.type.name);
 
     const themeColor = `${TYPE_COLORS[types[types.length - 1]]}`;
@@ -104,12 +102,13 @@ export default class Pokemon extends Component {
     });
   }
 
-  // eslint-disable-next-line consistent-return
   renderRedirect = () => {
     const { redirect } = this.state;
+    let a = '';
     if (redirect) {
-      return <Redirect to="/" />;
+      a = <Redirect to="/" />;
     }
+    return a;
   }
 
   render() {

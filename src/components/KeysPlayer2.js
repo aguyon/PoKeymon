@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow2 from './KeysShow2';
@@ -23,6 +21,8 @@ class KeysPlayer2 extends Component {
       i: 0,
       touchKeyClass: '',
     };
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onKeyUp(keyName) {
@@ -69,33 +69,35 @@ class KeysPlayer2 extends Component {
     const { output, i, touchKeyClass } = this.state;
 
     return (
-      <div className="gameplay2">
-        <div>
-          <Hotkeys
-            keyName={haut}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={bas}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={droite}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={gauche}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
-          <Hotkeys
-            keyName={attack}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onKeyUp={this.onKeyUp.bind(this)}
-          />
+      <div>
+        <div className="gameplay">
+          <div>
+            <Hotkeys
+              keyName={haut}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
+            />
+            <Hotkeys
+              keyName={bas}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
+            />
+            <Hotkeys
+              keyName={droite}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
+            />
+            <Hotkeys
+              keyName={gauche}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
+            />
+            <Hotkeys
+              keyName={attack}
+              onKeyDown={this.onKeyDown}
+              onKeyUp={this.onKeyUp}
+            />
+          </div>
         </div>
         <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
         <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
