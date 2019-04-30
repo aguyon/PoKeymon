@@ -45,6 +45,8 @@ class Duo extends Component {
           </Nav.Item>
         </Nav>
         <div className="fullPage">
+
+
           <Player2
             pokemonRare={index}
             pokemonName={name}

@@ -9,11 +9,6 @@ const Player2 = ({
     pokemonName={pokemonName}
     handlePokHideDuo={handlePokHideDuo}
     showPokemonDuo={showPokDuo}
-    haut="z"
-    gauche="q"
-    bas="s"
-    droite="d"
-    attack="e"
   />
 );
 export default Player2;

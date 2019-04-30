@@ -9,11 +9,6 @@ const Player1 = ({
     pokemonName={pokemonName}
     handlePokHideDuo={handlePokHideDuo}
     showPokemonDuo={showPokDuo}
-    haut="o"
-    gauche="k"
-    bas="l"
-    droite="m"
-    attack="p"
   />
 );
 
