@@ -61,3 +61,11 @@ small {
     position: absolute;
     margin-left: -200px;
 }
+
+.userLog {
+    padding: 1.4rem 2rem;
+    font-Size: 20px;
+    color: #ede9ed;
+    position: absolute;
+    right: 0;
+}
