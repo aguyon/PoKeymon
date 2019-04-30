@@ -45,8 +45,8 @@
 }
 
 .toDo {
-    margin-bottom: 24vh;
-    padding-top: 20px;
+    margin-bottom: 10vh;
+    padding-top: 13px;
 }
 
 .gameplay {
@@ -179,6 +179,10 @@
 blockquote {
     text-align: center;
     font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    margin-top: 10px;
+    margin-top: 25px !important;
 }
 
 .pokemonCap {
@@ -193,4 +197,5 @@ blockquote {
 .pokemonAcap {
     position: relative;
     right: 10vw;
+    text-align: center;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 import '../css/Login.css';
 
@@ -25,24 +24,25 @@ export default class Login extends Component {
     render() {
       return (
         <div className="Login">
-          <div id="joint-the-game">
-            <h1> Join the game </h1>
+          <div id="join-the-game">
+            <h1> Join the Game !</h1>
           </div>
           <div id="text-user">
             Enter your name
           </div>
           <form onSubmit={this.handleSubmit}>
-            <div id="text-login">
-              <input type="text" name="user" onChange={this.handleChange} style={{ marginBottom: '20px', width: '50%', borderRadius: '5px' }} />
+            <div id="input-login">
+              <input type="text" name="user" onChange={this.handleChange} />
             </div>
-            <Button
-              onClick={this.onNavigateHome}
-              className="btn btn-primary"
-              block
-              type="submit"
-            >
-              Catch them all
-            </Button>
+            <div className="containerBtn">
+              <button
+                onClick={this.onNavigateHome}
+                className="btnLogin"
+                type="submit"
+              >
+                CATCH THEM ALL
+              </button>
+            </div>
           </form>
         </div>
       );

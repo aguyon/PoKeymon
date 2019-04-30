@@ -47,7 +47,7 @@ class PokemonList extends Component {
               ))}
             </div>
           ) : (
-            <h1>Loading Pokemon</h1>
+            <h1 id="search">Loading Pokemon</h1>
           )}
         </div>
       </React.Fragment>
