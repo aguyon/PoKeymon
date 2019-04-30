@@ -11,7 +11,14 @@ class Solo extends Component {
     super();
     this.state = {
       index: '',
+      showPok: true,
+      newUser: '',
     };
+  }
+
+  componentDidMount() {
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
@@ -21,8 +28,14 @@ class Solo extends Component {
     });
   }
 
+  handlePokHide = () => {
+    this.setState({ showPok: false });
+  }
+
   render() {
-    const { index, name } = this.state;
+    const {
+      index, name, showPok, newUser,
+    } = this.state;
     return (
       <div>
         <div>
@@ -39,11 +52,18 @@ class Solo extends Component {
             <Nav.Item>
               <NavLink to="/pokedex">PoKeydex</NavLink>
             </Nav.Item>
+            <p
+              className="userLog"
+            >
+                 Trainer:
+              {' '}
+              {newUser}
+            </p>
           </Nav>
         </div>
         <div className="fullPage">
-          <Player pokemon={index} pokemonName={name} />
-          <PokemonACapturer getPokemon={this.pokemonRandom} />
+          <Player pokemon={index} pokemonName={name} handlePokHide={this.handlePokHide} />
+          <PokemonACapturer getPokemon={this.pokemonRandom} showPokemon={showPok} />
         </div>
       </div>
     );

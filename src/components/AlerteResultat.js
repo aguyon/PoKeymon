@@ -1,10 +1,7 @@
-
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../css/AlerteResultat.css';
-// import bulbasaur from '../media/001-bulbasaur.svg';
-// import PokemonCapture from './PokemonCapture';
 import { NavLink } from 'react-router-dom';
 import PokemonACapturer from './PokemonACapturer';
 
@@ -28,6 +25,9 @@ class AlerteResultat extends React.Component {
     const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
     newListPokemons.push(pokemonName);
     localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   refreshPage = () => {
@@ -40,12 +40,21 @@ class AlerteResultat extends React.Component {
 
   render() {
     const { pokemonName, pokemon } = this.props;
-    const { show } = this.state;
+    const { show, newUser } = this.state;
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
           <Modal.Header id="sasa" closeButton>
-            <Modal.Title><p id="victory">Congratulations, Grogory!</p></Modal.Title>
+            <Modal.Title>
+              <p id="victory">
+                Congratulations,
+                {' '}
+                {newUser}
+                {' '}
+                !
+              </p>
+
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
             Woohoo,
@@ -54,7 +63,7 @@ class AlerteResultat extends React.Component {
             {' '}
             joined your team!
             <div className="pokemonCap">
-              <PokemonACapturer index={pokemon} imageOnly />
+              <PokemonACapturer index={pokemon} showPokemon imageOnly />
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
