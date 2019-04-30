@@ -31,6 +31,7 @@ h3{
   padding: 1.3rem;
   width: 20%;
   transition: 1s;
+  position: relative;
 }
 
 .battle {
