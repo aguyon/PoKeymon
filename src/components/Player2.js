@@ -16,5 +16,4 @@ const Player2 = ({
     attack="e"
   />
 );
-
 export default Player2;
