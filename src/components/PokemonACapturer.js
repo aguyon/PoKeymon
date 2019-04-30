@@ -28,7 +28,10 @@ class PokemonACapturer extends Component {
           {imageOnly ? null
             : (
               <blockquote>
-                {pokemonName.toUpperCase()}
+                {pokemonName.toLowerCase()
+                  .split(' ')
+                  .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                  .join(' ')}
               </blockquote>
             )
           }

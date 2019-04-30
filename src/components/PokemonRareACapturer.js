@@ -24,7 +24,14 @@ class PokemonRareACapturer extends Component {
       <figure style={{ visibility: showPokemonDuo ? 'visible' : 'hidden' }}>
         <img className="pokemonImage" height="340px" src={pokemonsImg(pokemonsMulti[pokemonRandom])} alt={pokemonName} />
         <figcaption>
-          {imageOnly ? null : <blockquote>{pokemonName.toUpperCase()}</blockquote>}
+          {imageOnly ? null : (
+            <blockquote>
+              {pokemonName.toLowerCase()
+                .split(' ')
+                .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                .join(' ')}
+            </blockquote>
+          )}
         </figcaption>
       </figure>
     );
