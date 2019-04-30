@@ -28,7 +28,7 @@ class Duo extends Component {
     });
   }
 
-  handlePokHide = () => {
+  handlePokHideDuo = () => {
     this.setState({ showPokDuo: false });
   }
 

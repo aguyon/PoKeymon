@@ -3,6 +3,8 @@ import Axios from 'axios';
 import { Button } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
 
+const pokemonsImg = require.context('../media/PokemonACapturer');
+
 const TYPE_COLORS = {
   bug: 'B1C12E',
   dark: '4F3A2D',
@@ -29,7 +31,6 @@ export default class Pokemon extends Component {
     super(props);
     this.state = {
       name: '',
-      imageUrl: '',
       statTitleWidth: 3,
       statBarWidth: 9,
       stats: {
@@ -53,15 +54,12 @@ export default class Pokemon extends Component {
     // Get Pokemon Information
     const pokemonRes = await Axios.get(pokemonUrl);
 
-    // eslint-disable-next-line prefer-destructuring
-    const name = pokemonRes.data.name;
-    const imageUrl = pokemonRes.data.sprites.front_default;
+    const { name } = pokemonRes.data;
 
     let {
       hp, attack, defense, speed,
     } = '';
 
-    // eslint-disable-next-line array-callback-return
     pokemonRes.data.stats.map((stat) => {
       switch (stat.stat.name) {
         case 'hp':
@@ -79,15 +77,14 @@ export default class Pokemon extends Component {
         default:
           break;
       }
+      return stat;
     });
 
-    // eslint-disable-next-line max-len
     const types = pokemonRes.data.types.map(type => type.type.name);
 
     const themeColor = `${TYPE_COLORS[types[types.length - 1]]}`;
 
     this.setState({
-      imageUrl,
       name,
       stats: {
         hp,
@@ -105,17 +102,17 @@ export default class Pokemon extends Component {
     });
   }
 
-  // eslint-disable-next-line consistent-return
   renderRedirect = () => {
     const { redirect } = this.state;
+    let a = '';
     if (redirect) {
-      return <Redirect to="/" />;
+      a = <Redirect to="/" />;
     }
+    return a;
   }
 
   render() {
     const {
-      imageUrl,
       name,
       statTitleWidth,
       statBarWidth,
@@ -142,8 +139,8 @@ export default class Pokemon extends Component {
               </div>
               <div className="col-md-3">
                 <img
-                  src={imageUrl}
-                  className="card-img-top rounded mx-auto mt-2 imgPokemon"
+                  src={pokemonsImg(pokemonsImg.keys().find(img => img.indexOf(name) >= 0))}
+                  className="card-img-top rounded imgPokemon"
                   alt=""
                 />
               </div>

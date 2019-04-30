@@ -1,19 +1,8 @@
-html {
-    background-color: #EFF4D4;
-    background-image: url(../media/fond01Poke.png);
-    
-    /* Full height */
-    height: 100%;
-    width: 100%; 
-  
-    /* Center and scale the image nicely 
-    background-position: absolute;
-    bottom: 0;
-    background-attachment: scroll;*/
-    background-repeat: no-repeat;
-    background-size: cover;
+#search {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
 }
-
 .row {
     margin: 25px !important;
     margin-top: 0px !important;

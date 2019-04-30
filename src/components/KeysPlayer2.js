@@ -1,16 +1,14 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-no-bind */
 import React, { Component } from 'react';
 import Hotkeys from 'react-hot-keys';
 import KeysShow2 from './KeysShow2';
 import ToDoArrows2 from './ToDoArrows2';
-import '../css/Solo2.css';
-// import AlerteResultat from './AlerteResultat';
+import '../css/Dual.css';
+import AlerteResultatDual from './AlerteResultatDual';
 // import Context from './Context';
 
 const arr = ['s', 'q', 'd', 'z'];
 const toDoArrRandom = [];
-for (let i = 0; i < 30; i += 1) {
+for (let i = 0; i < 20; i += 1) {
   toDoArrRandom.push(arr[Math.floor(Math.random() * 4)]);
 }
 
@@ -23,6 +21,8 @@ class KeysPlayer2 extends Component {
       i: 0,
       touchKeyClass: '',
     };
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onKeyUp(keyName) {
@@ -44,6 +44,9 @@ class KeysPlayer2 extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+      }, () => {
+        const { handlePokHideDuo } = this.props;
+        if (i === toDoArrRandom.length - 1) handlePokHideDuo();
       });
     }
   }
@@ -61,43 +64,42 @@ class KeysPlayer2 extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, attack,
+      haut, gauche, bas, droite, attack, pokemon, pokemonName, showPokemonDuo,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
     return (
-      <div>
-        <div className="gameplay">
-          <div>
-            <Hotkeys
-              keyName={haut}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={bas}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={droite}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={gauche}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-            <Hotkeys
-              keyName={attack}
-              onKeyDown={this.onKeyDown.bind(this)}
-              onKeyUp={this.onKeyUp.bind(this)}
-            />
-          </div>
-          <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
-          <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
+      <div className="gameplay">
+        <div>
+          <Hotkeys
+            keyName={haut}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={bas}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={droite}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={gauche}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
+          <Hotkeys
+            keyName={attack}
+            onKeyDown={this.onKeyDown}
+            onKeyUp={this.onKeyUp}
+          />
         </div>
+        <ToDoArrows2 toDoArrow={toDoArrRandom[i]} />
+        <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
+        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} showPokemonDuo={showPokemonDuo} /> : ''}
       </div>
     );
   }

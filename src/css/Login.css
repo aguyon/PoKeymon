@@ -9,9 +9,54 @@
     }
   }
 
-#text-user, #joint-the-game, #text-login {
+#text-user, #join-the-game h1, #input-login {
   display: flex;
   justify-content: center;
-  color: black;
-  margin-top: 5%
+  color: #3C3C3D;
+  margin-top: 5%;
+  font-weight: 700;
+  letter-spacing: .2rem;
+}
+
+#join-the-game h1 {
+  font-size: 2em;
+}
+
+#text-user {
+  font-size: 1.5em;
+}
+
+.containerBtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.btnLogin {
+  width: 67%;
+  height: 70px;
+  border-radius: 30px;
+  background: #A9C128;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  margin-top: 27px;
+  font-weight: 700;
+  color: #3C3C3D;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btnLogin:hover {
+  background: #519032;
 }

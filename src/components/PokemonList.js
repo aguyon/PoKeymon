@@ -7,7 +7,7 @@ class PokemonList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: 'https://pokeapi.co/api/v2/pokemon',
+      url: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=152',
       pokemon: null,
     };
   }
@@ -35,14 +35,13 @@ class PokemonList extends Component {
         <div className="bg">
           {pokemon ? (
             <div className="row rowCustom">
-              {/* eslint-disable-next-line no-shadow */}
-              {pokemon.map(pokemon => (
+              {pokemon.map(pok => (
                 <PokemonCard
-                  key={pokemon.name}
-                  name={pokemon.name}
-                  url={pokemon.url}
+                  key={pok.name}
+                  name={pok.name}
+                  url={pok.url}
                   style={{
-                    filter: `grayscale(${this.isInMyPokedex(pokemon.name) ? '0' : '1'})`,
+                    filter: `grayscale(${this.isInMyPokedex(pok.name) ? '0' : '1'})`,
                   }}
                 />
               ))}

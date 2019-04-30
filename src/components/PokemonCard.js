@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import pokeball from '../media/pokeball.png';
 
+const pokemonsImg = require.context('../media/PokemonACapturer');
+
 const Sprite = styled.img`
   width: 5em;
   height: 5em;
@@ -41,10 +43,8 @@ export default class PokemonCard extends Component {
     super(props);
     this.state = {
       name: '',
-      imageUrl: '',
       pokemonIndex: '',
       imageLoading: true,
-      toManyRequests: false,
     };
   }
 
@@ -52,9 +52,8 @@ export default class PokemonCard extends Component {
     const { name, url } = this.props;
 
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
-    const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
-    this.setState({ name, imageUrl, pokemonIndex });
+    this.setState({ name, pokemonIndex });
   }
 
   render() {
@@ -63,8 +62,6 @@ export default class PokemonCard extends Component {
       name,
       pokemonIndex,
       imageLoading,
-      imageUrl,
-      toManyRequests,
     } = this.state;
 
     return (
@@ -81,26 +78,11 @@ export default class PokemonCard extends Component {
               />
             ) : null}
             <Sprite
-              className="card-img-top rounded mx-auto mt-2"
-              src={imageUrl}
+              className="card-img-top rounded mx-auto imgPokedex"
+              src={pokemonsImg(pokemonsImg.keys().find(img => img.indexOf(name) >= 0))}
               onLoad={() => this.setState({ imageLoading: false })}
-              onError={() => this.setState({ toManyRequests: true })}
-              style={
-                // eslint-disable-next-line no-nested-ternary
-                 toManyRequests
-                   ? { display: 'none' }
-                   : imageLoading
-                     ? null
-                     : { display: 'block' }
-              }
+              style={imageLoading ? null : { display: 'block' }}
             />
-            {toManyRequests ? (
-              <h6 className="mx-auto">
-                <span className="badge badge-danger mt-2">
-                  To Many Requests
-                </span>
-              </h6>
-            ) : null}
             <div className="card-body mx-auto">
               <h6 className="card-title">
                 {name
