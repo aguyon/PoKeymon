@@ -18,18 +18,16 @@ class Home extends Component {
       scale: 1,
       scale1: 1,
       scale2: 1,
-      zIndex: 10,
     };
   }
 
   selectionPokemon1 = () => {
     let {
-      scale, scale1, scale2, zIndex,
+      scale, scale1, scale2,
     } = this.state;
     localStorage.setItem('listPokemons', '["bulbasaur"]');
-    if (scale === 1.4 && zIndex === 10) {
+    if (scale === 1.4) {
       scale = 1;
-      zIndex = 11;
     } else {
       scale = 1.4;
       scale1 = 1;
@@ -37,7 +35,6 @@ class Home extends Component {
     }
     this.setState({
       scale,
-      zIndex,
       scale1,
       scale2,
     });
@@ -45,12 +42,11 @@ class Home extends Component {
 
   selectionPokemon2 = () => {
     let {
-      scale, scale1, scale2, zIndex,
+      scale, scale1, scale2,
     } = this.state;
     localStorage.setItem('listPokemons', '["charmander"]');
-    if (scale1 === 1.4 && zIndex === 10) {
+    if (scale1 === 1.4) {
       scale1 = 1;
-      zIndex = 11;
     } else {
       scale1 = 1.4;
       scale = 1;
@@ -58,7 +54,6 @@ class Home extends Component {
     }
     this.setState({
       scale1,
-      zIndex,
       scale,
       scale2,
     });
@@ -66,12 +61,11 @@ class Home extends Component {
 
   selectionPokemon3 = () => {
     let {
-      scale, scale1, scale2, zIndex,
+      scale, scale1, scale2,
     } = this.state;
     localStorage.setItem('listPokemons', '["squirtle"]');
-    if (scale2 === 1.4 && zIndex === 10) {
+    if (scale2 === 1.4) {
       scale2 = 1;
-      zIndex = 11;
     } else {
       scale2 = 1.4;
       scale1 = 1;
@@ -79,7 +73,6 @@ class Home extends Component {
     }
     this.setState({
       scale2,
-      zIndex,
       scale1,
       scale,
     });
@@ -120,7 +113,7 @@ class Home extends Component {
               className="ImageAccueil"
               src={bulbasaur}
               alt="Bulbizarre"
-              style={{ transform: `scale(${scale})`, zIndex: `(${zIndex})` }}
+              style={{ transform: `scale(${scale})`, zIndex: `${zIndex}` }}
             />
             <img
               onClick={() => this.selectionPokemon2()}
