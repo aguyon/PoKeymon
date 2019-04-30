@@ -18,26 +18,23 @@ class Home extends Component {
       scale: 1,
       scale1: 1,
       scale2: 1,
-      zIndex: 9,
     };
   }
 
   selectionPokemon1 = () => {
     let {
-      scale, scale1, scale2, zIndex,
+      scale, scale1, scale2,
     } = this.state;
     localStorage.setItem('listPokemons', '["bulbasaur"]');
     if (scale === 1.4) {
       scale = 1;
     } else {
       scale = 1.4;
-      zIndex += 2;
       scale1 = 1;
       scale2 = 1;
     }
     this.setState({
       scale,
-      zIndex,
       scale1,
       scale2,
     });
