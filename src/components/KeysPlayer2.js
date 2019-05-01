@@ -116,8 +116,11 @@ class KeysPlayer2 extends Component {
 
   render() {
     this.keyIsToDo();
-    const { pokemon, pokemonName, showPokemonDuo } = this.props;
+    const {
+      pokemon, pokemonName, showPokemonDuo, newUser,
+    } = this.props;
     const { output, i, touchKeyClass } = this.state;
+    console.log(newUser, 'kp2');
 
     return (
       <div className="gameplay">
@@ -131,7 +134,7 @@ class KeysPlayer2 extends Component {
           </h1>
         </div>
         <KeysShow2 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
-        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} showPokemonDuo={showPokemonDuo} /> : ''}
+        {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} showPokemonDuo={showPokemonDuo} newUser={newUser} /> : ''}
       </div>
     );
   }

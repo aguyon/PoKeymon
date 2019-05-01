@@ -17,13 +17,15 @@ class AlerteResultat extends React.Component {
   }
 
   componentDidMount() {
-    const { pokemonName } = this.props;
+    const { pokemonName, newUser } = this.props;
     if (!localStorage.getItem('listPokemons')) {
       localStorage.setItem('listPokemons', '[]');
     }
-    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
-    newListPokemons.push(pokemonName);
-    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+    if (newUser) {
+      const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+      newListPokemons.push(pokemonName);
+      localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+    }
   }
 
   refreshPage = () => {
@@ -35,14 +37,27 @@ class AlerteResultat extends React.Component {
   }
 
   render() {
-    const { pokemonName, pokemon } = this.props;
+    const {
+      pokemonName, pokemon, newUser, newGuest,
+    } = this.props;
     const { show } = this.state;
+    console.log(newUser, 'vic');
 
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
           <Modal.Header id="sasa" closeButton>
-            <Modal.Title><p id="victory">Congratulations, Grogory!</p></Modal.Title>
+            <Modal.Title>
+              <p id="victory">
+                Congratulations,
+                {' '}
+                {newGuest || newUser}
+                {' '}
+
+                !
+              </p>
+
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
             Woohoo,
