@@ -17,14 +17,20 @@ class AlerteResultat extends React.Component {
   }
 
   componentDidMount() {
-    const { pokemonName, newUser } = this.props;
-    if (!localStorage.getItem('listPokemons')) {
-      localStorage.setItem('listPokemons', '[]');
+    const { pokemonName, newUser, newGuest } = this.props;
+    if (!localStorage.getItem(`${newUser}listPokemons`) && newUser) {
+      localStorage.setItem(`${newUser}listPokemons`, '[]');
+    } else if (!localStorage.getItem(`${newGuest}listPokemons`) && newGuest) {
+      localStorage.setItem(`${newGuest}listPokemons`, '[]');
     }
     if (newUser) {
-      const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+      const newListPokemons = JSON.parse(localStorage.getItem(`${newUser}listPokemons`));
       newListPokemons.push(pokemonName);
-      localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+      localStorage.setItem(`${newUser}listPokemons`, JSON.stringify(newListPokemons));
+    } else if (newGuest) {
+      const newListPokemons = JSON.parse(localStorage.getItem(`${newGuest}listPokemons`));
+      newListPokemons.push(pokemonName);
+      localStorage.setItem(`${newGuest}listPokemons`, JSON.stringify(newListPokemons));
     }
   }
 

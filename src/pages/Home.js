@@ -18,14 +18,22 @@ class Home extends Component {
       scale: 1,
       scale1: 1,
       scale2: 1,
+      newUser: '',
     };
   }
 
+  componentDidMount() {
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
+  }
+
+
   selectionPokemon1 = () => {
+    const { newUser } = this.state;
     let {
       scale, scale1, scale2,
     } = this.state;
-    localStorage.setItem('listPokemons', '["bulbasaur"]');
+    localStorage.setItem(`${newUser}listPokemons`, '["bulbasaur"]');
     if (scale === 1.4) {
       scale = 1;
     } else {
@@ -41,10 +49,11 @@ class Home extends Component {
   };
 
   selectionPokemon2 = () => {
+    const { newUser } = this.state;
     let {
       scale, scale1, scale2,
     } = this.state;
-    localStorage.setItem('listPokemons', '["charmander"]');
+    localStorage.setItem(`${newUser}listPokemons`, '["charmander"]');
     if (scale1 === 1.4) {
       scale1 = 1;
     } else {
@@ -60,10 +69,11 @@ class Home extends Component {
   };
 
   selectionPokemon3 = () => {
+    const { newUser } = this.state;
     let {
       scale, scale1, scale2,
     } = this.state;
-    localStorage.setItem('listPokemons', '["squirtle"]');
+    localStorage.setItem(`${newUser}listPokemons`, '["squirtle"]');
     if (scale2 === 1.4) {
       scale2 = 1;
     } else {
