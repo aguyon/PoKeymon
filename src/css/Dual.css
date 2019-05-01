@@ -204,7 +204,7 @@ blockquote {
 
 #pB {
     transform: scale(1.8) translateY(-10vh);
-    transition-duration: .4s;
+    transition-duration: .2s;
 }
 
 #UppB {
@@ -215,7 +215,7 @@ blockquote {
 
 #eB {
     transform: scale(1.8) translateY(-10vh);
-    transition-duration: .4s;
+    transition-duration: .2s;
 }
 
 #UpeB {
