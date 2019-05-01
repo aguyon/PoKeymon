@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button';
 
 import PokemonCard from './PokemonCard';
 
@@ -32,6 +33,10 @@ class PokemonList extends Component {
     const { pokemon } = this.state;
     return (
       <React.Fragment>
+        <ScrollUpButton style={{
+          width: '80px', height: '80px', backgroundColor: '#FFF', zIndex: 10, outline: 'none',
+        }}
+        />
         <div className="bg">
           {pokemon ? (
             <div className="row rowCustom">
@@ -47,7 +52,7 @@ class PokemonList extends Component {
               ))}
             </div>
           ) : (
-            <h1>Loading Pokemon</h1>
+            <h1 id="loading">Loading Pokemon</h1>
           )}
         </div>
       </React.Fragment>

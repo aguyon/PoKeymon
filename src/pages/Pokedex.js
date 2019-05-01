@@ -42,7 +42,7 @@ export default class Pokedex extends Component {
           <p
             className="userLog"
           >
-                 Trainer:
+            Trainer:
             {' '}
             {newUser}
           </p>
