@@ -24,6 +24,9 @@ class AlerteResultat extends React.Component {
     const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
     newListPokemons.push(pokemonName);
     localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   refreshPage = () => {
@@ -36,13 +39,23 @@ class AlerteResultat extends React.Component {
 
   render() {
     const { pokemonName, pokemon } = this.props;
-    const { show } = this.state;
+    const { show, newUser } = this.state;
 
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
           <Modal.Header id="sasa" closeButton>
-            <Modal.Title><p id="victory">Congratulations, Grogory!</p></Modal.Title>
+            <Modal.Title>
+              {' '}
+              <p id="victory">
+                Congratulations,
+                {' '}
+                {newUser}
+                {' '}
+                !
+              </p>
+
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
             Woohoo,
