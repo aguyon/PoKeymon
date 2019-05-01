@@ -70,12 +70,10 @@ class Duo extends Component {
             showPokemonDuo={showPokDuo}
           />
           <div className="instructions">
-            <a href="button">
-              <img className="btnHelp" src={btnHelp} alt="Help" />
-              <div className="bulleHelp">
-                <span className="help">Instructions</span>
-              </div>
-            </a>
+            <img className="btnHelp" src={btnHelp} alt="Help" />
+            <div className="bulleHelp">
+              <span className="help">Instructions</span>
+            </div>
           </div>
           <Player1
             pokemonRare={index}

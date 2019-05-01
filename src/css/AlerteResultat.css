@@ -1,6 +1,6 @@
 
 #sasa {
-    background-color:#B5B7A3;
+    background-color:#566e47;
 }
 
 #victory {
@@ -8,6 +8,7 @@
     justify-content: center !important;
     font-weight: bold !important;
     font-size: 1em !important;
+    color: #ede9ed;
 }
 
 #modalAlerte {
@@ -17,7 +18,7 @@
 }
 
 #modalBody {
-    background-color:#E2E9ED;
+    background-color:#eff4d4;
     font-size: 2em !important;
     justify-content: center !important;
     display: flex;
@@ -31,7 +32,7 @@
 }
 
 #modalFoot {
-    background-color: #B5B7A3;
+    background-color: #566e47;
 }
 
 #imgModal {
