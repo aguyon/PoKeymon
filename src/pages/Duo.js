@@ -40,7 +40,6 @@ class Duo extends Component {
     const {
       index, name, showPokDuo, newUser, newGuest,
     } = this.state;
-    console.log(newUser, 'NU');
 
     return (
       <div>

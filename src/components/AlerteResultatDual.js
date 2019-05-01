@@ -41,7 +41,6 @@ class AlerteResultat extends React.Component {
       pokemonName, pokemon, newUser, newGuest,
     } = this.props;
     const { show } = this.state;
-    console.log(newUser, 'vic');
 
     return (
       <div>

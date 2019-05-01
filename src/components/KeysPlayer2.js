@@ -120,7 +120,6 @@ class KeysPlayer2 extends Component {
       pokemon, pokemonName, showPokemonDuo, newUser,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
-    console.log(newUser, 'kp2');
 
     return (
       <div className="gameplay">
