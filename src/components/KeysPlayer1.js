@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Hotkeys from 'react-hot-keys';
 import KeysShow1 from './KeysShow1';
 import ToDoArrows1 from './ToDoArrows1';
-import '../css/Solo.css';
+import '../css/Dual.css';
 import AlerteResultatDual from './AlerteResultatDual';
 // import Context from './Context';
 
@@ -16,13 +15,73 @@ class KeysPlayer1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      output: ' ',
-      outputD: ' ',
+      output: '',
+      outputD: '',
       i: 0,
       touchKeyClass: '',
     };
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.onKeyUp = this.onKeyUp.bind(this);
+  }
+
+  componentDidMount() {
+    window.onkeydown = (e) => {
+      //   console.log(e.keyCode);
+      // console.log('1', e.keyCode,String.fromCharCode(e.keyCode))
+      switch (`${e.keyCode}`) {
+        case '79':
+          // o
+          this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+
+        case '75':
+          // k
+          this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+        case '76':
+
+          // l
+          this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+        case '77':
+          // m
+          this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+        case '69':
+          // p
+          this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+        default:
+          break;
+      }
+    };
+    window.onkeyup = (e) => {
+      //   e = e || window.event;
+      //   console.log(e.keyCode);
+      // console.log('1', e.keyCode,String.fromCharCode(e.keyCode))
+      switch (`${e.keyCode}`) {
+        case '79':
+          // up arrow
+          this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
+          break;
+        case '75':
+          this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
+          // down arrow
+          break;
+        case '76':
+          this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
+          // left arrow
+          break;
+        case '77':
+          this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
+          // right arrow
+          break;
+        case '69':
+          this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
+          // right arrow
+          break;
+        default:
+          break;
+      }
+    };
   }
 
   onKeyUp(keyName) {
@@ -44,6 +103,7 @@ class KeysPlayer1 extends Component {
     if (outputD === toDoArrRandom[i]) {
       this.setState({
         i: i + 1,
+        touchKeyClass: 'good',
       }, () => {
         const { handlePokHideDuo } = this.props;
         if (i === toDoArrRandom.length - 1) handlePokHideDuo();
@@ -51,55 +111,27 @@ class KeysPlayer1 extends Component {
     }
   }
 
-  keyIsGood = () => {
-    const { output, i } = this.state;
-    if (output === toDoArrRandom[i]) {
-      this.setState({
-        touchKeyClass: 'good',
-      });
-    }
-  }
 
   render() {
     this.keyIsToDo();
-    this.keyIsGood();
-    const {
-      haut, gauche, bas, droite, attack, pokemon, pokemonName, showPokemonDuo,
-    } = this.props;
+    const { pokemon, pokemonName, showPokemonDuo } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
     return (
       <div className="gameplay">
+
+        <ToDoArrows1 toDoArrow={toDoArrRandom[i]} output2={output} />
         <div>
-          <Hotkeys
-            keyName={haut}
-            onKeyDown={this.onKeyDown}
-            onKeyUp={this.onKeyUp}
-          />
-          <Hotkeys
-            keyName={bas}
-            onKeyDown={this.onKeyDown}
-            onKeyUp={this.onKeyUp}
-          />
-          <Hotkeys
-            keyName={droite}
-            onKeyDown={this.onKeyDown}
-            onKeyUp={this.onKeyUp}
-          />
-          <Hotkeys
-            keyName={gauche}
-            onKeyDown={this.onKeyDown}
-            onKeyUp={this.onKeyUp}
-          />
-          <Hotkeys
-            keyName={attack}
-            onKeyDown={this.onKeyDown}
-            onKeyUp={this.onKeyUp}
-          />
+          <h1>
+            {i}
+            {' '}
+            /20
+            {' '}
+          </h1>
         </div>
-        <ToDoArrows1 toDoArrow={toDoArrRandom[i]} />
         <KeysShow1 output2={output} toDoArrow={toDoArrRandom[i]} touchKeyClass={touchKeyClass} />
         {(i === toDoArrRandom.length) ? <AlerteResultatDual pokemon={pokemon} pokemonName={pokemonName} showPokemonDuo={showPokemonDuo} /> : ''}
+
       </div>
     );
   }

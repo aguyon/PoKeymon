@@ -192,7 +192,7 @@ blockquote {
 
 .pokemonImage {
     animation: animPokeball 1.4s infinite;
-    margin: 20px;
+    margin: 50px auto 25px auto;
 }
 
 .pokemonAcap {

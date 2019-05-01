@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
-
+import btnHelp from '../media/btnHelp.png';
 
 class Duo extends Component {
   constructor() {
@@ -26,11 +26,11 @@ class Duo extends Component {
       index: indexPlayedPokemon,
       name: playedPokemonName,
     });
-  }
+  };
 
   handlePokHideDuo = () => {
     this.setState({ showPokDuo: false });
-  }
+  };
 
   render() {
     const {
@@ -46,15 +46,15 @@ class Duo extends Component {
             <NavLink to="/solo-mode">Solo Mode</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/dual-mode" activeClassName="selected">Dual Mode</NavLink>
+            <NavLink to="/dual-mode" activeClassName="selected">
+              Dual Mode
+            </NavLink>
           </Nav.Item>
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
-          <p
-            className="userLog"
-          >
-                 Trainer:
+          <p className="userLog">
+          Trainer:
             {' '}
             {newUser}
           </p>
@@ -65,7 +65,18 @@ class Duo extends Component {
             pokemonName={name}
             handlePokHideDuo={this.handlePokHideDuo}
           />
-          <PokemonRareACapturer getPokemon={this.pokemonRandom} showPokemonDuo={showPokDuo} />
+          <PokemonRareACapturer
+            getPokemon={this.pokemonRandom}
+            showPokemonDuo={showPokDuo}
+          />
+          <div className="instructions">
+            <a href="button">
+              <img className="btnHelp" src={btnHelp} alt="Help" />
+              <div className="bulleHelp">
+                <span className="help">Instructions</span>
+              </div>
+            </a>
+          </div>
           <Player1
             pokemonRare={index}
             pokemonName={name}
