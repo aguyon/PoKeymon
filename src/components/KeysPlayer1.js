@@ -45,8 +45,8 @@ class KeysPlayer1 extends Component {
           // m
           this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
           break;
-        case '80':
-          // m
+        case '69':
+          // p
           this.onKeyDown(String.fromCharCode(e.keyCode).toLowerCase());
           break;
         default:
@@ -74,7 +74,7 @@ class KeysPlayer1 extends Component {
           this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
           // right arrow
           break;
-        case '80':
+        case '69':
           this.onKeyUp(String.fromCharCode(e.keyCode).toLowerCase());
           // right arrow
           break;
@@ -120,7 +120,7 @@ class KeysPlayer1 extends Component {
     return (
       <div className="gameplay">
 
-        <ToDoArrows1 toDoArrow={toDoArrRandom[i]} />
+        <ToDoArrows1 toDoArrow={toDoArrRandom[i]} output2={output} />
         <div>
           <h1>
             {i}

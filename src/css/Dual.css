@@ -203,21 +203,23 @@ blockquote {
 }
 
 #pB {
-    transform: scale(1.4);
-    transition-duration: .08s;
+    transform: scale(1.8) translateY(-10vh);
+    transition-duration: .4s;
 }
 
 #UppB {
     transform: scale(1);
-    transition-duration: .2s;
+    transition-duration: .6s;
+    transition-delay: .4s;
 }
 
 #eB {
-    transform: scale(1.4);
-    transition-duration: .08s;
+    transform: scale(1.8) translateY(-10vh);
+    transition-duration: .4s;
 }
 
 #UpeB {
     transform: scale(1);
-    transition-duration: .2s;
+    transition-duration: .6s;
+    transition-delay: .4s;
 }
