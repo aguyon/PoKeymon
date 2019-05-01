@@ -12,7 +12,13 @@ class Solo extends Component {
     this.state = {
       index: '',
       showPok: true,
+      newUser: '',
     };
+  }
+
+  componentDidMount() {
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
@@ -27,7 +33,9 @@ class Solo extends Component {
   }
 
   render() {
-    const { index, name, showPok } = this.state;
+    const {
+      index, name, showPok, newUser,
+    } = this.state;
     return (
       <div>
         <div>
@@ -44,6 +52,13 @@ class Solo extends Component {
             <Nav.Item>
               <NavLink to="/pokedex">PoKeydex</NavLink>
             </Nav.Item>
+            <p
+              className="userLog"
+            >
+                 Trainer:
+              {' '}
+              {newUser}
+            </p>
           </Nav>
         </div>
         <div className="fullPage">

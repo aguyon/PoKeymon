@@ -12,7 +12,13 @@ class Duo extends Component {
     this.state = {
       index: '',
       showPokDuo: true,
+      newUser: '',
     };
+  }
+
+  componentDidMount() {
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
@@ -27,7 +33,9 @@ class Duo extends Component {
   }
 
   render() {
-    const { index, name, showPokDuo } = this.state;
+    const {
+      index, name, showPokDuo, newUser,
+    } = this.state;
     return (
       <div>
         <Nav className="justify-content-center">
@@ -43,8 +51,17 @@ class Duo extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
+          <p
+            className="userLog"
+          >
+                 Trainer:
+            {' '}
+            {newUser}
+          </p>
         </Nav>
         <div className="fullPage">
+
+
           <Player2
             pokemonRare={index}
             pokemonName={name}
