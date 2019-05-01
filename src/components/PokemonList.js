@@ -4,12 +4,15 @@ import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button';
 
 import PokemonCard from './PokemonCard';
 
+// const pokemonsImg = require.context('../media/PokemonACapturer');
+
 class PokemonList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       url: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=152',
       pokemon: null,
+      // pokemonRare: null,
     };
   }
 
@@ -18,6 +21,12 @@ class PokemonList extends Component {
     const res = await axios.get(url);
     this.setState({ pokemon: res.data.results });
   }
+
+  // handleClickPokemonRare = () => {
+  //   const { pokemonRare, pokemon } = this.state;
+  //   const pokemonsDuo = pokemon.filter(pokemonsImg.keys().find(img => img.includes('/1')));
+  //   this.setState({ pokemonRare: pokemonsDuo });
+  // }
 
   getMypokemonNames = () => {
     const listPokemonsACapturer = localStorage.getItem('listPokemons');
@@ -33,11 +42,9 @@ class PokemonList extends Component {
     const { pokemon } = this.state;
     return (
       <React.Fragment>
-        <ScrollUpButton style={{
-          width: '80px', height: '80px', backgroundColor: '#FFF', zIndex: 10, outline: 'none',
-        }}
-        />
         <div className="bg">
+          {/* eslint-disable-next-line max-len */}
+          {/* <button className="filterPokedex" onClick={this.handleClickPokemonRare} type="button">Rare</button> */}
           {pokemon ? (
             <div className="row rowCustom">
               {pokemon.map(pok => (
@@ -55,6 +62,10 @@ class PokemonList extends Component {
             <h1 id="loading">Loading Pokemon</h1>
           )}
         </div>
+        <ScrollUpButton style={{
+          width: '80px', height: '80px', backgroundColor: '#FFF', zIndex: 10, outline: 'none',
+        }}
+        />
       </React.Fragment>
     );
   }
