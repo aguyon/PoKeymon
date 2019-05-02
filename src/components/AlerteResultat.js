@@ -17,13 +17,13 @@ class AlerteResultat extends React.Component {
   }
 
   componentDidMount() {
-    const { pokemonName } = this.props;
-    if (!localStorage.getItem('listPokemons')) {
-      localStorage.setItem('listPokemons', '[]');
+    const { pokemonName, newUser } = this.props;
+    if (!localStorage.getItem(`${newUser}listPokemons`)) {
+      localStorage.setItem(`${newUser}listPokemons`, '[]');
     }
-    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
+    const newListPokemons = JSON.parse(localStorage.getItem(`${newUser}listPokemons`));
     newListPokemons.push(pokemonName);
-    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
+    localStorage.setItem(`${newUser}listPokemons`, JSON.stringify(newListPokemons));
 
     localStorage.getItem('userActive');
     this.setState({ newUser: localStorage.getItem('userActive') });

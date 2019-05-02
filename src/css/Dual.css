@@ -30,9 +30,43 @@
 }
 
 .toDo2 {
-   margin-bottom: 10vh;
-   margin-block-start: 1vh;
+   margin-bottom: 6vh;
+   margin-block-start: 3vh;
    text-align: center;
+}
+
+.btnHelp {
+    width: 5%;
+}
+
+.instructions {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 2vh;
+}
+
+.bulleHelp {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-left: -6vw;
+}
+
+.help {
+    position: absolute;
+    bottom: 15vh;
+    color: #FFF;
+    background: #FBB030;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    transform: scale(0) rotate(-12deg);
+    transition: all .25s;
+}
+
+.instructions:hover .help, .instructions:focus .help {
+    transform:scale(1) rotate(0);
 }
 
 .gameplay2 {
@@ -204,7 +238,7 @@ blockquote {
 
 #pB {
     transform: scale(1.8) translateY(-10vh);
-    transition-duration: .4s;
+    transition-duration: .2s;
 }
 
 #UppB {
@@ -215,7 +249,7 @@ blockquote {
 
 #eB {
     transform: scale(1.8) translateY(-10vh);
-    transition-duration: .4s;
+    transition-duration: .2s;
 }
 
 #UpeB {

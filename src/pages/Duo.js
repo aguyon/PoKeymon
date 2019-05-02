@@ -5,7 +5,7 @@ import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
 import Instruction from '../components/Instruction';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
-
+import btnHelp from '../media/btnHelp.png';
 
 class Duo extends Component {
   constructor() {
@@ -14,12 +14,16 @@ class Duo extends Component {
       index: '',
       showPokDuo: true,
       newUser: '',
+      newGuest: '',
     };
   }
 
   componentDidMount() {
-    localStorage.getItem('userActive');
-    this.setState({ newUser: localStorage.getItem('userActive') });
+    localStorage.getItem('userActive', 'guestActive');
+    this.setState({
+      newUser: localStorage.getItem('userActive'),
+      newGuest: localStorage.getItem('guestActive'),
+    });
   }
 
   pokemonRandom = (indexPlayedPokemon, playedPokemonName) => {
@@ -27,16 +31,17 @@ class Duo extends Component {
       index: indexPlayedPokemon,
       name: playedPokemonName,
     });
-  }
+  };
 
   handlePokHideDuo = () => {
     this.setState({ showPokDuo: false });
-  }
+  };
 
   render() {
     const {
-      index, name, showPokDuo, newUser,
+      index, name, showPokDuo, newUser, newGuest,
     } = this.state;
+
     return (
       <div>
         <Nav className="justify-content-center">
@@ -47,7 +52,9 @@ class Duo extends Component {
             <NavLink to="/solo-mode">Solo Mode</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/dual-mode" activeClassName="selected">Dual Mode</NavLink>
+            <NavLink to="/dual-mode" activeClassName="selected">
+              Dual Mode
+            </NavLink>
           </Nav.Item>
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
@@ -55,21 +62,40 @@ class Duo extends Component {
           <p
             className="userLog"
           >
-                 Trainer:
-            {' '}
-            {newUser}
+            <div>
+Trainer:
+              {' '}
+              {newUser}
+
+            </div>
+            <div>
+              {' '}
+Guest:
+              {' '}
+              {newGuest}
+
+            </div>
           </p>
         </Nav>
         <div className="fullPage">
-
-
           <Player2
             pokemonRare={index}
             pokemonName={name}
             handlePokHideDuo={this.handlePokHideDuo}
+            newUser={newUser}
           />
-          <PokemonRareACapturer getPokemon={this.pokemonRandom} showPokemonDuo={showPokDuo} />
+          <PokemonRareACapturer
+            getPokemon={this.pokemonRandom}
+            showPokemonDuo={showPokDuo}
+          />
+          <div className="instructions">
+            <img className="btnHelp" src={btnHelp} alt="Help" />
+            <div className="bulleHelp">
+              <span className="help">Instructions</span>
+            </div>
+          </div>
           <Player1
+            newGuest={newGuest}
             pokemonRare={index}
             pokemonName={name}
             handlePokHideDuo={this.handlePokHideDuo}
