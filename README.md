@@ -1,3 +1,4 @@
-# PoKeymon
-## Jeu full React
- Réalisé lors du Projet 2 à la Wild Code School avec une équipe de 6
+# Jeu full React sur Pokemon !
+  Réalisé lors du projet numéro 2 à la Wild Code School
+  
+Jeu développé par une équipe de 6
