@@ -14,16 +14,20 @@ export default class Pokedex extends Component {
     super();
     this.state = {
       newUser: '',
+      newGuest: '',
     };
   }
 
   componentWillMount() {
-    localStorage.getItem('userActive');
-    this.setState({ newUser: localStorage.getItem('userActive') });
+    localStorage.getItem('userActive', 'guestActive');
+    this.setState({
+      newUser: localStorage.getItem('userActive'),
+      newGuest: localStorage.getItem('guestActive'),
+    });
   }
 
   render() {
-    const { newUser } = this.state;
+    const { newUser, newGuest } = this.state;
     return (
       <div>
         <Nav className="justify-content-center">
@@ -42,9 +46,19 @@ export default class Pokedex extends Component {
           <p
             className="userLog"
           >
-            Trainer:
-            {' '}
-            {newUser}
+            <div>
+Trainer:
+              {' '}
+              {newUser}
+
+            </div>
+            <div>
+              {' '}
+Guest:
+              {' '}
+              {newGuest}
+              {' '}
+            </div>
           </p>
         </Nav>
         <Router>

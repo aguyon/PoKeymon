@@ -60,7 +60,7 @@ class Duo extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
-          <p
+          <div
             className="userLog"
           >
             <div>
@@ -76,7 +76,7 @@ class Duo extends Component {
               {newGuest}
 
             </div>
-          </p>
+          </div>
         </Nav>
         <div className="fullPage">
           <Player2
