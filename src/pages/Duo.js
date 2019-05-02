@@ -64,14 +64,14 @@ class Duo extends Component {
             className="userLog"
           >
             <div>
-Trainer:
+              Trainer:
               {' '}
               {newUser}
 
             </div>
             <div>
               {' '}
-Guest:
+              Guest:
               {' '}
               {newGuest}
 

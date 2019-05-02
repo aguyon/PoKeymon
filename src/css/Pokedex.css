@@ -70,8 +70,10 @@ small {
 
 .userLog {
     padding: 1.4rem 2rem;
-    font-Size: 20px;
+    font-Size: 0.6em;
     color: #ede9ed;
     position: absolute;
     right: 0;
+    letter-spacing: 0.15em;
+    top: -1.5vh;
 }
