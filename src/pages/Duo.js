@@ -7,6 +7,7 @@ import Instruction from '../components/Instruction';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
 import btnHelp from '../media/btnHelp.png';
 
+
 class Duo extends Component {
   constructor() {
     super();
@@ -91,7 +92,7 @@ Guest:
           <div className="instructions">
             <img className="btnHelp" src={btnHelp} alt="Help" />
             <div className="bulleHelp">
-              <span className="help">Instructions</span>
+              <span className="help"><Instruction /></span>
             </div>
           </div>
           <Player1
@@ -100,7 +101,6 @@ Guest:
             pokemonName={name}
             handlePokHideDuo={this.handlePokHideDuo}
           />
-          <Instruction />
         </div>
       </div>
     );
