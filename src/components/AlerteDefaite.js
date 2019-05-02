@@ -13,7 +13,13 @@ class AlerteDefaite extends React.Component {
 
     this.state = {
       show: true,
+      newUser: '',
     };
+  }
+
+  componentDidMount() {
+    localStorage.getItem('userActive');
+    this.setState({ newUser: localStorage.getItem('userActive') });
   }
 
   refreshPage = () => {
@@ -26,12 +32,21 @@ class AlerteDefaite extends React.Component {
 
 
   render() {
-    const { show } = this.state;
+    const { show, newUser } = this.state;
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
           <Modal.Header id="sasa" closeButton>
-            <Modal.Title><p id="victory">Oh no!</p></Modal.Title>
+            <Modal.Title>
+              <p id="victory">
+                 Oh no!
+                {' '}
+                {newUser}
+                {' '}
+
+              </p>
+
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
             You are late!!!

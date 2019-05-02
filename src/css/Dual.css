@@ -65,7 +65,7 @@
     transition: all .25s;
 }
 
-a:hover .help, a:focus .help {
+.instructions:hover .help, .instructions:focus .help {
     transform:scale(1) rotate(0);
 }
 
