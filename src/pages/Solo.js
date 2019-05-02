@@ -62,7 +62,12 @@ class Solo extends Component {
           </Nav>
         </div>
         <div className="fullPage">
-          <Player pokemon={index} pokemonName={name} handlePokHide={this.handlePokHide} />
+          <Player
+            pokemon={index}
+            pokemonName={name}
+            handlePokHide={this.handlePokHide}
+            newUser={newUser}
+          />
           <PokemonACapturer getPokemon={this.pokemonRandom} showPokemon={showPok} />
         </div>
       </div>
