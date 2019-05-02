@@ -20,6 +20,10 @@ export default class Pokedex extends Component {
   componentDidMount() {
     localStorage.getItem('userActive');
     this.setState({ newUser: localStorage.getItem('userActive') });
+
+    if (!localStorage.getItem('listPokemons')) {
+      localStorage.setItem('listPokemons', '["charmander"]');
+    }
   }
 
   render() {
