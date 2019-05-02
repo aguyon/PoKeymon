@@ -66,7 +66,7 @@ class KeysPlayer extends Component {
     this.keyIsToDo();
     this.keyIsGood();
     const {
-      haut, gauche, bas, droite, pokemon, pokemonName,
+      haut, gauche, bas, droite, pokemon, pokemonName, newUser,
     } = this.props;
     const { output, i, touchKeyClass } = this.state;
 
@@ -105,7 +105,7 @@ class KeysPlayer extends Component {
               </Context.Consumer>
             </Timer>
           </div>
-          {i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} /> : ''}
+          {i === toDoArrRandom.length ? <AlerteResultat pokemon={pokemon} pokemonName={pokemonName} newUser={newUser} /> : ''}
         </div>
       </div>
     );

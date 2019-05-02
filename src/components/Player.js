@@ -2,7 +2,7 @@ import React from 'react';
 import KeysPlayer from './KeysPlayer';
 
 const Player = ({
-  pokemon, pokemonName, handlePokHide, showPok,
+  pokemon, pokemonName, handlePokHide, showPok, newUser,
 }) => (
   <KeysPlayer
     pokemon={pokemon}
@@ -13,6 +13,7 @@ const Player = ({
     gauche="left"
     bas="down"
     droite="right"
+    newUser={newUser}
   />
 );
 

@@ -12,14 +12,18 @@ class PokemonList extends Component {
     this.state = {
       url: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=152',
       pokemon: null,
-      // pokemonRare: null,
+      newUser: '',
     };
   }
 
   async componentDidMount() {
     const { url } = this.state;
     const res = await axios.get(url);
-    this.setState({ pokemon: res.data.results });
+    localStorage.getItem('userActive');
+    this.setState({
+      pokemon: res.data.results,
+      newUser: localStorage.getItem('userActive'),
+    });
   }
 
   // handleClickPokemonRare = () => {
@@ -29,7 +33,8 @@ class PokemonList extends Component {
   // }
 
   getMypokemonNames = () => {
-    const listPokemonsACapturer = localStorage.getItem('listPokemons');
+    const { newUser } = this.state;
+    const listPokemonsACapturer = localStorage.getItem(`${newUser}listPokemons`);
     return listPokemonsACapturer;
   };
 

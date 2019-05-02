@@ -17,16 +17,21 @@ class AlerteResultat extends React.Component {
   }
 
   componentDidMount() {
-    const { pokemonName } = this.props;
-    if (!localStorage.getItem('listPokemons')) {
-      localStorage.setItem('listPokemons', '[]');
+    const { pokemonName, newUser, newGuest } = this.props;
+    if (!localStorage.getItem(`${newUser}listPokemons`) && newUser) {
+      localStorage.setItem(`${newUser}listPokemons`, '[]');
+    } else if (!localStorage.getItem(`${newGuest}listPokemons`) && newGuest) {
+      localStorage.setItem(`${newGuest}listPokemons`, '[]');
     }
-    const newListPokemons = JSON.parse(localStorage.getItem('listPokemons'));
-    newListPokemons.push(pokemonName);
-    localStorage.setItem('listPokemons', JSON.stringify(newListPokemons));
-
-    localStorage.getItem('userActive');
-    this.setState({ newUser: localStorage.getItem('userActive') });
+    if (newUser) {
+      const newListPokemons = JSON.parse(localStorage.getItem(`${newUser}listPokemons`));
+      newListPokemons.push(pokemonName);
+      localStorage.setItem(`${newUser}listPokemons`, JSON.stringify(newListPokemons));
+    } else if (newGuest) {
+      const newListPokemons = JSON.parse(localStorage.getItem(`${newGuest}listPokemons`));
+      newListPokemons.push(pokemonName);
+      localStorage.setItem(`${newGuest}listPokemons`, JSON.stringify(newListPokemons));
+    }
   }
 
   refreshPage = () => {
@@ -38,20 +43,22 @@ class AlerteResultat extends React.Component {
   }
 
   render() {
-    const { pokemonName, pokemon } = this.props;
-    const { show, newUser } = this.state;
+    const {
+      pokemonName, pokemon, newUser, newGuest,
+    } = this.props;
+    const { show } = this.state;
 
     return (
       <div>
         <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
           <Modal.Header id="sasa" closeButton>
             <Modal.Title>
-              {' '}
               <p id="victory">
                 Congratulations,
                 {' '}
-                {newUser}
+                {newGuest || newUser}
                 {' '}
+
                 !
               </p>
 
