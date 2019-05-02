@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
+import Instruction from '../components/Instruction';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
 import btnHelp from '../media/btnHelp.png';
+
 
 class Duo extends Component {
   constructor() {
@@ -58,7 +60,7 @@ class Duo extends Component {
           <Nav.Item>
             <NavLink to="/pokedex">PoKeydex</NavLink>
           </Nav.Item>
-          <p
+          <div
             className="userLog"
           >
             <div>
@@ -74,7 +76,7 @@ Guest:
               {newGuest}
 
             </div>
-          </p>
+          </div>
         </Nav>
         <div className="fullPage">
           <Player2
@@ -88,12 +90,10 @@ Guest:
             showPokemonDuo={showPokDuo}
           />
           <div className="instructions">
-            <a href="button">
-              <img className="btnHelp" src={btnHelp} alt="Help" />
-              <div className="bulleHelp">
-                <span className="help">Instructions</span>
-              </div>
-            </a>
+            <img className="btnHelp" src={btnHelp} alt="Help" />
+            <div className="bulleHelp">
+              <span className="help"><Instruction /></span>
+            </div>
           </div>
           <Player1
             newGuest={newGuest}

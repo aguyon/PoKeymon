@@ -20,6 +20,14 @@ h2 {
   text-align: center;
 }
 
+.disabled-link {
+  pointer-events: none;
+}
+
+.not-disabled {
+  pointer-events: block;
+}
+
 .nav-item {
   margin-top: 12px;
 }

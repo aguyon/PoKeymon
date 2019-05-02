@@ -19,6 +19,7 @@ class Home extends Component {
       scale1: 1,
       scale2: 1,
       newUser: '',
+      battleStyle: 0,
     };
   }
 
@@ -35,7 +36,7 @@ class Home extends Component {
     } = this.state;
     localStorage.setItem(`${newUser}listPokemons`, '["bulbasaur"]');
     if (scale === 1.4) {
-      scale = 1;
+      scale = 1.4;
     } else {
       scale = 1.4;
       scale1 = 1;
@@ -45,6 +46,7 @@ class Home extends Component {
       scale,
       scale1,
       scale2,
+      battleStyle: 1,
     });
   };
 
@@ -55,7 +57,7 @@ class Home extends Component {
     } = this.state;
     localStorage.setItem(`${newUser}listPokemons`, '["charmander"]');
     if (scale1 === 1.4) {
-      scale1 = 1;
+      scale1 = 1.4;
     } else {
       scale1 = 1.4;
       scale = 1;
@@ -65,6 +67,7 @@ class Home extends Component {
       scale1,
       scale,
       scale2,
+      battleStyle: 1,
     });
   };
 
@@ -75,7 +78,7 @@ class Home extends Component {
     } = this.state;
     localStorage.setItem(`${newUser}listPokemons`, '["squirtle"]');
     if (scale2 === 1.4) {
-      scale2 = 1;
+      scale2 = 1.4;
     } else {
       scale2 = 1.4;
       scale1 = 1;
@@ -85,12 +88,13 @@ class Home extends Component {
       scale2,
       scale1,
       scale,
+      battleStyle: 1,
     });
   };
 
   render() {
     const {
-      scale, scale1, scale2, zIndex,
+      scale, scale1, scale2, zIndex, battleStyle,
     } = this.state;
     return (
       <div>
@@ -144,7 +148,7 @@ class Home extends Component {
           <Nav className="justify-content-center">
             <div>
               <NavLink to="/solo-mode">
-                <img className="battle" src={solomode} alt="log-in" />
+                <img className="battle" style={{ opacity: `${battleStyle}`, transitionDuration: '.5s', transitionDelay: '.2s' }} src={solomode} alt="log-in" />
               </NavLink>
             </div>
           </Nav>

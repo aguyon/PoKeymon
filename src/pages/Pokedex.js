@@ -18,7 +18,7 @@ export default class Pokedex extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     localStorage.getItem('userActive', 'guestActive');
     this.setState({
       newUser: localStorage.getItem('userActive'),
@@ -57,7 +57,7 @@ Trainer:
 Guest:
               {' '}
               {newGuest}
-
+              {' '}
             </div>
           </p>
         </Nav>

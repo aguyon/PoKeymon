@@ -50,22 +50,24 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-left: -6vw;
+    margin-left: -15.5%;
 }
 
 .help {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
     position: absolute;
     bottom: 15vh;
-    color: #FFF;
-    background: #FBB030;
-    padding: 15px;
-    border-radius: 3px;
+    font-size: 25px;
     box-shadow: 0 0 2px rgba(0,0,0,.5);
     transform: scale(0) rotate(-12deg);
     transition: all .25s;
 }
 
-a:hover .help, a:focus .help {
+.instructions:hover .help, .instructions:focus .help {
     transform:scale(1) rotate(0);
 }
 
@@ -257,3 +259,22 @@ blockquote {
     transition-duration: .6s;
     transition-delay: .4s;
 }
+
+
+
+.TitreInstruction {
+    text-align: center;
+}
+
+.Player1 {
+    float: left;
+    margin-right: 200px;
+    margin-left: 30px;
+}
+
+.Player2 {
+    float: right;
+    margin-right: 30px;
+}
+
+
