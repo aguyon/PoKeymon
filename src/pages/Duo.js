@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
+import Instruction from '../components/Instruction';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
 import btnHelp from '../media/btnHelp.png';
+
 
 class Duo extends Component {
   constructor() {
@@ -90,7 +92,7 @@ Guest:
           <div className="instructions">
             <img className="btnHelp" src={btnHelp} alt="Help" />
             <div className="bulleHelp">
-              <span className="help">Instructions</span>
+              <span className="help"><Instruction /></span>
             </div>
           </div>
           <Player1
