@@ -13,16 +13,18 @@ class PokemonList extends Component {
       url: 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=152',
       pokemon: null,
       newUser: '',
+      // newGuest: '',
     };
   }
 
   async componentDidMount() {
     const { url } = this.state;
     const res = await axios.get(url);
-    localStorage.getItem('userActive');
+    localStorage.getItem('userActive', 'guestActive');
     this.setState({
       pokemon: res.data.results,
       newUser: localStorage.getItem('userActive'),
+      // newGuest: localStorage.getItem('guestActive'),
     });
   }
 
