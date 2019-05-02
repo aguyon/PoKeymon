@@ -40,12 +40,7 @@ class PokemonList extends Component {
 
   isInMyPokedex = (nameRef) => {
     const myPokemonsName = this.getMypokemonNames();
-
-    if (!localStorage.getItem('listPokemons')) {
-      localStorage.setItem('listPokemons', '["charmander"]');
-      return myPokemonsName.includes(nameRef);
-    }
-    return myPokemonsName;
+    return myPokemonsName.includes(nameRef);
   };
 
   render() {
