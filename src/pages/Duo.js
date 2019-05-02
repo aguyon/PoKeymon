@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Player1 from '../components/Player1';
 import Player2 from '../components/Player2';
+import Instruction from '../components/Instruction';
 import PokemonRareACapturer from '../components/PokemonRareACapturer';
 
 
@@ -73,6 +74,7 @@ class Duo extends Component {
             pokemonName={name}
             handlePokHideDuo={this.handlePokHideDuo}
           />
+          <Instruction />
         </div>
       </div>
     );

@@ -223,3 +223,32 @@ blockquote {
     transition-duration: .6s;
     transition-delay: .4s;
 }
+
+
+.Instruction {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    top: 81%;
+    font-size: 25px;
+}
+
+.TitreInstruction {
+    text-align: center;
+}
+
+.Player1 {
+    float: left;
+    margin-right: 200px;
+    margin-left: 30px;
+}
+
+.Player2 {
+    float: right;
+    margin-right: 30px;
+}
+
+
