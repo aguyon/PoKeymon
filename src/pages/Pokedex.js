@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import {
   HashRouter as Router, Route, Switch, NavLink,
 } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import PokemonList from '../components/PokemonList';
+import Pokemon from '../components/Pokemon';
 
 import '../css/Pokedex.css';
 
@@ -61,7 +61,12 @@ Guest:
             </div>
           </p>
         </Nav>
-        <PokemonList />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={PokemonList} />
+            <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />
+          </Switch>
+        </Router>
       </div>
     );
   }

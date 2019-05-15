@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import pokeball from '../media/pokeball.png';
@@ -25,56 +26,74 @@ const Card = styled.div`
   -o-user-select: none;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
 export default class PokemonCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
+      pokemonIndex: '',
       imageLoading: true,
     };
   }
 
   componentDidMount() {
-    const { name } = this.props;
+    const { name, url } = this.props;
 
-    this.setState({ name });
+    const pokemonIndex = url.split('/')[url.split('/').length - 2];
+
+    this.setState({ name, pokemonIndex });
   }
 
   render() {
     const { style } = this.props;
     const {
       name,
+      pokemonIndex,
       imageLoading,
     } = this.state;
 
     return (
       <div className="col-md-3 col-sm-6 mb-5" style={style}>
-        <Card className="card">
-          {/* <h5 className="card-header">{pokemonIndex}</h5> */}
-          {imageLoading ? (
-            <img
-              src={pokeball}
-              style={{ width: '5em', height: '5em' }}
-              className="poke card-img-top rounded mx-auto d-block mt-2"
-              alt=""
+        <StyledLink to={`pokemon/${pokemonIndex}`}>
+          <Card className="card">
+            {/* <h5 className="card-header">{pokemonIndex}</h5> */}
+            {imageLoading ? (
+              <img
+                src={pokeball}
+                style={{ width: '5em', height: '5em' }}
+                className="poke card-img-top rounded mx-auto d-block mt-2"
+                alt=""
+              />
+            ) : null}
+            <Sprite
+              className="card-img-top rounded mx-auto imgPokedex"
+              src={pokemonsImg(pokemonsImg.keys().find(img => img.indexOf(name) >= 0))}
+              onLoad={() => this.setState({ imageLoading: false })}
+              style={imageLoading ? null : { display: 'block' }}
             />
-          ) : null}
-          <Sprite
-            className="card-img-top rounded mx-auto imgPokedex"
-            src={pokemonsImg(pokemonsImg.keys().find(img => img.indexOf(name) >= 0))}
-            onLoad={() => this.setState({ imageLoading: false })}
-            style={imageLoading ? null : { display: 'block' }}
-          />
-          <div className="card-body mx-auto">
-            <h6 className="card-title">
-              {name
-                .toLowerCase()
-                .split(' ')
-                .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                .join(' ')}
-            </h6>
-          </div>
-        </Card>
+            <div className="card-body mx-auto">
+              <h6 className="card-title">
+                {name
+                  .toLowerCase()
+                  .split(' ')
+                  .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+                  .join(' ')}
+              </h6>
+            </div>
+          </Card>
+        </StyledLink>
       </div>
     );
   }
